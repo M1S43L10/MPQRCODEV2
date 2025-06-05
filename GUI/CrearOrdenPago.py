@@ -4,10 +4,12 @@ import threading
 import traceback
 import keyboard
 from tkinter import messagebox
+from GUI.BuscarOrdenPago import Ventana_BuscarPagoManual
 from GUI.Cronometro import Cronometro
 from GUI.BarraProgreso import BarraProgreso
 from Func.qrcode_mpV2 import crear_qr_data
 from Func.log_errorsV2 import log_error
+from GUI.GUI.MessageBox import CustomMessageBox
 
 class CrearOrdenPago(BarraProgreso):
     def __init__(self, frame, DICT_WIDGETS, DICT_DATOS_ORDEN, DICT_CONEXION):
@@ -23,9 +25,11 @@ class CrearOrdenPago(BarraProgreso):
             self.datos_error = None
             self.detalle_error = None
             self.ultima_actualizacion = None
+            self.datos_pagos = None
             self.NRO_ERROR = None
             self.PAGO_MANUAL = False
             self.reintentarpago = None
+            self.ventana_buscarpagomanual_abierta = False   
             
             #------------------------------------------- DICCIONARIOS CON DATOS -------------------------------------------
             self.DICT_WIDGETS = DICT_WIDGETS
@@ -46,7 +50,7 @@ class CrearOrdenPago(BarraProgreso):
                 "command": self.crear_orden
             }
             
-            self.cronometro = Cronometro(self.DICT_WIDGETS, 280, self.cancelar_orden_pasado_segundos)
+            self.cronometro = Cronometro(self.DICT_WIDGETS, 260, self.cancelar_orden_pasado_segundos)
             #threading.Thread(target=self.iniciar_orden).start()
             self.progreso(**self.DICT_PROGRESO)
         except Exception as e:
@@ -84,14 +88,17 @@ class CrearOrdenPago(BarraProgreso):
             else:
                 if self.qr_data == None:
                     log_error("ERROR 500", "No conexión")
-                    messagebox.showerror(f"ERROR 500", "No conexión")
+                    CustomMessageBox(self.DICT_WIDGETS["root"], f"ERROR 500", "No conexión" , "error")
+                    #messagebox.showerror(f"ERROR 500", "No conexión")
                 else:
                     log_error(self.qr_data.json()['message'], "Error: Respuesta de MP al Crear Pago")
-                    messagebox.showerror(f"ERROR {self.qr_data.status_code}", self.qr_data.json()['message'])
+                    CustomMessageBox(self.DICT_WIDGETS["root"], f"ERROR {self.qr_data.status_code}", self.qr_data.json()['message'], "error")
+                    #messagebox.showerror(f"ERROR {self.qr_data.status_code}", self.qr_data.json()['message'])
                 self.cierre_ERROR()
         except Exception as e:
             log_error(str(e), 'crear_orden')
-            messagebox.showerror('Error', 'Ocurrió un error al crear la orden.')
+            CustomMessageBox(self.DICT_WIDGETS["root"], 'Error', 'Ocurrió un error al crear la orden.', "error")
+            #messagebox.showerror('Error', 'Ocurrió un error al crear la orden.')
             self.cierre_ERROR()
         
     def func_orden_creada(self):
@@ -199,7 +206,14 @@ class CrearOrdenPago(BarraProgreso):
             
             
     def buscar_pago_manual(self):
-        # Registrar el método de validación
+        
+        if self.ventana_buscarpagomanual_abierta  == False:
+            self.ventana_buscarpagomanual_abierta  = True
+            ventana_buscarpagomanual = Ventana_BuscarPagoManual(self.DICT_WIDGETS, self.DICT_DATOS_ORDEN, self.DICT_CONEXION)
+            threading.Thread(target=self.esperar_respuesta_mp, args=(ventana_buscarpagomanual, )).start()
+        else:
+            print("TATATA")
+        """ # Registrar el método de validación
         self.DICT_WIDGETS["def_ventana_buscar_pago_manual"]["func_ventana_buscar_pago_manual"]()
         
         self.DICT_WIDGETS["def_ventana_buscar_pago_manual"]["button_info_buscar_pago"].config(command=self.buscar_id_pago_manual)
@@ -222,7 +236,24 @@ class CrearOrdenPago(BarraProgreso):
         self.DICT_WIDGETS["def_ventana_buscar_pago_manual"]["ventana_buscar_pago_manual"].bind("<Button-1>", self.handle_click_outside)
         
         if self.DICT_CONEXION["conexionDBA"].specify_search_condicion("SPDIR", "ID", "GRID", "teclado_km84", False) == "true":
-            keyboard.hook(self.on_4_and_a)
+            keyboard.hook(self.on_4_and_a)"""
+            
+    def esperar_respuesta_mp(self, ventana_buscarpagomanual):
+        while ventana_buscarpagomanual.return_respuesta_mp() == None:
+            print(ventana_buscarpagomanual.return_respuesta_mp())
+            time.sleep(1)
+        print(ventana_buscarpagomanual.return_respuesta_mp())
+        if not ventana_buscarpagomanual.return_respuesta_mp() == False:
+            if ventana_buscarpagomanual.return_respuesta_mp() == "CERRANDO":
+                self.ventana_buscarpagomanual_abierta = False
+                return
+            else:
+                self.datos_pagos = ventana_buscarpagomanual.return_respuesta_mp()
+                self.datos_pagos = self.datos_pagos.json()
+        else:
+            self.NRO_ERROR = 101
+        self.esperando_pago = False
+        self.pago_manual = False
         
     def entry_info_buscar_pago_on_focus_in(self, event):
         try:
@@ -231,7 +262,7 @@ class CrearOrdenPago(BarraProgreso):
                 self.DICT_WIDGETS["def_ventana_buscar_pago_manual"]["entry_info_buscar_pago"].config(foreground='black')
         except Exception as e:
             log_error(str(e), "entry_info_buscar_pago_on_focus_in")
-            messagebox.showerror("Error", "Error al enfocar la entrada de ID de operación.")
+            #messagebox.showerror("Error", "Error al enfocar la entrada de ID de operación.")
 
 
     def entry_info_buscar_pago_on_focus_out(self, event):
@@ -241,7 +272,7 @@ class CrearOrdenPago(BarraProgreso):
                 self.DICT_WIDGETS["def_ventana_buscar_pago_manual"]["entry_info_buscar_pago"].config(foreground='gray')
         except Exception as e:
             log_error(str(e), "entry_info_buscar_pago_on_focus_out")
-            messagebox.showerror("Error", "Error al desenfocar la entrada de ID de operación.")
+            #messagebox.showerror("Error", "Error al desenfocar la entrada de ID de operación.")
             
     def validate_number(self, entry_value):
         try:
@@ -250,11 +281,12 @@ class CrearOrdenPago(BarraProgreso):
                 return True
             else:
                 # Mostrar el mensaje de error
-                messagebox.showerror("Error", "Solo puedes ingresar valores numéricos.")
+                CustomMessageBox(self.DICT_WIDGETS["root"], "Error", "Solo puedes ingresar valores numéricos.", "error")
+                #messagebox.showerror("Error", "Solo puedes ingresar valores numéricos.")
                 return False
         except Exception as e:
             log_error(str(e), "validate_number")
-            messagebox.showerror("Error", "Error al validar el número.")
+            #messagebox.showerror("Error", "Error al validar el número.")
             return False
         
     def handle_click_outside(self, event):
@@ -267,7 +299,7 @@ class CrearOrdenPago(BarraProgreso):
                 self.DICT_WIDGETS["def_ventana_buscar_pago_manual"]["ventana_buscar_pago_manual"].focus_set()  # O enfocar el contenedor principal para garantizar la pérdida de foco
         except Exception as e:
             log_error(str(e), "handle_click_outside")
-            messagebox.showerror("Error", "Error al procesar el clic fuera del campo de entrada.")
+            #messagebox.showerror("Error", "Error al procesar el clic fuera del campo de entrada.")
 
             
     def detectar_secuencia(self, event):
@@ -348,22 +380,25 @@ class CrearOrdenPago(BarraProgreso):
                     self.tecla_secuencia = self.tecla_secuencia[-3:]
         except Exception as e:
             log_error(str(e), "detectar_secuencia")
-            messagebox.showerror("Error", "Error al procesar la secuencia de teclas.")
+            #messagebox.showerror("Error", "Error al procesar la secuencia de teclas.")
             
     def buscar_id_pago_manual(self):
         try:
             respuesta = self.DICT_CONEXION["conexionAPI"].obtenerPago_manual(self.DICT_WIDGETS["def_ventana_buscar_pago_manual"]["entry_info_buscar_pago"].get(), self.DICT_DATOS_ORDEN["nro_factura"], self.DICT_DATOS_ORDEN["external_id_pos"])
 
             if respuesta == True:
-                messagebox.showinfo("Nro Operacion exitosa", "Se ha encontrado el número de operación")
+                CustomMessageBox(self.DICT_WIDGETS["root"], "Nro Operacion exitosa", "Se ha encontrado el número de operación", "info")
+                #messagebox.showinfo("Nro Operacion exitosa", "Se ha encontrado el número de operación")
                 self.cerrar_cronometro()
                 self.id_pago = self.DICT_WIDGETS["def_ventana_buscar_pago_manual"]["entry_info_buscar_pago"].get()
                 self.PAGO_MANUAL = True
 
             elif respuesta == False:
-                messagebox.showerror("Error", "No se ha encontrado el número de operación")
+                CustomMessageBox(self.DICT_WIDGETS["root"], "Error", "No se ha encontrado el número de operación", "error")
+                #messagebox.showerror("Error", "No se ha encontrado el número de operación")
             else:
-                messagebox.showerror("Error", respuesta)
+                CustomMessageBox(self.DICT_WIDGETS["root"], "Error", respuesta, "error")
+                #messagebox.showerror("Error", respuesta)
 
             self.DICT_WIDGETS["def_ventana_buscar_pago_manual"]["cerrar_ventana_buscar_pago_manual"]()
         except Exception as e:
@@ -478,6 +513,35 @@ class CrearOrdenPago(BarraProgreso):
             error_detallado = traceback.format_exc()
             print(self.NRO_ERROR, error_detallado)
             log_error(error_detallado, "LISTADO_ERRORES")  # Registro del error completo
+            
+            
+    def resultado_estado_pago(self):
+        if self.datos_pagos["external_reference"] != self.DICT_DATOS_ORDEN["nro_factura"]:
+            self.NRO_ERROR = 13
+        elif self.datos_pagos["transaction_amount"] != self.DICT_DATOS_ORDEN["monto_pagar"]:
+            self.NRO_ERROR = 10
+        elif self.datos_pagos["status"] == "refunded":
+            self.NRO_ERROR = 12
+        if self.NRO_ERROR == None:
+            if self.datos_pagos["status"] == "approved":
+                if self.datos_pagos["status_detail"] == "accredited":
+                    self.DICT_PROGRESO["text_label_aviso"] = "¡¡¡Pago Exitoso!!!"
+                    self.DICT_PROGRESO["carga"] = 99
+                    self.DICT_PROGRESO["command"] = self.finalizar_pago                    
+            elif self.datos_pagos["status"] == "rejected":
+                self.NRO_ERROR = "ERROR_TARJETA"
+                self.DICT_PROGRESO["text_label_aviso"] = "Error en el pago"
+                self.DICT_PROGRESO["carga"] = 99
+                self.DICT_PROGRESO["command"] = self.error_pago
+                return
+            else:
+                print(self.datos_pagos["status"], self.datos_pagos["status"])
+        else:
+            self.DICT_PROGRESO["text_label_aviso"] = "Error en el pago"
+            self.DICT_PROGRESO["carga"] = 99
+            self.DICT_PROGRESO["command"] = self.error_pago
+        if not self.pago_manual:
+            self.esperando_pago = False
 
             
 #------------------------------------------------------------Comparar datos--------------------------------------------------------
@@ -489,7 +553,8 @@ class CrearOrdenPago(BarraProgreso):
                         print(self.DICT_DATOS_ORDEN["monto_pagar"], float(self.DICT_CONEXION["conexionDBAServer"].specify_search_condicion("MPQRCODE_OBTENERPAGOServer", "transaction_details_total_paid_amount", "external_reference", f"{self.DICT_DATOS_ORDEN["nro_factura"]}", False)))
                     else:
                         self.NRO_ERROR = 10
-                        messagebox.showerror(f"Error {self.NRO_ERROR}", self.LISTADO_ERRORES())
+                        CustomMessageBox(self.DICT_WIDGETS["root"], f"Error {self.NRO_ERROR}", self.LISTADO_ERRORES(), "error")
+                        #messagebox.showerror(f"Error {self.NRO_ERROR}", self.LISTADO_ERRORES())
                         self.DICT_PROGRESO["text_label_aviso"] = "ERROR"
                         
                         self.esperando_comparacion = True
@@ -499,7 +564,8 @@ class CrearOrdenPago(BarraProgreso):
                         print(self.id_pago == self.DICT_CONEXION["conexionDBAServer"].specify_search_condicion("MPQRCODE_OBTENERPAGOServer", "data", "external_reference", f"{self.DICT_DATOS_ORDEN["nro_factura"]}", False))
                     else:
                         self.NRO_ERROR = 11
-                        messagebox.showerror(f"Error {self.NRO_ERROR}", self.LISTADO_ERRORES())
+                        CustomMessageBox(self.DICT_WIDGETS["root"], f"Error {self.NRO_ERROR}", self.LISTADO_ERRORES(), "error")
+                        #messagebox.showerror(f"Error {self.NRO_ERROR}", self.LISTADO_ERRORES())
                         self.DICT_PROGRESO["text_label_aviso"] = "ERROR"
                         self.esperando_comparacion = True
                         self.reintentarpago = False
@@ -508,7 +574,8 @@ class CrearOrdenPago(BarraProgreso):
                     self.reintentarpago = None                   
                 elif self.DICT_CONEXION["conexionDBAServer"].specify_search_condicion("MPQRCODE_OBTENERPAGOServer", "status", "external_reference", self.DICT_DATOS_ORDEN["nro_factura"], False) == 'refunded':
                     self.NRO_ERROR = 12
-                    messagebox.showerror(f"Error {self.NRO_ERROR}", self.LISTADO_ERRORES())
+                    CustomMessageBox(self.DICT_WIDGETS["root"], f"Error {self.NRO_ERROR}", self.LISTADO_ERRORES(), "error")
+                    #messagebox.showerror(f"Error {self.NRO_ERROR}", self.LISTADO_ERRORES())
                     self.reintentarpago = False                    
                     self.esperando_comparacion = True
                 elif self.DICT_CONEXION["conexionDBAServer"].specify_search_condicion("MPQRCODE_OBTENERPAGOServer", "status", "external_reference", self.DICT_DATOS_ORDEN["nro_factura"], False) == "rejected":
@@ -528,7 +595,6 @@ class CrearOrdenPago(BarraProgreso):
     def agrega_datos_dba_caja(self):
         try:
             datos_pago = self.DICT_CONEXION["conexionDBAServer"].specify_search_condicion("MPQRCODE_OBTENERPAGOServer", "*", "external_reference", f"{self.DICT_DATOS_ORDEN["nro_factura"]}", True)[0]
-            print(len(datos_pago))
             datos_dba = {
                 "external_reference": datos_pago[0],
                 "external_idPOS": self.DICT_DATOS_ORDEN["external_id_pos"],
@@ -597,7 +663,8 @@ class CrearOrdenPago(BarraProgreso):
             self.DICT_WIDGETS["cerrar_ventana"]()
                 
     def mostrar_error(self):
-        messagebox.showerror(f"Error {self.NRO_ERROR}", self.LISTADO_ERRORES())
+        CustomMessageBox(self.DICT_WIDGETS["root"], f"Error {self.NRO_ERROR}", self.LISTADO_ERRORES(), "error")
+        #messagebox.showerror(f"Error {self.NRO_ERROR}", self.LISTADO_ERRORES())
         self.DICT_CONEXION["conexionDBA"].actualizar_datos_condicion(
             "MPQRCODE_CONEXIONPROGRAMAS",
             self.datos_error,
@@ -650,12 +717,16 @@ class CrearOrdenPago(BarraProgreso):
                 'response': 0,
                 'description': 'accredited',
                 'IDMercadoPago': self.id_pago,
+                'card_first_six_digits': None,
+                'card_last_four_digits': None,
+                'payment_method_id': None,
+                'payment_method_name':None,
+                'payment_type_id': None,
             }
-            
+            self.DICT_WIDGETS["my_label_aviso"].config(text="Pago recibido") 
+            #messagebox.showinfo("Pago recibido", f"Pago recibido\nNro Factura: {self.DICT_DATOS_ORDEN["nro_factura"]}\nNro Operación: {self.DICT_CONEXION["conexionDBAServer"].specify_search_condicion("MPQRCODE_OBTENERPAGOServer", "id", "external_reference", f"{self.DICT_DATOS_ORDEN["nro_factura"]}", False)}\nMonto recibido: {float(self.DICT_CONEXION["conexionDBAServer"].specify_search_condicion("MPQRCODE_OBTENERPAGOServer", "transaction_details_total_paid_amount", "external_reference", f"{self.DICT_DATOS_ORDEN["nro_factura"]}", False))}")
             self.DICT_CONEXION["conexionDBA"].actualizar_datos_condicion("MPQRCODE_CONEXIONPROGRAMAS", datos, "nro_factura", f"'{self.DICT_DATOS_ORDEN["nro_factura"]}'")
             self.DICT_CONEXION["conexionDBAServer"].actualizar_datos_condicion("MPQRCODE_OBTENERPAGOServer", self.datos_obtener_pago, "external_reference", f"'{self.DICT_DATOS_ORDEN["nro_factura"]}'")
-            self.DICT_WIDGETS["my_label_aviso"].config(text="Pago recibido") 
-            messagebox.showinfo("Pago recibido", f"Pago recibido\nNro Factura: {self.DICT_DATOS_ORDEN["nro_factura"]}\nNro Operación: {self.DICT_CONEXION["conexionDBAServer"].specify_search_condicion("MPQRCODE_OBTENERPAGOServer", "id", "external_reference", f"{self.DICT_DATOS_ORDEN["nro_factura"]}", False)}\nMonto recibido: {float(self.DICT_CONEXION["conexionDBAServer"].specify_search_condicion("MPQRCODE_OBTENERPAGOServer", "transaction_details_total_paid_amount", "external_reference", f"{self.DICT_DATOS_ORDEN["nro_factura"]}", False))}")
             self.DICT_WIDGETS["cerrar_ventana"]()
         except Exception as e:
             log_error(str(e), "finalizar_pago")

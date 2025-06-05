@@ -1,3 +1,14 @@
-output/
 __pycache__/
+AWS/
+output/
+tickets/
+configuracion.json/
 errores.txt/
+MPQRCODEV2_PYINSTALLER.json/
+Clover/json_data/
+Clover/ejemplos_clover/
+Clover/font/
+Clover/logs/
+Clover/idempotency_key.py/
+Clover/main_.py/
+Clover/Services_DBA.bat/

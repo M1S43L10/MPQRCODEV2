@@ -1,3 +1,4 @@
+from pprint import pprint
 import requests
 import json
 import uuid
@@ -340,6 +341,7 @@ class Conexion_Api:
             json.dump(response.json(), json_file, indent=2)
         print(response.status_code)
         """
+        pprint(response.json())
         return response
     
 #/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*REEMBOLSOS/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*
@@ -436,7 +438,7 @@ class Conexion_Api:
         response = requests.get(url, headers=headers)
         return response
     
-    def crear_intencion_pago_POINT(self, deviceid, nro_factura, precio, TicketNUM):
+    def crear_intencion_pago_POINT(self, deviceid, nro_factura, precio, imprime_ticket, TicketNUM):
         url = f"https://api.mercadopago.com/point/integration-api/devices/{deviceid}/payment-intents" 
         
         headers = {
@@ -448,7 +450,7 @@ class Conexion_Api:
         payload = {
             "additional_info": {
                 "external_reference": nro_factura,
-                "print_on_terminal": False,
+                "print_on_terminal": imprime_ticket,
                 "ticket_number": TicketNUM
             },
             "amount": precio
@@ -456,6 +458,10 @@ class Conexion_Api:
         
         response = requests.post(url, headers=headers, data=json.dumps(payload))
         return response
+    
+    
+
+    
     
     def cancelar_intencion_pago_POINT(self, deviceid, paymentintentid):
         url = f"https://api.mercadopago.com/point/integration-api/devices/{deviceid}/payment-intents/{paymentintentid}"
@@ -473,15 +479,26 @@ class Conexion_Api:
         url = f"https://api.mercadopago.com/point/integration-api/payment-intents/{paymentintentid}"
         
         headers = {
-            "Content-Type": 'application/json',
-            #'x-test-scope': 'sandbox',
+            "Content-Type": "application/json",
             "Authorization": f"Bearer {self.access_token}"
-            }
+        }
         
-        response = requests.get(url, headers=headers)
-        return response
+        try:
+            response = requests.get(url, headers=headers, timeout=10)  # Agregamos un timeout de 10 segundos
+            response.raise_for_status()  # Lanza un error si el código de estado es 4xx o 5xx
+            
+            # Intentamos convertir la respuesta a JSON
+            try:
+                return response.json()  
+            except ValueError:
+                print("❌ Error: La respuesta no es un JSON válido")
+                return None  # Devolver None si la respuesta no es JSON válido
+
+        except requests.exceptions.RequestException as e:
+            print(f"❌ Error en la solicitud: {e}")
+            return None  # En caso de error, devolvemos None
     
-    def cambiar_modo_operacion(self, device_id):
+    def cambiar_modo_operacion(self, device_id, tipo):
         url = f"https://api.mercadopago.com/point/integration-api/devices/{device_id}"
         
         headers = {
@@ -491,8 +508,18 @@ class Conexion_Api:
             }
         
         dataload = {
-            "operating_mode": "PDV"
+            "operating_mode": tipo
         }
         
         response = requests.patch(url, headers=headers, data=json.dumps(dataload)) 
         return response
+    
+    def obtener_todos_medios_pagos(self):
+        url = "https://api.mercadopago.com/v1/payment_methods"
+        
+        headers = {
+            "Content-Type": 'application/json',
+            "Authorization": f"Bearer {self.access_token}"
+            }
+        
+        return requests.get(url, headers=headers)

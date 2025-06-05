@@ -1,5 +1,6 @@
 import pypyodbc
 import json
+import traceback
 
 
 def dsn_configurados():
@@ -32,6 +33,46 @@ class ConexionSybase:
         except pypyodbc.Error as err:
             print(f"Error al conectar a Sybase: {err}")
             return False
+        
+    def ejecutar_consulta(self, sentencia_sql):
+        try:
+            # Intentar conectar si no se ha hecho antes
+            if not self.conexion:
+                self.conectar()
+
+            # Crear un cursor para ejecutar la sentencia SQL
+            with self.conexion.cursor() as cursor:
+                # Verificación antes de ejecutar la consulta para asegurarse de que la conexión esté activa
+                try:
+                    # Intentar ejecutar una consulta de prueba (como un SELECT vacío)
+                    cursor.execute('SELECT 1')
+                except pypyodbc.Error:
+                    # Si la conexión se ha cerrado, reconectar
+                    self.conectar()
+                
+                # Ahora ejecutar la consulta principal
+                cursor.execute(sentencia_sql)
+                
+                # Obtener los resultados si la consulta es un SELECT
+                if sentencia_sql.strip().upper().startswith('SELECT'):
+                    resultados = cursor.fetchall()
+                    return resultados
+                else:
+                    # Para otros tipos de consultas (INSERT, UPDATE, DELETE)
+                    self.conexion.commit()
+                    return "Operación exitosa"
+
+        except pypyodbc.Error as e:
+            error_traceback = traceback.format_exc()
+            print(f"Error al recargar dispositivos: {e}\nTraceback:\n{error_traceback}")
+            print(f"Error al ejecutar la consulta: {e}")
+            return None
+        except Exception as e:
+            print(f"Error inesperado: {e}")
+            return None
+
+
+
         
     def conectarServer(self):
         try:
@@ -75,9 +116,7 @@ class ConexionSybase:
             self.conexion.commit()
             print(f'Tabla MPQRCODE_CONEXIONSERVIDORAPI creada con éxito.')
         except Exception as e:
-            print(f'Error al crear la tabla: {e}')
-        finally:
-            self.desconectar()   
+            print(f'Error al crear la tabla: {e}')   
     
     def crear_tabla_MPQRCODE_CONEXIONPROGRAMAS(self):
         try:
@@ -102,8 +141,6 @@ class ConexionSybase:
             print(f'Tabla MPQRCODE_CONEXIONPROGRAMAS creada con éxito.')
         except Exception as e:
             print(f'Error al crear la tabla: {e}')
-        finally:
-            self.desconectar()
     
     def crear_tabla_MPQRCODE_CLIENTE(self):
         try:
@@ -121,8 +158,6 @@ class ConexionSybase:
             print(f'Tabla MPQRCODE_CLIENTE creada con éxito.')
         except Exception as e:
             print(f'Error al crear la tabla: {e}')
-        finally:
-            self.desconectar()
 
     def crear_tabla_MPQRCODE_SUCURSAL(self):
         try:
@@ -141,8 +176,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_SUCURSAL creada con éxito.")
         except Exception as e:
             print(f"Error al crear la tabla: {e}")
-        finally:
-            self.desconectar()
             
     def crear_tabla_MPQRCODE_SUCURSAL_business_hours(self):
         try:
@@ -160,8 +193,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_SUCURSAL creada con éxito.")
         except Exception as e:
             print(f"Error al crear la tabla: {e}")
-        finally:
-            self.desconectar()
             
     def crear_tabla_MPQRCODE_SUCURSAL_location(self):
         try:
@@ -184,8 +215,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_SUCURSAL creada con éxito.")
         except Exception as e:
             print(f"Error al crear la tabla: {e}")
-        finally:
-            self.desconectar()
         
     
     def crear_tabla_MPQRCODE_CAJAS(self):
@@ -217,8 +246,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_CAJAS creada con éxito.")
         except Exception as e:
             print(f"Error al crear la tabla: {e}")
-        finally:
-            self.desconectar()
             
     def crear_tabla_MPQRCODE_CAJAS_qr(self):
         try:
@@ -237,8 +264,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_CAJAS_qr creada con éxito.")
         except Exception as e:
             print(f"Error al crear la tabla: {e}")
-        finally:
-            self.desconectar()
             
     def crear_tabla_MPQRCODE_CAJA(self):
         try:
@@ -257,8 +282,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_CAJA creada con éxito.")
         except Exception as e:
             print(f"Error al crear la tabla: {e}")
-        finally:
-            self.desconectar()
             
     def obtener_nombres_columnas(self, tabla):
         try:
@@ -275,8 +298,6 @@ class ConexionSybase:
         except pypyodbc.Error as err:
             print(f"Error al obtener nombres de columnas: {err}")
             return None
-        finally:
-            self.desconectar()
 
             
     #----------------------------------------------------TABLAS QUE TRABAJAN JUNTOSA PARA LA OBTENCIÓN DEL PAGO----------------------------------------------------
@@ -313,8 +334,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_CREARORDEN creada con éxito.")
         except Exception as e:
             print(f"Error al crear la tabla: {e}")
-        finally:
-            self.desconectar()
             
     def crear_tabla_MPQRCODE_CREARORDEN_items(self):
         try:
@@ -337,8 +356,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_CREARORDEN_items creada con éxito.")
         except Exception as e:
             print(f"Error al crear la tabla: {e}")
-        finally:
-            self.desconectar()
             
     def crear_tabla_MPQRCODE_RESPUESTAPOST(self):
         try:
@@ -360,8 +377,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_RESPUESTAPOST creada con éxito.")
         except Exception as e:
             print(f"Error al crear la tabla: {e}")
-        finally:
-            self.desconectar()
             
     def crear_tabla_MPQRCODE_RESPUESTAPOSTPOINT(self):
         try:
@@ -383,8 +398,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_RESPUESTAPOSTPOINT creada con éxito.")
         except Exception as e:
             print(f"Error al crear la tabla: {e}")
-        finally:
-            self.desconectar()
             
     def crear_tabla_MPQRCODE_OBTENERPAGO(self):
         try:
@@ -438,8 +451,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_OBTENERPAGO creada con éxito.")
         except Exception as e:
             print(f"Error al crear la tabla: {e}")
-        finally:
-            self.desconectar()
             
     def recrear_tabla_MPQRCODE_OBTENERPAGO(self): #05-11-24
         try:
@@ -482,8 +493,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_OBTENERPAGO recreada con éxito.")
         except Exception as e:
             print(f"Error al recrear la tabla: {e}")
-        finally:
-            self.desconectar()
 
     
     def crear_tabla_MPQRCODE_OBTENERPAGOPOINT(self):
@@ -538,8 +547,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_OBTENERPAGOPOINT creada con éxito.")
         except Exception as e:
             print(f"Error al crear la tabla: {e}")
-        finally:
-            self.desconectar()
             
             
     def crear_tabla_MPQRCODE_OBTENERPAGOServer(self):
@@ -594,8 +601,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_OBTENERPAGOServer creada con éxito.")
         except Exception as e:
             print(f"Error al crear la tabla: {e}")
-        finally:
-            self.desconectar()
             
     def recrear_tabla_MPQRCODE_OBTENERPAGOServer(self):
         try:
@@ -641,8 +646,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_OBTENERPAGOServer recreada con éxito.")
         except Exception as e:
             print(f"Error al recrear la tabla: {e}")
-        finally:
-            self.desconectar()
 
             
     def crear_tabla_MPQRCODE_OBTENERPAGOPOINTServer(self):
@@ -697,8 +700,6 @@ class ConexionSybase:
             print("Tabla MPQRCODE_OBTENERPAGOPOINTServer creada con éxito.")
         except Exception as e:
             print(f"Error al crear la tabla: {e}")
-        finally:
-            self.desconectar()
             
     #CREAR EXEPCION PARA INSERTAR order del POST ya que en SyBase DICHA PALABRA ESTA RESERVA, EL valor de orden va a ir en ordermp
 
@@ -770,8 +771,6 @@ class ConexionSybase:
             print(f"Tabla '{tabla}' limpiada exitosamente.")
         except pypyodbc.Error as err:
             print(f"Error al limpiar la tabla: {err}")
-        finally:
-            self.desconectar()
             
     def seleccionar_tabla(self, nombre_tabla):
         try:
@@ -794,8 +793,6 @@ class ConexionSybase:
                 print(f"Columna '{columna}' agregada exitosamente a la tabla '{tabla}'.")
         except pypyodbc.Error as e:
             print(f"Error al agregar la columna: {e}")
-        finally:
-            self.desconectar()
 
     # MANEJO DE DATOS DE UNA TABLA
     
@@ -842,8 +839,6 @@ class ConexionSybase:
                 print(f"No existe la tabla '{nombre_tabla}' en la base de datos.")
         except pypyodbc.Error as err:
             print(f"Error al insertar dato en la tabla: {err}")
-        finally:
-            self.desconectar()
 
 
 
@@ -871,8 +866,6 @@ class ConexionSybase:
         except pypyodbc.Error as err:
             print(f"Error al insertar datos: {err}")
             return None
-        finally:
-            self.desconectar()
             
     def insertar_datos_o_actualizar(self, tabla, datos):
         try:
@@ -881,7 +874,7 @@ class ConexionSybase:
                 # Reemplazar cualquier valor de 'None' como cadena por None en el diccionario
                 #datos = {k: (None if v == 'None' else v) for k, v in datos.items()}
 
-                # Comprobar si el external_reference ya existe
+            # Comprobar si el external_reference ya existe
                 external_reference = datos.get('external_reference')
                 consulta_existente = f"SELECT COUNT(*) FROM {tabla} WHERE external_reference = '{external_reference}'"
                 cursor.execute(consulta_existente)
@@ -908,8 +901,52 @@ class ConexionSybase:
         except pypyodbc.Error as err:
             print(f"Error al insertar o actualizar datos: {err}")
             return False
-        finally:
-            self.desconectar()
+        
+        
+    def insertar_datos_o_actualizarPOINT(self, tabla, datos):
+        try:
+            self.conectar()
+            with self.conexion.cursor() as cursor:
+                # Convertir datos en un JSON string
+                datos_json = json.dumps(datos.json(), ensure_ascii=False)
+                
+                # Obtener el valor de external_reference para buscar si ya existe
+                external_reference =  datos.json()['external_reference']
+                if not external_reference:
+                    print("Error: external_reference no está presente en los datos.")
+                    return False
+                
+                # Comprobar si el external_reference ya existe
+                consulta_existente = f"SELECT COUNT(*) FROM {tabla} WHERE external_reference = '{external_reference}'"
+                cursor.execute(consulta_existente)
+                existe = cursor.fetchone()[0] > 0
+                
+                if existe:
+                    # Si existe, realizar un UPDATE de la columna datos_pago
+                    consulta_update = f"""
+                        UPDATE {tabla}
+                        SET datos_pago = '{datos_json}'
+                        WHERE external_reference = '{external_reference}'
+                    """
+                    #print("Consulta UPDATE:", consulta_update)
+                    cursor.execute(consulta_update)
+                    print("Datos actualizados con éxito.")
+                else:
+                    # Si no existe, realizar un INSERT
+                    consulta_insert = f"""
+                        INSERT INTO {tabla} (external_reference, datos_pago)
+                        VALUES ('{external_reference}', '{datos_json}')
+                    """
+                    #print("Consulta INSERT:", consulta_insert)
+                    cursor.execute(consulta_insert)
+                    print("Datos insertados con éxito.")
+                
+                # Confirmar los cambios en la base de datos
+                self.conexion.commit()
+            return True
+        except pypyodbc.Error as err:
+            print(f"Error al insertar o actualizar datos: {err}")
+            return False
 
 
             
@@ -948,9 +985,7 @@ class ConexionSybase:
             return True
         except pypyodbc.Error as err:
             print(f"Error al insertar o actualizar datos: {err}")
-            return False
-        finally:
-            self.desconectar()"""
+            return False"""
 
             
     """def insertar_datos_o_actualizar(self, tabla, datos):
@@ -983,9 +1018,7 @@ class ConexionSybase:
             return True
         except pypyodbc.Error as err:
             print(f"Error al insertar o actualizar datos: {err}")
-            return False
-        finally:
-            self.desconectar()"""
+            return False"""
 
 
     def insertar_datos_sin_obtener_id(self, tabla, datos):
@@ -1002,8 +1035,39 @@ class ConexionSybase:
         except pypyodbc.Error as err:
             print(f"Error al insertar datos: {err}")
             return False
-        finally:
-            self.desconectar()
+            
+    def obtener_datos_por_id(self, tabla, id_columna, id_valor):
+        try:
+            self.conectar()
+            with self.conexion.cursor() as cursor:
+                # Construir la consulta SQL para seleccionar los datos
+                consulta_select = f"SELECT * FROM {tabla} WHERE {id_columna} = '{id_valor}'"
+                cursor.execute(consulta_select)
+                
+                # Obtener los nombres de las columnas
+                columnas = [column[0] for column in cursor.description]
+                
+                # Obtener el primer resultado
+                resultado = cursor.fetchone()
+                
+                if resultado:
+                    # Construir el diccionario con los nombres de las columnas y sus valores
+                    datos = dict(zip(columnas, resultado))
+                    # Convertir las cadenas JSON de nuevo a diccionarios
+                    for clave, valor in datos.items():
+                        if isinstance(valor, str):
+                            try:
+                                # Intentar cargar el valor como un diccionario
+                                datos[clave] = json.loads(valor)
+                            except json.JSONDecodeError:
+                                # Si no es una cadena JSON válida, dejar el valor original
+                                continue
+                    return datos
+                else:
+                    return None  # Si no hay resultados, devolver None
+        except pypyodbc.Error as err:
+            print(f"Error al obtener datos: {err}")
+            return None
             
     def borrar_datos_tabla(self, tabla):
         try:
@@ -1018,8 +1082,6 @@ class ConexionSybase:
 
         except pypyodbc.Error as err:
             print(f"Error al borrar los datos de la tabla '{tabla}': {err}")
-        finally:
-            self.desconectar()
             
     def eliminar_filas_por_condicion(self, nombre_tabla, nombre_columna, valor_condicion):
         try:
@@ -1038,8 +1100,6 @@ class ConexionSybase:
         except pypyodbc.Error as e:
             print(f"Error al ejecutar la consulta DELETE: {e}")
         
-        finally:
-            self.desconectar()
             
             
     def eliminar_filas_repetidas_por_condicion(self, nombre_tabla, nombre_columna, valor_condicion):
@@ -1068,8 +1128,6 @@ class ConexionSybase:
         except pypyodbc.Error as e:
             print(f"Error al ejecutar la consulta DELETE: {e}")
         
-        finally:
-            self.desconectar()
 
             
     def tabla_vacia(self, tabla):
@@ -1087,8 +1145,6 @@ class ConexionSybase:
         except pypyodbc.Error as err:
             print(f"Error al verificar si la tabla '{tabla}' está vacía: {err}")
             return False  # Retorna False en caso de error
-        finally:
-            self.desconectar()
 
             
     def actualizar_datos(self, tabla, datos, condicion):
@@ -1105,8 +1161,6 @@ class ConexionSybase:
 
         except pypyodbc.Error as err:
             print(f"Error al actualizar datos: {err}")
-        finally:
-            self.desconectar()
             
     def actualizar_datos_condicion(self, tabla, datos, condicion, valor_condicion):
         try:
@@ -1122,8 +1176,8 @@ class ConexionSybase:
 
         except pypyodbc.Error as err:
             print(f"Error al actualizar datos: {err}")
-        finally:
-            self.desconectar()
+            
+    
             
     def actualizar_datos_condicionID(self, tabla, datos, condicion1, valor_condicion1, condicion2, valor_condicion2):
         try:
@@ -1139,8 +1193,6 @@ class ConexionSybase:
 
         except pypyodbc.Error as err:
             print(f"Error al actualizar datos: {err}")
-        finally:
-            self.desconectar()
 
 
     def actualizar_todos_valores_columna(self, tabla, columna, nuevo_valor):
@@ -1168,8 +1220,6 @@ class ConexionSybase:
 
         except pypyodbc.Error as err:
             print(f"Error al actualizar todos los valores de la columna: {err}")
-        finally:
-            self.desconectar()
 
 
 
@@ -1263,8 +1313,6 @@ class ConexionSybase:
                 print("external_ID ACTUALIZADO")
         except pypyodbc.Error as err:
             print(f"Error al actualizar external_id: {err}")
-        finally:
-            self.desconectar()
             
 
     """
@@ -1301,8 +1349,6 @@ class ConexionSybase:
                 print(f"No se encontró una fila con NRO_FACTURA='{factura}' y PUNTO_VENTA='{POS}' en la base de datos.")
         except pypyodbc.Error as err:
             print(f"Error al actualizar ID_PAGO: {err}")
-        finally:
-            self.desconectar()
             
     def actualizar_hs_pago(self, factura, POS, fecha_creacion):
         try:
@@ -1321,8 +1367,6 @@ class ConexionSybase:
                 print(f"No se encontró una fila con NRO_FACTURA='{factura}' y PUNTO_VENTA='{POS}' en la base de datos.")
         except pypyodbc.Error as err:
             print(f"Error al actualizar FECHA_CREACION: {err}")
-        finally:
-            self.desconectar()
 
     def existe_fila(self, numero_factura, punto_venta):
         try:
@@ -1366,9 +1410,7 @@ class ConexionSybase:
                     return None
         except pypyodbc.Error as err:
             print(f"Error al obtener el ID de compra: {err}")
-            return None
-        finally:
-            self.desconectar()  # Asegúrate de desconectar incluso si hay un error
+            return None  # Asegúrate de desconectar incluso si hay un error
             
     def obtener_todos_los_name(self, tabla):
         try:
@@ -1380,8 +1422,6 @@ class ConexionSybase:
                 return [resultado[0] for resultado in resultados]
         except Exception as e:
             print(f"Error al obtener los names: {e}")
-        finally:
-            self.desconectar()
             
             
     def obtener_todos_los_external_id(self, tabla):
@@ -1394,8 +1434,6 @@ class ConexionSybase:
                 return [resultado[0] for resultado in resultados]
         except Exception as e:
             print(f"Error al obtener los external_ids: {e}")
-        finally:
-            self.desconectar()
             
 
     def obtener_valor_id_por_idINCREMENT(self, idINCREMENT, nombre_tabla):
@@ -1417,8 +1455,6 @@ class ConexionSybase:
         except pypyodbc.Error as err:
             print(f"Error al obtener el valor de 'id': {err}")
             return None
-        finally:
-            self.desconectar()
             
     def obtener_valor_external_idPOS_por_idINCREMENT(self, idINCREMENT, nombre_tabla):
         try:
@@ -1439,8 +1475,6 @@ class ConexionSybase:
         except pypyodbc.Error as err:
             print(f"Error al obtener el valor de 'external_id': {err}")
             return None
-        finally:
-            self.desconectar()
             
     def obtener_valor_id_por_external_id(self, external_id, nombre_tabla):
         try:
@@ -1681,8 +1715,6 @@ class ConexionSybase:
             print(f"Error al verificar la existencia de la tabla: {err}")
             return False
 
-        finally:
-            self.desconectar()
         
         
     def contar_registros(self, tabla):
@@ -1696,8 +1728,6 @@ class ConexionSybase:
         except pypyodbc.Error as err:
             print(f"Error al contar registros en la tabla '{tabla}': {err}")
             return 0
-        finally:
-            self.desconectar()
 
 #/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/ ELIMINAR DATOS DE CAJAS #/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
     def eliminar_filas(self, tabla, columna, external_id):

@@ -1,6 +1,11 @@
 from Conf.Conexion_APIs_MPV2 import Conexion_Api
 from datetime import datetime, timedelta
 from tkinter import messagebox
+from pprint import pprint
+import json
+import traceback
+import random
+import string
 
 # Obtener la fecha y hora actual
 now = datetime.now()
@@ -336,11 +341,11 @@ class Conexion_APP():
                     print("NO SE PUDO OBTENER EL PAGO")
                     return False
                 
-    def obtenerPago_manual(self, id_pago, external_reference, external_idPOS):
+    def obtenerPAGO(self, id_pago):
+        return self.conexionAPI.obtener_pago(id_pago)
+                
+    def obtenerPago_manual(self, external_reference, external_idPOS, respuesta):
         
-        print("BUSCANDO STATUS DEL PAGO: ")
-        # Asegúrate de que obtienes la respuesta correctamente
-        respuesta = self.conexionAPI.obtener_pago(id_pago)
         
         if respuesta.status_code > 300 and respuesta.status_code < 500:
             return f"Error {respuesta.status_code, respuesta.json["message"]}"
@@ -397,7 +402,7 @@ class Conexion_APP():
         }
         datos_server = {
             'external_reference': external_reference,
-            'data': id_pago,
+            'data': json_response["id"],
             "collector_id": json_response["collector_id"],
             "coupon_amount": json_response["coupon_amount"],
             "currency_id": json_response["currency_id"],
@@ -436,10 +441,31 @@ class Conexion_APP():
         }
         self.conexionDBA.insertar_datos_o_actualizar("MPQRCODE_OBTENERPAGO", datos)
         self.conexionDBAServer.insertar_datos_o_actualizar("MPQRCODE_OBTENERPAGOServer", datos_server)
-        return True
-        
+        return respuesta
+    
+    def obtenerPagoV2_POINT(self, idpago):
+        return self.conexionAPI.obtener_pago(idpago)
+    
 
+    def obtenerPago_manualPOINT(self, respuesta):
         
+        if respuesta.status_code < 300:
+            try:            
+                # Guardar o actualizar los datos con el JSON string
+                self.conexionDBA.insertar_datos_o_actualizarPOINT("MPQRCODE_OBTENERPAGOPOINT", respuesta)
+                self.conexionDBAServer.insertar_datos_o_actualizarPOINT("MPQRCODE_OBTENERPAGOPOINTServer", respuesta)
+                return respuesta
+            except Exception as e:
+                # Puedes registrar el error en tu archivo de errores si tienes un sistema de logging
+                print(f"Error al insertar datos: {e}")
+                error_traceback = traceback.format_exc()
+                print(f"Error al obtenerPago_manualPOINTs: {e}\nTraceback:\n{error_traceback}")
+                return "Error al momento de insertar los datos en el DBA"
+        elif respuesta.status_code == 404:
+            return "No se ha encontrado el número de operación"
+        else:
+            return f"Error {respuesta.status_code, respuesta.json()}"
+            
             
             
     def crearOrdenFULL(self, external_id_pos, nroFactura, sucNAME, montoPagar, pictureURL):
@@ -496,10 +522,25 @@ class Conexion_APP():
             messagebox.showerror("Error al obtener POINT", f"{e}")
             return "No se encontro el dispositivo"
         
+    def cambiarModoOperacion(self, ID_DEVICE, tipo_operacion):
+        respuesta = self.conexionAPI.cambiar_modo_operacion(ID_DEVICE, tipo_operacion)
+        return respuesta        
     
-    def crearIntencionPAGOPoint(self, deviceid, nro_factura, precio, TicketNUM):
-        respuesta = self.conexionAPI.crear_intencion_pago_POINT(deviceid, nro_factura, precio, TicketNUM)
+    def crearIntencionPAGOPoint(self, deviceid, nro_factura, precio, imprime_ticket):
+        TicketNUM = self.generar_ticket_number()
+        respuesta = self.conexionAPI.crear_intencion_pago_POINT(deviceid, nro_factura, precio, imprime_ticket, TicketNUM)
         return respuesta
+    
+    def generar_ticket_number(self):
+        prefijo = self.conexionDBA.specify_search_condicion("SPDIR", "ID", "GRID", "pref_tkt_MP", False) #"TKT"  # Opcional, puedes modificarlo
+        if not prefijo == None:
+            pass
+        else:
+            prefijo = "TKT"
+        timestamp = datetime.now().strftime("%H%M")  # Hora, minutos y segundos
+        random_part = ''.join(random.choices(string.ascii_uppercase + string.digits, k=3))
+        ticket_number = f"{prefijo}{timestamp}{random_part}"
+        return ticket_number[:20]  # Garantiza que no supere los 20 caracteres
     
     def cancelarIntencionPAGOPoint(self, deviceid, paymentintentid):
         respuesta = self.conexionAPI.cancelar_intencion_pago_POINT(deviceid, paymentintentid)
@@ -507,7 +548,11 @@ class Conexion_APP():
     
     def buscarIntencionPAGOPoint(self, paymentintentid):
         respuesta = self.conexionAPI.buscar_intencion_pago_POINT(paymentintentid)
+        print(respuesta)
         return respuesta
     
     def prueba(self):
         return True
+    
+    def obtenerTodosMediosPagos(self):
+        return self.conexionAPI.obtener_todos_medios_pagos()

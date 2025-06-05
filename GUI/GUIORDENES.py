@@ -4,7 +4,9 @@ import Func.window_position
 import threading
 from decimal import Decimal
 from GUI.CrearOrdenPago import CrearOrdenPago
+from GUI.CrearOrdenPagoPOINT import CrearOrdenPagoPOINT
 from GUI.CrerarOrdenReembolso import CrearOrdenReembolso
+from GUI.BuscarOrdenPago import BuscarOrdenPago
 from ttkbootstrap.constants import *
 from tkinter import messagebox
 from assets.image_pathV2 import *
@@ -44,10 +46,10 @@ class GUIMAIN:
             log_error(f"Error al obtener datos para la orden: {e}", function_name='__init__')
             messagebox.showerror("Error", "No se pudo obtener los datos necesarios para la orden.")
         
-        self.ventana_creacion_caja = ttk.Window(themename="lumen")
+        self.ventana_creacion_caja = ttk.Window(themename="lumen", iconphoto=LOGO_MP())
         self.ventana_creacion_caja.title(f"Creación de OrdenV2, V.{version}")
         self.ventana_creacion_caja.resizable(False, False)
-        self.ventana_creacion_caja.iconbitmap(Icono_MercadoPago_Blue())
+        #self.ventana_creacion_caja.iconbitmap(Icono_MercadoPago_Blue())
         
         
         self.frame_left = tk.Frame(
@@ -131,6 +133,10 @@ class GUIMAIN:
         self.my_buttonDLT.pack(pady=10)
         self.my_buttonDLT.pack_propagate(False)
         
+        self.my_label_aviso_cancelar_point = tk.Label(self.frame_conjunto, text="No puede CANCELAR UNA ORDEN desde aqui, tiene que hacerlo desde el POINT", wraplength=300, font=("Helvetica", 10))
+        #self.my_label_aviso_cancelar_point.pack(pady=10)
+        #self.my_label_aviso_cancelar_point.pack_propagate(False)
+        
         self.DIC_WIDGET = {
             "root": self.ventana_creacion_caja,
             "label_estado": self.my_label_estado,
@@ -138,6 +144,7 @@ class GUIMAIN:
             "label_cronometro": self.my_label_time, 
             "id_pago": self.label_id_pago,
             "boton_cancelar":  self.my_buttonDLT,
+            "my_label_aviso_cancelar_point": self.my_label_aviso_cancelar_point,
             "mostrar_qr": self.mostrar_qr,
             "window_position": Func.window_position.center_window, 
             "ventana_tamano_400_550": self.ventana_tamano_400_550,
@@ -174,7 +181,43 @@ class GUIMAIN:
                     'NumCajero': self.datos_para_orden[9],
                     'NombreCajero': self.datos_para_orden[10]
                 }
-            threading.Thread(target=CrearOrdenPago, args=(self.frame_progress_bar, self.DIC_WIDGET, DICT_DATOS_ORDEN, DICT_CONEXION)).start()
+            if self.datos_para_orden[6] == 0:
+                threading.Thread(target=CrearOrdenPago, args=(self.frame_progress_bar, self.DIC_WIDGET, DICT_DATOS_ORDEN, DICT_CONEXION)).start()
+            else:
+                try:
+                    if self.conexionDBA.specify_search_condicion("SPDIR", "ID", "GRID", "MP_POINT", False).lower() == "true":
+                        self.my_buttonDLT.pack_forget()
+                        self.my_label_aviso_cancelar_point.pack(pady=10)
+                        self.my_label_aviso_cancelar_point.pack_propagate(False)
+                        threading.Thread(target=CrearOrdenPagoPOINT, args=(self.frame_progress_bar, self.DIC_WIDGET, DICT_DATOS_ORDEN, DICT_CONEXION)).start()
+                    else:
+                        messagebox.showerror("Error", "Este facturador no esta habilitado para realizar envios a un POINT")
+                        datos_error = {
+                            'status': 0,
+                            'response': 500,
+                            'description': "Este facturador no esta habilitado para realizar envios a un POINT"
+                        }
+                        self.conexionDBA.actualizar_datos_condicion(
+                            "MPQRCODE_CONEXIONPROGRAMAS",
+                            datos_error,
+                            "nro_factura",
+                            f"'{self.datos_para_orden[0]}'"  # Cambiado a comillas simples internas
+                        )
+                        self.cerrar_ventana()
+                except Exception as e:
+                    messagebox.showerror("Error", "Este facturador no esta habilitado para realizar envios a un POINT")
+                    datos_error = {
+                        'status': 0,
+                        'response': 500,
+                        'description': "Este facturador no esta habilitado para realizar envios a un POINT"
+                    }
+                    self.conexionDBA.actualizar_datos_condicion(
+                            "MPQRCODE_CONEXIONPROGRAMAS",
+                            datos_error,
+                            "nro_factura",
+                            f"'{self.datos_para_orden[0]}'"  # Cambiado a comillas simples internas
+                        )
+                    self.cerrar_ventana()
             """threading.Thread(target=self.cerrar_ventana).start()
             print(threading.enumerate())"""
         elif self.datos_para_orden[1] == 2:
@@ -201,6 +244,31 @@ class GUIMAIN:
                     'NombreCajero': self.datos_para_orden[10]
                 }
             threading.Thread(target=CrearOrdenReembolso, args=(self.frame_progress_bar, self.DIC_WIDGET, DICT_DATOS_ORDEN, DICT_CONEXION)).start()
+        elif self.datos_para_orden[1] == 9:
+            if self.conexionDBAServer.specify_search_condicion("SPDIR", "ID", "GRID", "MP_NUEVA_VERSION", False).lower() == "true":
+                DICT_DATOS_ORDEN = {
+                    "external_id_pos": self.datos_caja[3], 
+                    "nro_factura": self.datos_para_orden[0], 
+                    "sucNAME": self.datos_caja[1], 
+                    "monto_pagar": float(self.datos_para_orden[2].quantize(Decimal('1.00'))),
+                    "url_API": self.conexionDBAServer.specify_search_condicion("SPDIR", "ID", "GRID", "url_api_AWS", False),
+                    'NomCaja': self.datos_para_orden[8],
+                    'NumCajero': self.datos_para_orden[9],
+                    'NombreCajero': self.datos_para_orden[10]
+                }
+            else:
+                DICT_DATOS_ORDEN = {
+                    "external_id_pos": self.datos_caja[3], 
+                    "nro_factura": self.datos_para_orden[0], 
+                    "sucNAME": self.datos_caja[1], 
+                    "monto_pagar": float(self.datos_para_orden[2].quantize(Decimal('1.00'))),
+                    "url_API": self.conexionDBAServer.specify_search_condicion("SPDIR", "ID", "GRID", "url_api_NGROK", False),
+                    'NomCaja': self.datos_para_orden[8],
+                    'NumCajero': self.datos_para_orden[9],
+                    'NombreCajero': self.datos_para_orden[10]
+                }
+                
+                threading.Thread(target=BuscarOrdenPago, args=(self.frame_progress_bar, self.DIC_WIDGET, DICT_DATOS_ORDEN, DICT_CONEXION)).start()
             
             
     def label_img(self):
