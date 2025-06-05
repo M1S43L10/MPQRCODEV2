@@ -9,7 +9,7 @@ import threading
 import time
 import traceback
 
-from GUI.GUI.MessageBox import CustomMessageBox
+from GUI.MessageBox import CustomMessageBox
 
 
 class BuscarOrdenPago(BarraProgreso):

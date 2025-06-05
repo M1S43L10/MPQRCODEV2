@@ -1,6 +1,6 @@
 from Conf.GUIENLACECREARORDENV2 import EnlaceCrearOrden
 
-__version__ = "4.8.25"
+__version__ = "5.0.0"
 
 
 if __name__ == "__main__":

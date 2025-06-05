@@ -12,6 +12,7 @@ from tkinter import messagebox
 from assets.image_pathV2 import *
 from PIL import Image, ImageTk
 from Func.log_errorsV2 import log_error
+from Clover.GUI.gui_main import GUI_MAIN
 
 
 class GUIMAIN:
@@ -45,48 +46,50 @@ class GUIMAIN:
         except Exception as e:
             log_error(f"Error al obtener datos para la orden: {e}", function_name='__init__')
             messagebox.showerror("Error", "No se pudo obtener los datos necesarios para la orden.")
-        
-        self.ventana_creacion_caja = ttk.Window(themename="lumen", iconphoto=LOGO_MP())
-        self.ventana_creacion_caja.title(f"Creación de OrdenV2, V.{version}")
-        self.ventana_creacion_caja.resizable(False, False)
-        #self.ventana_creacion_caja.iconbitmap(Icono_MercadoPago_Blue())
-        
-        
-        self.frame_left = tk.Frame(
-            self.ventana_creacion_caja, 
-            width=400, 
-            height=550, 
-            borderwidth=5, 
-            relief=tk.GROOVE  # Cambia 'tk.GROOVE' a otro estilo si prefieres un borde diferente
-        )
+        if self.datos_para_orden[6] == 2:
+            threading.Thread(target=GUI_MAIN).start()
+            print("Modulo CLOVER")
+        else:
+            self.ventana_creacion_caja = ttk.Window(themename="lumen", iconphoto=LOGO_MP())
+            self.ventana_creacion_caja.title(f"Creación de OrdenV2, V.{version}")
+            self.ventana_creacion_caja.resizable(False, False)
+            #self.ventana_creacion_caja.iconbitmap(Icono_MercadoPago_Blue())
+            
+            self.frame_left = tk.Frame(
+                self.ventana_creacion_caja, 
+                width=400, 
+                height=550, 
+                borderwidth=5, 
+                relief=tk.GROOVE  # Cambia 'tk.GROOVE' a otro estilo si prefieres un borde diferente
+            )
 
-        self.frame_left.pack(side='left')
-        self.frame_left.pack_propagate(False)  # Evitar que el tamaño del frame cambie
+            self.frame_left.pack(side='left')
+            self.frame_left.pack_propagate(False)  # Evitar que el tamaño del frame cambie
 
-        
-        self.frame_right = tk.Frame(
-            self.ventana_creacion_caja, 
-            width=400, 
-            height=550, 
-            borderwidth=5, 
-            relief=tk.GROOVE  # Cambia 'tk.GROOVE' a otro estilo si prefieres un borde diferente
-        )
+            
+            self.frame_right = tk.Frame(
+                self.ventana_creacion_caja, 
+                width=400, 
+                height=550, 
+                borderwidth=5, 
+                relief=tk.GROOVE  # Cambia 'tk.GROOVE' a otro estilo si prefieres un borde diferente
+            )
 
-        
+            
 
-        self.frame_conjunto = tk.Frame(self.frame_left)
-        self.frame_conjunto.pack()
-        
-        self.logo_mp()
-        self.label_img()
-        
-        self.func_barra_progreso(DICT_CONEXION)
-        
-        
-        Func.window_position.center_window(self.ventana_creacion_caja, 400, 550)
-        self.ventana_creacion_caja.protocol("WM_DELETE_WINDOW", self.mostrar_error)
-        self.ventana_creacion_caja.mainloop()
-        
+            self.frame_conjunto = tk.Frame(self.frame_left)
+            self.frame_conjunto.pack()
+            
+            self.logo_mp()
+            self.label_img()
+            
+            self.func_barra_progreso(DICT_CONEXION)
+            
+            
+            Func.window_position.center_window(self.ventana_creacion_caja, 400, 550)
+            self.ventana_creacion_caja.protocol("WM_DELETE_WINDOW", self.mostrar_error)
+            self.ventana_creacion_caja.mainloop()
+            
     def mostrar_error(self):
         # Mostrar un mensaje de error
         messagebox.showerror("Error", "No se puede cerrar la ventana porque una orden está en proceso.")

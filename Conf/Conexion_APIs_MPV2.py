@@ -1,4 +1,5 @@
 from pprint import pprint
+import os
 import requests
 import json
 import uuid
@@ -145,6 +146,7 @@ class Conexion_Api:
             json.dump(response.json(), json_file, indent=2)
         print(response.status_code)
         """
+        guardar_json(response.json(), f"crear_orden_{factura}.json")
         return response
     
     #NO FUNCIONA
@@ -182,6 +184,7 @@ class Conexion_Api:
             }
         
         response = requests.put(url, headers=headers, data=json.dumps(payload))
+        guardar_json(response.json(), f"crear_ordenV2_reference_12345678.json")
         return response.status_code
     
         
@@ -280,6 +283,7 @@ class Conexion_Api:
             }
         
         response = requests.put(url, headers=headers, data=json.dumps(pagodata_json))
+        guardar_json(response.json(), f"crear_orden_dinamico_{nro_factura}.json")
         print(response)
         return response
     
@@ -319,6 +323,7 @@ class Conexion_Api:
         
         response = requests.put(url, headers=headers, data=json.dumps(pagodata_json))
         print(response)
+        guardar_json(response.json(), f"crear_orden_dinamicoV2_{nro_factura}.json")
         return response
     
     def obtener_pago(self, nro_operacion):
@@ -330,6 +335,7 @@ class Conexion_Api:
             }
         
         response = requests.get(url=url, headers=headers)
+        guardar_json(response.json(), f"obtener_pago_{nro_operacion}.json")
         """
         print(response.status_code)
         # Crear la carpeta si no existe
@@ -359,6 +365,7 @@ class Conexion_Api:
         }
         
         response = requests.post(url, headers=headers, data=json.dumps(returnload))
+        guardar_json(response.json(), f"crear_reembolso_{id_compra}.json")
         
         return response
     
@@ -371,6 +378,7 @@ class Conexion_Api:
         }
         
         response = requests.get(url, headers=headers)
+        guardar_json(response.json(), f"obtener_reembolso_{id_pago}.json")
         
         return response.json()
         
@@ -457,6 +465,7 @@ class Conexion_Api:
         }
         
         response = requests.post(url, headers=headers, data=json.dumps(payload))
+        guardar_json(response.json(), f"crear_intencion_pago_POINT_{nro_factura}.json")
         return response
     
     
@@ -489,6 +498,7 @@ class Conexion_Api:
             
             # Intentamos convertir la respuesta a JSON
             try:
+                guardar_json(response.json(), f"buscar_intencion_pago_POINT_{paymentintentid}.json")
                 return response.json()  
             except ValueError:
                 print("❌ Error: La respuesta no es un JSON válido")
@@ -523,3 +533,20 @@ class Conexion_Api:
             }
         
         return requests.get(url, headers=headers)
+    
+    
+def guardar_json(data, nombre_archivo):
+    """
+    Guarda un diccionario o JSON serializable en F:\Sp\Fac_Elec\Clover\nombre_archivo.
+    Crea la carpeta si no existe.
+
+    :param data: dict o JSON serializable
+    :param nombre_archivo: nombre del archivo (ej: "salida.json")
+    """
+    ruta_base = r"F:\Sp\Fac_Elec\MPQRCODE"
+    os.makedirs(ruta_base, exist_ok=True)  # Crea la carpeta si no existe
+
+    ruta_archivo = os.path.join(ruta_base, nombre_archivo)
+
+    with open(ruta_archivo, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)

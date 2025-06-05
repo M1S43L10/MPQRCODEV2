@@ -9,7 +9,7 @@ from GUI.Cronometro import Cronometro
 from GUI.BarraProgreso import BarraProgreso
 from Func.qrcode_mpV2 import crear_qr_data
 from Func.log_errorsV2 import log_error
-from GUI.GUI.MessageBox import CustomMessageBox
+from GUI.MessageBox import CustomMessageBox
 
 class CrearOrdenPago(BarraProgreso):
     def __init__(self, frame, DICT_WIDGETS, DICT_DATOS_ORDEN, DICT_CONEXION):
