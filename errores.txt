@@ -3164,205 +3164,1304 @@ AttributeError: 'CrearOrdenPagoPOINT' object has no attribute 'datos_pagos'
 2025-02-13 15:54:49,406 - DEBUG - STREAM b'IDAT' 54 8192
 2025-02-13 15:54:58,288 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
 
-2025-06-05 10:39:22,160 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
-2025-06-05 10:39:22,440 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
-2025-06-05 10:39:22,717 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 404 None
-2025-06-05 10:39:22,718 - ERROR - No nos pudimos conectar al servidor API local
-2025-06-05 10:39:25,444 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:34:36,788 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:34:37,026 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-14 09:34:38,262 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-14 09:34:38,371 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-14 09:34:38,629 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:34:38,629 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-14 09:34:38,629 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-14 09:34:44,561 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
 
-2025-06-05 11:08:49,421 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
-2025-06-05 11:08:49,741 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
-2025-06-05 11:08:50,033 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 404 None
-2025-06-05 11:08:50,034 - ERROR - No nos pudimos conectar al servidor API local
-2025-06-05 11:08:52,362 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:35:42,340 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:35:42,560 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-14 09:35:42,881 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-14 09:35:42,991 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-14 09:35:43,190 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:35:43,190 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-14 09:35:43,190 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-14 09:35:51,958 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
 
-2025-06-05 11:09:22,993 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
-2025-06-05 11:09:23,296 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
-2025-06-05 11:09:23,449 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 404 None
-2025-06-05 11:09:23,450 - ERROR - No nos pudimos conectar al servidor API local
-2025-06-05 11:09:27,693 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:36:06,424 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:36:06,648 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-14 09:36:06,863 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-14 09:36:06,973 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-14 09:36:07,173 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:36:07,173 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-14 09:36:07,173 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-14 09:36:13,286 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
 
-2025-06-05 11:09:56,587 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
-2025-06-05 11:09:56,707 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
-2025-06-05 11:09:57,030 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
-2025-06-05 11:09:57,058 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
-2025-06-05 11:09:57,235 - DEBUG - STREAM b'IHDR' 16 13
-2025-06-05 11:09:57,235 - DEBUG - STREAM b'sRGB' 41 1
-2025-06-05 11:09:57,235 - DEBUG - STREAM b'IDAT' 54 8192
-2025-06-05 11:10:01,752 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:36:32,395 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:36:32,635 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-14 09:36:32,888 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-14 09:36:33,001 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-14 09:36:33,202 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:36:33,202 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-14 09:36:33,202 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-14 09:36:34,791 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:36:36,078 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-14 09:36:37,417 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:36:37,418 - DEBUG - STREAM b'IDAT' 41 7893
+2025-02-14 09:36:47,144 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:36:47,989 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-14 09:36:51,594 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
 
-2025-06-05 11:21:16,882 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
-2025-06-05 11:21:16,943 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
-2025-06-05 11:21:17,194 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 404 None
-2025-06-05 11:21:17,195 - ERROR - No nos pudimos conectar al servidor API local
-2025-06-05 11:21:18,676 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:37:52,709 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:37:52,941 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-14 09:37:53,305 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-14 09:37:53,415 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-14 09:37:53,616 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:37:53,616 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-14 09:37:53,616 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-14 09:37:55,209 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:37:56,438 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-14 09:37:57,778 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:37:57,778 - DEBUG - STREAM b'IDAT' 41 7890
+2025-02-14 09:38:12,223 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:38:13,069 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-14 09:38:15,274 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
 
-2025-06-05 11:22:27,881 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
-2025-06-05 11:22:27,945 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
-2025-06-05 11:22:28,339 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
-2025-06-05 11:22:28,368 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
-2025-06-05 11:22:28,509 - DEBUG - STREAM b'IHDR' 16 13
-2025-06-05 11:22:28,510 - DEBUG - STREAM b'sRGB' 41 1
-2025-06-05 11:22:28,510 - DEBUG - STREAM b'IDAT' 54 8192
-2025-06-05 11:22:32,805 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:39:51,547 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:39:51,839 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-14 09:39:52,181 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-14 09:39:52,303 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-14 09:39:52,518 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:39:52,518 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-14 09:39:52,518 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-14 09:39:54,138 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:39:55,362 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-14 09:39:56,701 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:39:56,701 - DEBUG - STREAM b'IDAT' 41 7899
+2025-02-14 09:40:03,064 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:40:03,944 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-14 09:40:06,052 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
 
-2025-06-05 11:24:08,448 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
-2025-06-05 11:24:08,515 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
-2025-06-05 11:24:08,824 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
-2025-06-05 11:24:08,853 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
-2025-06-05 11:24:08,869 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:43:25,007 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:43:25,231 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-14 09:43:25,609 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-14 09:43:25,726 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-14 09:43:25,927 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:43:25,927 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-14 09:43:25,928 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-14 09:43:27,521 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:43:28,754 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-14 09:43:30,091 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:43:30,091 - DEBUG - STREAM b'IDAT' 41 7817
+2025-02-14 09:43:53,941 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:43:54,547 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/649a7498d4as HTTP/11" 404 204
+2025-02-14 09:43:56,203 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:43:56,801 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/649a7498d4as HTTP/11" 404 204
+2025-02-14 09:43:57,544 - ERROR - buscar_id_pago_manual: invalid command name ".!toplevel9.!frame.!entry"
+2025-02-14 09:43:58,521 - ERROR - buscar_id_pago_manual: invalid command name ".!toplevel9.!frame.!entry"
+2025-02-14 09:43:59,289 - ERROR - buscar_id_pago_manual: invalid command name ".!toplevel9.!frame.!entry"
+2025-02-14 09:44:05,785 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:44:06,532 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/9874201646 HTTP/11" 404 None
+2025-02-14 09:44:12,344 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:44:12,987 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/98798798446 HTTP/11" 404 None
+2025-02-14 09:44:16,111 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:44:16,941 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-14 09:44:19,858 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
 
-2025-06-05 11:24:09,085 - DEBUG - STREAM b'IHDR' 16 13
-2025-06-05 11:24:09,085 - DEBUG - STREAM b'pHYs' 41 9
-2025-06-05 11:24:09,085 - DEBUG - STREAM b'iTXt' 62 1217
-2025-06-05 11:24:09,085 - DEBUG - STREAM b'IDAT' 1291 38988
-2025-06-05 11:24:09,118 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 11:24:09,796 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1 HTTP/11" 200 None
-2025-06-05 11:24:09,809 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 11:24:10,412 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/address HTTP/11" 200 None
-2025-06-05 11:24:10,421 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 11:24:11,037 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/devices/ HTTP/11" 200 None
-2025-06-05 11:24:11,050 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 11:24:15,642 - DEBUG - https://sandbox.dev.clover.com:443 "GET /connect/v1/payments/external/B-0024-00000407 HTTP/11" 200 None
-2025-06-05 11:24:18,761 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 11:24:23,527 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments/AT6TABHKWJJ4Y/refunds HTTP/11" 500 195
-2025-06-05 11:24:24,531 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 11:24:26,019 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments/AT6TABHKWJJ4Y/refunds HTTP/11" 500 195
-2025-06-05 11:24:27,023 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 11:24:28,393 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments/AT6TABHKWJJ4Y/refunds HTTP/11" 500 195
-2025-06-05 11:24:29,826 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 11:24:31,343 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/welcome HTTP/11" 200 None
-2025-06-05 11:24:31,350 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 11:24:32,776 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/welcome HTTP/11" 200 None
-2025-06-05 13:39:44,830 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
-2025-06-05 13:39:44,894 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
-2025-06-05 13:39:45,112 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
-2025-06-05 13:39:45,142 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
-2025-06-05 13:39:45,161 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:49:26,919 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:49:27,161 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-14 09:49:27,545 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-14 09:49:27,660 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-14 09:49:28,966 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:49:28,966 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-14 09:49:28,966 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-14 09:49:30,575 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:49:31,812 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-14 09:49:33,149 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:49:33,149 - DEBUG - STREAM b'IDAT' 41 7855
+2025-02-14 09:49:43,816 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:49:44,629 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/4416654 HTTP/11" 404 None
+2025-02-14 09:49:51,792 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:49:52,624 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-14 09:49:57,425 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
 
-2025-06-05 13:39:45,352 - DEBUG - STREAM b'IHDR' 16 13
-2025-06-05 13:39:45,352 - DEBUG - STREAM b'pHYs' 41 9
-2025-06-05 13:39:45,352 - DEBUG - STREAM b'iTXt' 62 1217
-2025-06-05 13:39:45,352 - DEBUG - STREAM b'IDAT' 1291 38988
-2025-06-05 13:39:45,388 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:39:46,060 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1 HTTP/11" 200 None
-2025-06-05 13:39:46,066 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:39:46,664 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/address HTTP/11" 200 None
-2025-06-05 13:39:46,671 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:39:47,270 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/devices/ HTTP/11" 200 None
-2025-06-05 13:39:50,283 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:39:52,170 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments HTTP/11" 400 207
-2025-06-05 13:39:53,173 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:39:54,982 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments HTTP/11" 400 207
-2025-06-05 13:39:55,985 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:39:57,442 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments HTTP/11" 400 207
-2025-06-05 13:39:59,282 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:40:00,710 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/welcome HTTP/11" 200 None
-2025-06-05 13:40:27,572 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
-2025-06-05 13:40:27,635 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
-2025-06-05 13:40:27,998 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
-2025-06-05 13:40:28,028 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
-2025-06-05 13:40:28,048 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:50:08,347 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:50:08,585 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-14 09:50:08,817 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-14 09:50:08,926 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-14 09:50:09,127 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:50:09,128 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-14 09:50:09,128 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-14 09:50:22,918 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
 
-2025-06-05 13:40:28,206 - DEBUG - STREAM b'IHDR' 16 13
-2025-06-05 13:40:28,206 - DEBUG - STREAM b'pHYs' 41 9
-2025-06-05 13:40:28,206 - DEBUG - STREAM b'iTXt' 62 1217
-2025-06-05 13:40:28,207 - DEBUG - STREAM b'IDAT' 1291 38988
-2025-06-05 13:40:28,228 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:40:28,819 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1 HTTP/11" 200 None
-2025-06-05 13:40:28,827 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:40:29,435 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/address HTTP/11" 200 None
-2025-06-05 13:40:29,442 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:40:30,041 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/devices/ HTTP/11" 200 None
-2025-06-05 13:40:33,055 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:40:39,704 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments HTTP/11" 200 None
-2025-06-05 13:40:39,797 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:40:40,389 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/payments/1ZWJTRA623CK8?expand=cardTransaction HTTP/11" 200 None
-2025-06-05 13:40:40,400 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:40:43,753 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/receipt-options HTTP/11" 200 None
-2025-06-05 13:40:43,759 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:40:57,255 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments/1ZWJTRA623CK8/receipt HTTP/11" 200 None
-2025-06-05 13:40:57,321 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:40:59,111 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/welcome HTTP/11" 200 None
-2025-06-05 13:42:15,856 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
-2025-06-05 13:42:15,923 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
-2025-06-05 13:42:16,315 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
-2025-06-05 13:42:16,344 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
-2025-06-05 13:42:16,362 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:50:36,038 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:50:36,257 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-14 09:50:36,634 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-14 09:50:36,745 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-14 09:50:36,979 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:50:36,979 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-14 09:50:36,979 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-14 09:50:43,029 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
 
-2025-06-05 13:42:16,517 - DEBUG - STREAM b'IHDR' 16 13
-2025-06-05 13:42:16,517 - DEBUG - STREAM b'pHYs' 41 9
-2025-06-05 13:42:16,517 - DEBUG - STREAM b'iTXt' 62 1217
-2025-06-05 13:42:16,518 - DEBUG - STREAM b'IDAT' 1291 38988
-2025-06-05 13:42:16,539 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:42:17,141 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1 HTTP/11" 200 None
-2025-06-05 13:42:17,150 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:42:17,747 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/address HTTP/11" 200 None
-2025-06-05 13:42:17,755 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:42:18,349 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/devices/ HTTP/11" 200 None
-2025-06-05 13:42:21,362 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:42:27,954 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments HTTP/11" 200 None
-2025-06-05 13:42:28,038 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:42:28,646 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/payments/S5R227Y49M0BP?expand=cardTransaction HTTP/11" 200 None
-2025-06-05 13:42:28,656 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:42:36,193 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/receipt-options HTTP/11" 200 None
-2025-06-05 13:42:36,200 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:42:49,456 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments/S5R227Y49M0BP/receipt HTTP/11" 200 None
-2025-06-05 13:42:49,528 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:42:51,000 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/welcome HTTP/11" 200 None
-2025-06-05 13:44:48,656 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
-2025-06-05 13:44:48,721 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
-2025-06-05 13:44:49,071 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
-2025-06-05 13:44:49,101 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
-2025-06-05 13:44:49,120 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:50:55,290 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:50:55,522 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-14 09:50:55,798 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-14 09:50:55,907 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-14 09:50:56,108 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:50:56,108 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-14 09:50:56,110 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-14 09:50:57,229 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:50:58,037 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-14 09:50:59,400 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:51:00,180 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 218
+2025-02-14 09:51:12,824 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:51:13,047 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-14 09:51:13,269 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-14 09:51:13,385 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-14 09:51:13,581 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:51:13,581 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-14 09:51:13,581 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-14 09:51:14,697 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:51:15,425 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-14 09:51:16,788 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:51:17,524 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 409 113
+2025-02-14 09:51:41,093 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
 
-2025-06-05 13:44:49,276 - DEBUG - STREAM b'IHDR' 16 13
-2025-06-05 13:44:49,276 - DEBUG - STREAM b'pHYs' 41 9
-2025-06-05 13:44:49,276 - DEBUG - STREAM b'iTXt' 62 1217
-2025-06-05 13:44:49,276 - DEBUG - STREAM b'IDAT' 1291 38988
-2025-06-05 13:44:49,297 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:44:49,878 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1 HTTP/11" 200 None
-2025-06-05 13:44:49,887 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:44:50,479 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/address HTTP/11" 200 None
-2025-06-05 13:44:50,486 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:44:51,064 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/devices/ HTTP/11" 200 None
-2025-06-05 13:44:54,078 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:45:00,236 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments HTTP/11" 200 None
-2025-06-05 13:45:00,323 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:45:00,949 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/payments/2FXQZPX20H95R?expand=cardTransaction HTTP/11" 200 None
-2025-06-05 13:45:00,958 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:45:05,290 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/receipt-options HTTP/11" 200 None
-2025-06-05 13:45:05,296 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:45:18,842 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments/2FXQZPX20H95R/receipt HTTP/11" 200 None
-2025-06-05 13:45:18,900 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:45:20,412 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/welcome HTTP/11" 200 None
-2025-06-05 13:46:48,553 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
-2025-06-05 13:46:48,613 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
-2025-06-05 13:46:48,938 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
-2025-06-05 13:46:48,971 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
-2025-06-05 13:46:48,990 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:51:42,397 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-14 09:51:42,628 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-14 09:51:43,009 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-14 09:51:43,122 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-14 09:51:43,320 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-14 09:51:43,320 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-14 09:51:43,321 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-14 09:51:44,433 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:51:45,135 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-14 09:51:46,498 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-14 09:51:47,179 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 218
+2025-02-14 09:52:08,811 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
 
-2025-06-05 13:46:49,146 - DEBUG - STREAM b'IHDR' 16 13
-2025-06-05 13:46:49,146 - DEBUG - STREAM b'pHYs' 41 9
-2025-06-05 13:46:49,147 - DEBUG - STREAM b'iTXt' 62 1217
-2025-06-05 13:46:49,147 - DEBUG - STREAM b'IDAT' 1291 38988
-2025-06-05 13:46:49,167 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:46:49,789 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1 HTTP/11" 200 None
-2025-06-05 13:46:49,796 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:46:50,435 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/address HTTP/11" 200 None
-2025-06-05 13:46:50,442 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:46:51,031 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/devices/ HTTP/11" 200 None
-2025-06-05 13:46:51,041 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:46:54,349 - DEBUG - https://sandbox.dev.clover.com:443 "GET /connect/v1/payments/external/B-0024-00000413 HTTP/11" 200 None
-2025-06-05 13:46:57,415 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:47:04,789 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments/2FXQZPX20H95R/refunds HTTP/11" 200 None
-2025-06-05 13:47:04,807 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:47:05,417 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/payments/2FXQZPX20H95R?expand=cardTransaction HTTP/11" 200 None
-2025-06-05 13:47:05,426 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:47:08,461 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/receipt-options HTTP/11" 200 None
-2025-06-05 13:47:08,468 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:47:21,769 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments/2FXQZPX20H95R/receipt HTTP/11" 200 None
-2025-06-05 13:47:21,821 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:47:23,285 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/welcome HTTP/11" 200 None
-2025-06-05 13:47:23,290 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
-2025-06-05 13:47:24,720 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/welcome HTTP/11" 200 None
+2025-02-18 12:03:28,655 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-18 12:03:28,932 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-18 12:03:29,895 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-18 12:03:30,019 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-18 12:03:31,480 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-18 12:03:31,480 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-18 12:03:31,480 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-18 12:03:32,625 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-18 12:03:33,418 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-18 12:03:34,790 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-18 12:03:35,527 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 217
+2025-02-18 12:04:03,164 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-18 12:04:04,239 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payment_methods HTTP/11" 200 1225
+2025-02-18 12:04:04,423 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-18 12:06:12,765 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-18 12:06:13,024 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-18 12:06:13,471 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-18 12:06:13,595 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-18 12:06:13,801 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-18 12:06:13,801 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-18 12:06:13,801 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-18 12:06:14,925 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-18 12:06:15,677 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-18 12:06:17,043 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-18 12:06:17,749 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 217
+2025-02-18 12:06:49,711 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-18 12:06:50,380 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/102338954663 HTTP/11" 200 None
+2025-02-18 12:06:55,911 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-18 12:06:56,968 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payment_methods HTTP/11" 200 1230
+2025-02-18 12:07:03,464 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-19 09:02:21,535 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 09:02:21,862 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 09:02:23,062 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 09:02:23,203 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 09:02:24,704 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 09:02:24,704 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 09:02:24,704 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 09:02:25,887 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 09:02:26,711 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-19 09:02:28,094 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 09:02:28,815 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 219
+2025-02-19 09:07:26,031 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-19 09:56:24,462 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 09:56:24,759 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 09:56:25,161 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 09:56:25,289 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 09:56:25,549 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 09:56:25,549 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 09:56:25,549 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 09:56:26,747 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 09:56:27,505 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-19 09:56:28,893 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 09:56:29,610 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 218
+2025-02-19 09:56:48,388 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-19 15:51:43,895 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 15:51:44,221 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 15:51:44,658 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 15:51:44,863 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 15:51:46,523 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 15:51:46,524 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 15:51:46,524 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 15:51:47,692 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 15:51:48,461 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-19 15:51:49,840 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 15:51:50,573 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 219
+2025-02-19 15:52:07,387 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-19 15:52:42,846 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 15:52:43,176 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 15:52:43,438 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 15:52:43,567 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 15:52:43,783 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 15:52:43,783 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 15:52:43,783 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 15:52:45,506 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 15:52:46,986 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-19 15:52:48,342 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 15:52:48,342 - DEBUG - STREAM b'IDAT' 41 7839
+2025-02-19 15:53:10,434 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 15:53:11,299 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-19 15:53:14,852 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-19 15:55:43,559 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 15:55:43,824 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 15:55:44,257 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 15:55:44,389 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 15:55:44,600 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 15:55:44,600 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 15:55:44,600 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 15:55:44,878 - ERROR - CrearOrdenPago: 'CrearOrdenPago' object has no attribute 'DICT_CONEXION'
+2025-02-19 15:56:10,591 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 15:56:10,870 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 15:56:11,111 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 15:56:11,240 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 15:56:11,456 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 15:56:11,456 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 15:56:11,456 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 15:56:13,204 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 15:56:14,531 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-19 15:56:15,874 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 15:56:15,875 - DEBUG - STREAM b'IDAT' 41 7892
+2025-02-19 15:56:49,862 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 15:56:51,619 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/362341544568974 HTTP/11" 404 None
+2025-02-19 15:57:15,434 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 15:57:16,434 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-19 15:57:18,760 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-19 16:00:34,196 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 16:00:34,458 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 16:00:34,878 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 16:00:35,004 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 16:00:35,218 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 16:00:35,219 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 16:00:35,219 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 16:00:36,978 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 16:00:38,175 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-19 16:00:39,516 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 16:00:39,516 - DEBUG - STREAM b'IDAT' 41 7811
+2025-02-19 16:00:48,908 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 16:00:49,574 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/565758686766 HTTP/11" 404 None
+2025-02-19 16:00:54,585 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 16:00:55,438 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-19 16:00:57,732 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-19 16:07:43,057 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 16:07:43,339 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 16:07:44,770 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 16:07:44,897 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 16:07:45,112 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 16:07:45,112 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 16:07:45,112 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 16:07:46,853 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 16:07:48,069 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-19 16:07:49,408 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 16:07:49,408 - DEBUG - STREAM b'IDAT' 41 7862
+2025-02-19 16:08:12,042 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 16:08:12,927 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-19 16:08:15,245 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-19 16:11:43,842 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 16:11:44,114 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 16:11:44,469 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 16:11:44,599 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 16:11:44,820 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 16:11:44,820 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 16:11:44,820 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 16:11:46,577 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 16:11:47,813 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-19 16:11:49,158 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 16:11:49,158 - DEBUG - STREAM b'IDAT' 41 7863
+2025-02-19 16:12:28,053 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 16:12:28,922 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-19 16:12:32,937 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-19 16:18:42,358 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 16:18:42,738 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 16:18:43,094 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 16:18:43,221 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 16:18:43,437 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 16:18:43,437 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 16:18:43,437 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 16:18:43,744 - ERROR - CrearOrdenPago: TecladoHasar.__init__() missing 1 required positional argument: 'callback_numero'
+2025-02-19 16:19:20,506 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 16:19:20,773 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 16:19:21,024 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 16:19:21,150 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 16:19:21,360 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 16:19:21,360 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 16:19:21,360 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 16:19:21,666 - ERROR - CrearOrdenPago: TecladoHasar.__init__() missing 1 required positional argument: 'callback_numero'
+2025-02-19 16:26:34,698 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 16:26:34,972 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 16:26:35,307 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 16:26:35,428 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 16:26:35,634 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 16:26:35,634 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 16:26:35,634 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 16:26:35,939 - ERROR - CrearOrdenPago: TecladoHasar.__init__() missing 1 required positional argument: 'callback_numero'
+2025-02-19 16:27:21,685 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 16:27:21,964 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 16:27:22,216 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 16:27:22,345 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 16:27:22,562 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 16:27:22,562 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 16:27:22,562 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 16:27:22,889 - ERROR - CrearOrdenPago: TecladoHasar.__init__() missing 1 required positional argument: 'callback_numero'
+2025-02-19 16:28:08,209 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 16:28:08,494 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 16:28:08,877 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 16:28:09,007 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 16:28:09,228 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 16:28:09,228 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 16:28:09,228 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 16:28:10,969 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 16:28:12,185 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-19 16:28:13,529 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 16:28:13,529 - DEBUG - STREAM b'IDAT' 41 7884
+2025-02-19 16:28:25,754 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 16:28:27,645 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-19 16:28:29,989 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-19 16:32:05,924 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-19 16:32:06,189 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-19 16:32:06,597 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-19 16:32:06,726 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-19 16:32:06,944 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 16:32:06,944 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-19 16:32:06,944 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-19 16:32:08,696 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 16:32:09,931 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-19 16:32:11,268 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-19 16:32:11,268 - DEBUG - STREAM b'IDAT' 41 7851
+2025-02-19 16:32:38,403 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-19 16:32:40,260 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-19 16:32:42,477 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 08:47:45,428 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 08:47:45,994 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 08:47:47,039 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 400 None
+2025-02-20 08:47:47,040 - ERROR - No nos pudimos conectar al servidor API local
+2025-02-20 08:47:49,711 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 08:54:20,248 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 08:54:20,473 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 08:54:20,734 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 08:54:20,837 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 08:54:22,356 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 08:54:22,356 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 08:54:22,356 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 08:54:24,011 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 08:54:25,334 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 08:54:26,682 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 08:54:26,682 - DEBUG - STREAM b'IDAT' 41 7899
+2025-02-20 08:54:38,849 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 08:54:39,704 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 08:54:46,370 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 08:55:55,753 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 08:55:55,970 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 08:55:56,315 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 08:55:56,416 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 08:55:56,614 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 08:55:56,615 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 08:55:56,615 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 08:55:58,327 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 08:55:59,531 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 08:56:00,875 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 08:56:00,876 - DEBUG - STREAM b'IDAT' 41 7829
+2025-02-20 08:56:07,948 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 08:56:08,780 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 08:56:11,334 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 08:56:13,402 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 08:56:13,622 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 08:56:13,843 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 08:56:13,948 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 08:56:14,148 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 08:56:14,148 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 08:56:14,150 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 08:56:15,881 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 08:56:16,903 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 08:56:18,243 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 08:56:18,244 - DEBUG - STREAM b'IDAT' 41 7828
+2025-02-20 08:56:25,242 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 08:56:26,085 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 08:56:29,971 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 08:56:32,094 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 08:56:32,333 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 08:56:32,583 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 08:56:32,689 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 08:56:32,885 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 08:56:32,885 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 08:56:32,885 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 08:56:34,635 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 08:56:35,676 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 08:56:37,019 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 08:56:37,020 - DEBUG - STREAM b'IDAT' 41 7878
+2025-02-20 08:56:52,536 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 08:56:53,413 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 08:56:55,728 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 08:58:23,610 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 08:58:23,829 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 08:58:24,214 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 08:58:24,317 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 08:58:24,515 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 08:58:24,515 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 08:58:24,515 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 08:58:26,234 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 08:58:27,612 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 08:58:28,956 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 08:58:28,956 - DEBUG - STREAM b'IDAT' 41 7869
+2025-02-20 08:58:35,103 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 08:58:35,770 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/3624515784123 HTTP/11" 404 None
+2025-02-20 08:58:59,729 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 08:59:00,658 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 08:59:02,955 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 08:59:49,888 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 08:59:50,101 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 08:59:50,461 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 08:59:50,560 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 08:59:50,754 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 08:59:50,754 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 08:59:50,754 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 08:59:52,464 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 08:59:53,672 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 08:59:55,013 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 08:59:55,013 - DEBUG - STREAM b'IDAT' 41 7809
+2025-02-20 09:00:15,805 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:00:16,759 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:00:20,513 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:00:23,727 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:00:23,940 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:00:24,161 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:00:24,263 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:00:24,455 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:00:24,455 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:00:24,455 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:00:26,169 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:00:27,195 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:00:28,533 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:00:28,533 - DEBUG - STREAM b'IDAT' 41 7845
+2025-02-20 09:00:45,153 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:00:46,044 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:00:48,358 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:05:20,642 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:05:20,875 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:05:21,264 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:05:21,366 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:05:21,573 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:05:21,573 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:05:21,573 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:05:23,294 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:05:24,653 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:05:25,995 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:05:25,995 - DEBUG - STREAM b'IDAT' 41 7900
+2025-02-20 09:05:37,460 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:05:38,302 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:05:40,770 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:11:48,335 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:11:48,551 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:11:48,958 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:11:49,064 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:11:49,283 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:11:49,283 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:11:49,283 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:11:51,010 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:11:52,285 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:11:53,629 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:11:53,629 - DEBUG - STREAM b'IDAT' 41 7835
+2025-02-20 09:12:07,296 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:12:08,119 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:12:10,638 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:12:12,553 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:12:12,768 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:12:13,003 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:12:13,107 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:12:13,304 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:12:13,304 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:12:13,304 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:12:15,012 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:12:16,029 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:12:17,369 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:12:17,369 - DEBUG - STREAM b'IDAT' 41 7868
+2025-02-20 09:12:22,199 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:12:22,831 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/78978643321 HTTP/11" 404 None
+2025-02-20 09:12:30,241 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:12:31,104 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:14:51,560 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:15:57,469 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:15:57,687 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:15:58,013 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:15:58,148 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:15:58,346 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:15:58,347 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:15:58,347 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:16:00,081 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:16:01,348 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:16:02,687 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:16:02,687 - DEBUG - STREAM b'IDAT' 41 7902
+2025-02-20 09:16:17,291 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:16:17,930 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/11112222333355556666444455556666 HTTP/11" 400 None
+2025-02-20 09:16:19,345 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:16:19,981 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/11112222333355556666444455556666 HTTP/11" 400 None
+2025-02-20 09:16:22,399 - ERROR - buscar_id_pago_manual: invalid command name ".!toplevel4.!frame.!entry"
+2025-02-20 09:16:23,615 - ERROR - buscar_id_pago_manual: invalid command name ".!toplevel4.!frame.!entry"
+2025-02-20 09:16:30,080 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:16:30,921 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:16:33,225 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:18:07,189 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:18:07,407 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:18:07,781 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:18:07,885 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:18:08,079 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:18:08,079 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:18:08,081 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:18:09,787 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:18:11,009 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:18:12,348 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:18:12,348 - DEBUG - STREAM b'IDAT' 41 7870
+2025-02-20 09:18:49,448 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:18:50,343 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:18:52,853 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:23:48,548 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:23:48,763 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:23:49,137 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:23:49,239 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:23:49,435 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:23:49,435 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:23:49,435 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:23:51,141 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:23:52,363 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:23:53,700 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:23:53,700 - DEBUG - STREAM b'IDAT' 41 7812
+2025-02-20 09:24:11,870 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:24:12,685 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:24:15,330 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:25:25,388 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:25:25,614 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:25:26,015 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:25:26,116 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:25:26,309 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:25:26,309 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:25:26,309 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:25:28,025 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:25:29,637 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:25:30,984 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:25:30,984 - DEBUG - STREAM b'IDAT' 41 7797
+2025-02-20 09:26:11,914 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:26:12,788 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:26:15,106 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:29:18,960 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:29:19,176 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:29:19,557 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:29:19,664 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:29:19,860 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:29:19,860 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:29:19,860 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:29:21,580 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:29:22,956 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:29:24,300 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:29:24,300 - DEBUG - STREAM b'IDAT' 41 7849
+2025-02-20 09:30:18,025 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:30:18,898 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:30:21,124 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:38:39,406 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:38:39,624 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:38:39,986 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:38:40,087 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:38:40,290 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:38:40,290 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:38:40,290 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:38:42,015 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:38:43,283 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:38:44,625 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:38:44,625 - DEBUG - STREAM b'IDAT' 41 7896
+2025-02-20 09:38:49,684 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:38:50,457 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/46452123 HTTP/11" 404 None
+2025-02-20 09:39:04,663 - ERROR - buscar_id_pago_manual: TecladoHasar.asignar_funcion() missing 1 required positional argument: 'funcion'
+2025-02-20 09:39:07,969 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:39:08,821 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:39:09,938 - ERROR - func_progreso: TecladoHasar.asignar_funcion() missing 1 required positional argument: 'funcion'
+2025-02-20 09:39:10,998 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:41:44,996 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:41:45,216 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:41:45,544 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:41:45,650 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:41:45,853 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:41:45,854 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:41:45,854 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:41:47,565 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:41:48,910 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:41:50,251 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:41:50,251 - DEBUG - STREAM b'IDAT' 41 7901
+2025-02-20 09:42:00,075 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:42:00,673 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/ HTTP/11" 405 238
+2025-02-20 09:42:00,739 - ERROR - buscar_id_pago_manual: Expecting value: line 1 column 1 (char 0)
+2025-02-20 09:42:08,971 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:42:09,826 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:42:14,507 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:42:16,332 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:42:16,548 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:42:16,821 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:42:16,923 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:42:17,124 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:42:17,124 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:42:17,124 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:42:18,830 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:42:19,906 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:42:21,245 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:42:21,245 - DEBUG - STREAM b'IDAT' 41 7851
+2025-02-20 09:42:26,175 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:42:26,815 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/231565632164589 HTTP/11" 404 None
+2025-02-20 09:42:26,873 - ERROR - buscar_id_pago_manual: unsupported operand type(s) for -: 'TecladoHasar' and 'int'
+2025-02-20 09:42:44,422 - ERROR - func_orden_creada: main thread is not in main loop
+2025-02-20 09:42:44,422 - ERROR - func_progreso: CrearOrdenPago.cierre_ERROR() missing 1 required positional argument: 'paso_M'
+2025-02-20 09:43:40,149 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:43:40,382 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:43:40,717 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:43:40,822 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:43:41,025 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:43:41,025 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:43:41,026 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:43:42,734 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:43:43,984 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:43:45,325 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:43:45,325 - DEBUG - STREAM b'IDAT' 41 7814
+2025-02-20 09:43:48,760 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:43:49,410 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/5456978556 HTTP/11" 404 None
+2025-02-20 09:44:01,689 - ERROR - buscar_id_pago_manual: TecladoHasar.asignar_funcion() missing 1 required positional argument: 'funcion'
+2025-02-20 09:44:04,633 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:44:05,476 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:44:06,678 - ERROR - func_progreso: TecladoHasar.asignar_funcion() missing 1 required positional argument: 'funcion'
+2025-02-20 09:44:07,730 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:45:31,436 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:45:31,653 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:45:32,013 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:45:32,116 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:45:32,319 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:45:32,319 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:45:32,319 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:45:34,034 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:45:35,317 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:45:36,658 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:45:36,658 - DEBUG - STREAM b'IDAT' 41 7860
+2025-02-20 09:45:40,404 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:45:41,163 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/564564974 HTTP/11" 404 None
+2025-02-20 09:45:41,337 - ERROR - buscar_id_pago_manual: 'NoneType' object has no attribute 'invoke'
+2025-02-20 09:45:49,193 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:45:50,024 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:45:50,359 - ERROR - func_progreso: 'NoneType' object has no attribute 'invoke'
+2025-02-20 09:45:51,422 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:46:14,909 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:46:15,121 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:46:15,343 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:46:15,443 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:46:15,640 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:46:15,640 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:46:15,640 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:46:17,345 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:46:18,386 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:46:19,733 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:46:19,734 - DEBUG - STREAM b'IDAT' 41 7839
+2025-02-20 09:46:22,132 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:46:22,867 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/564978 HTTP/11" 404 None
+2025-02-20 09:46:23,040 - ERROR - buscar_id_pago_manual: TecladoHasar.asignar_funcion() missing 1 required positional argument: 'funcion'
+2025-02-20 09:46:29,274 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:46:30,123 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:46:30,466 - ERROR - func_progreso: TecladoHasar.asignar_funcion() missing 1 required positional argument: 'funcion'
+2025-02-20 09:46:31,533 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:47:32,916 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:47:33,136 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:47:33,467 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:47:33,568 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:47:33,767 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:47:33,768 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:47:33,768 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:47:35,505 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:47:36,693 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:47:38,034 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:47:38,034 - DEBUG - STREAM b'IDAT' 41 7927
+2025-02-20 09:47:41,171 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:47:41,792 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/89789 HTTP/11" 404 None
+2025-02-20 09:47:41,965 - ERROR - buscar_id_pago_manual: TecladoHasar.asignar_funcion() missing 1 required positional argument: 'funcion'
+2025-02-20 09:47:46,721 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:47:47,558 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:47:47,891 - ERROR - func_progreso: TecladoHasar.asignar_funcion() missing 1 required positional argument: 'funcion'
+2025-02-20 09:47:48,950 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:48:40,484 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:48:40,705 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:48:41,024 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:48:41,126 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:48:41,329 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:48:41,329 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:48:41,329 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:48:43,038 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:48:44,331 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:48:45,674 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:48:45,674 - DEBUG - STREAM b'IDAT' 41 7837
+2025-02-20 09:48:47,534 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:48:48,158 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/8987 HTTP/11" 404 None
+2025-02-20 09:48:48,334 - ERROR - buscar_id_pago_manual: TecladoHasar.asignar_funcion() missing 1 required positional argument: 'self'
+2025-02-20 09:48:53,121 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:48:53,973 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:48:54,307 - ERROR - func_progreso: TecladoHasar.asignar_funcion() missing 1 required positional argument: 'self'
+2025-02-20 09:48:55,368 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:49:22,041 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:49:22,266 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:49:22,481 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:49:22,583 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:49:22,789 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:49:22,789 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:49:22,789 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:49:24,514 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:49:25,598 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:49:26,940 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:49:26,940 - DEBUG - STREAM b'IDAT' 41 7852
+2025-02-20 09:49:28,982 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:49:29,618 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/5456 HTTP/11" 404 None
+2025-02-20 09:49:29,797 - ERROR - buscar_id_pago_manual: 'CustomMessageBox' object has no attribute 'teclado'
+2025-02-20 09:49:34,049 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:49:34,892 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:49:35,226 - ERROR - func_progreso: 'CustomMessageBox' object has no attribute 'teclado'
+2025-02-20 09:49:36,292 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 09:50:15,618 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 09:50:15,848 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 09:50:16,164 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 09:50:16,269 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 09:50:16,466 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:50:16,466 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 09:50:16,466 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 09:50:18,182 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:50:19,366 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 09:50:20,703 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 09:50:20,704 - DEBUG - STREAM b'IDAT' 41 7822
+2025-02-20 09:50:24,004 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:50:24,747 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/897897 HTTP/11" 404 None
+2025-02-20 09:50:33,050 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 09:50:33,981 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 09:50:37,377 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:00:35,357 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:00:35,626 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:00:36,005 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:00:36,113 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:00:37,579 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:00:37,580 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:00:37,580 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:00:39,317 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:00:40,663 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 12:00:42,008 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:00:42,008 - DEBUG - STREAM b'IDAT' 41 7887
+2025-02-20 12:00:45,415 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:00:46,156 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/897456123 HTTP/11" 404 None
+2025-02-20 12:00:56,222 - ERROR - buscar_id_pago_manual: 'TecladoHasar' object is not callable
+2025-02-20 12:01:13,668 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:01:14,528 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 12:01:16,723 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:01:45,366 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:01:45,583 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:01:45,995 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:01:46,098 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:01:46,294 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:01:46,294 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:01:46,294 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:01:48,032 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:01:49,420 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 12:01:50,765 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:01:50,765 - DEBUG - STREAM b'IDAT' 41 7852
+2025-02-20 12:02:14,361 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:02:14,964 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/ HTTP/11" 405 238
+2025-02-20 12:02:15,022 - ERROR - buscar_id_pago_manual: Expecting value: line 1 column 1 (char 0)
+2025-02-20 12:02:26,362 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:02:27,002 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/896543216549878997 HTTP/11" 404 None
+2025-02-20 12:02:49,167 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:02:50,231 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 12:02:52,965 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:04:45,418 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:04:45,646 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:04:45,979 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:04:46,087 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:04:46,289 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:04:46,289 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:04:46,289 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:04:47,394 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:04:48,168 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-20 12:04:49,528 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:04:50,276 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 219
+2025-02-20 12:05:53,362 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:07:10,292 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:07:10,515 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:07:10,838 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:07:10,945 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:07:11,143 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:07:11,143 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:07:11,143 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:07:12,241 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:07:12,974 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-20 12:07:14,333 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:07:15,033 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 219
+2025-02-20 12:08:39,096 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:08:39,315 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:08:39,684 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:08:39,790 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:08:39,989 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:08:39,989 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:08:39,989 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:08:41,193 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:08:41,923 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-20 12:08:43,284 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:08:44,001 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 409 113
+2025-02-20 12:08:47,704 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:08:57,203 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:08:57,429 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:08:57,663 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:08:57,768 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:08:57,968 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:08:57,968 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:08:57,968 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:08:59,170 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:08:59,989 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-20 12:09:01,346 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:09:02,072 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 219
+2025-02-20 12:09:20,097 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:09:20,742 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/895 HTTP/11" 404 None
+2025-02-20 12:09:34,641 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:09:35,464 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/987654321 HTTP/11" 404 None
+2025-02-20 12:09:45,800 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:09:46,534 - DEBUG - https://api.mercadopago.com:443 "DELETE /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents/444bfa96-bc74-4720-8bc0-2dfb735dc12c HTTP/11" 200 69
+2025-02-20 12:09:49,825 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:09:50,972 - ERROR - func_progreso: main thread is not in main loop
+2025-02-20 12:21:18,662 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:21:18,881 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:21:19,234 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:21:19,340 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:21:19,539 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:21:19,539 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:21:19,539 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:21:20,738 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:21:21,485 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-20 12:21:22,848 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:21:23,537 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 218
+2025-02-20 12:21:33,921 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:21:34,584 - DEBUG - https://api.mercadopago.com:443 "DELETE /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents/3b78df63-8273-4533-a692-3bb1f2d20000 HTTP/11" 409 170
+2025-02-20 12:21:40,805 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:21:59,900 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:22:00,123 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:22:00,416 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:22:00,520 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:22:00,719 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:22:00,719 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:22:00,719 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:22:01,912 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:22:02,623 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-20 12:22:03,982 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:22:04,680 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 219
+2025-02-20 12:22:24,127 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:44:51,406 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:44:51,637 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:44:52,033 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:44:52,142 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:44:52,349 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:44:52,349 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:44:52,349 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:44:53,550 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:44:54,306 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-20 12:44:55,666 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:44:56,463 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 220
+2025-02-20 12:45:30,513 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:47:47,454 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:47:47,678 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:47:48,044 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:47:48,151 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:47:48,347 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:47:48,347 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:47:48,347 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:47:49,542 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:47:50,267 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-20 12:47:51,625 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:47:52,322 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 217
+2025-02-20 12:48:28,453 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:48:30,704 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:48:30,936 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:48:31,174 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:48:31,285 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:48:31,482 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:48:31,483 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:48:31,483 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:48:33,197 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:48:34,502 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 12:48:35,851 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:48:35,851 - DEBUG - STREAM b'IDAT' 41 7852
+2025-02-20 12:48:47,827 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:48:48,689 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 12:48:51,096 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:49:02,967 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:49:03,190 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:49:03,586 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:49:03,694 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:49:03,892 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:49:03,892 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:49:03,892 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:49:05,593 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:49:06,624 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 12:49:07,964 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:49:07,964 - DEBUG - STREAM b'IDAT' 41 7814
+2025-02-20 12:49:07,998 - ERROR - func_orden_creada: 'CrearOrdenPago' object has no attribute 'self'
+2025-02-20 12:49:07,999 - ERROR - func_progreso: CrearOrdenPago.cierre_ERROR() missing 1 required positional argument: 'paso_M'
+2025-02-20 12:49:19,251 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:49:20,077 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 12:49:22,387 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:49:44,374 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:49:44,601 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:49:44,821 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:49:44,928 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:49:45,125 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:49:45,125 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:49:45,125 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:49:46,839 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:49:48,021 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 12:49:49,367 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:49:49,367 - DEBUG - STREAM b'IDAT' 41 7858
+2025-02-20 12:50:00,083 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:50:00,970 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 12:50:03,297 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:50:32,713 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:50:32,937 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:50:33,302 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:50:33,407 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:50:33,600 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:50:33,600 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:50:33,600 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:50:35,323 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:50:36,325 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 12:50:37,670 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:50:37,670 - DEBUG - STREAM b'IDAT' 41 7879
+2025-02-20 12:50:48,147 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:50:49,281 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 12:50:51,484 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:51:07,229 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:51:07,453 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:51:07,714 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:51:07,823 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:51:08,024 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:51:08,024 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:51:08,024 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:51:09,728 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:51:10,770 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 12:51:12,110 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:51:12,110 - DEBUG - STREAM b'IDAT' 41 7820
+2025-02-20 12:51:26,107 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:51:26,956 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 12:51:30,456 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 12:51:40,442 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 12:51:40,666 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 12:51:40,992 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 12:51:41,096 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 12:51:41,300 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:51:41,301 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 12:51:41,301 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 12:51:43,020 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:51:44,015 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 12:51:45,358 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 12:51:45,358 - DEBUG - STREAM b'IDAT' 41 7867
+2025-02-20 12:51:58,116 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 12:51:59,113 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 12:52:01,970 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 13:17:35,556 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 13:17:35,790 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 13:17:36,112 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 13:17:36,218 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 13:17:36,424 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:17:36,425 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 13:17:36,425 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 13:17:38,131 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:17:39,380 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 13:17:40,726 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:17:40,726 - DEBUG - STREAM b'IDAT' 41 7886
+2025-02-20 13:17:43,357 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:17:44,206 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 13:17:49,072 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 13:24:49,729 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 13:24:49,955 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 13:24:50,402 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 13:24:50,511 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 13:24:50,713 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:24:50,713 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 13:24:50,714 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 13:24:52,446 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:24:53,746 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 13:24:55,090 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:24:55,090 - DEBUG - STREAM b'IDAT' 41 7852
+2025-02-20 13:25:01,372 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:25:02,129 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/365841841 HTTP/11" 404 None
+2025-02-20 13:25:22,772 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:25:23,643 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 13:25:25,860 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 13:26:13,315 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 13:26:13,540 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 13:26:13,913 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 13:26:14,020 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 13:26:14,216 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:26:14,217 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 13:26:14,217 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 13:26:15,930 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:26:17,217 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 13:26:18,561 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:26:18,561 - DEBUG - STREAM b'IDAT' 41 7908
+2025-02-20 13:26:23,493 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:26:24,351 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 13:26:31,426 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 13:26:33,423 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 13:26:33,653 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 13:26:33,895 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 13:26:34,002 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 13:26:34,196 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:26:34,196 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 13:26:34,196 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 13:26:35,905 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:26:36,899 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 13:26:38,243 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:26:38,243 - DEBUG - STREAM b'IDAT' 41 7889
+2025-02-20 13:26:43,925 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:26:44,897 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/28500500 HTTP/11" 404 None
+2025-02-20 13:26:53,717 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:26:54,547 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 13:26:56,731 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 13:28:19,291 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 13:28:19,513 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 13:28:19,820 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 13:28:19,929 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 13:28:20,125 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:28:20,125 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 13:28:20,125 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 13:28:21,843 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:28:23,144 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/520701393/pos/SUC003POS006/qrs HTTP/11" 200 233
+2025-02-20 13:28:24,486 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:28:24,486 - DEBUG - STREAM b'IDAT' 41 7899
+2025-02-20 13:28:32,149 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:28:33,080 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/58245841 HTTP/11" 404 None
+2025-02-20 13:28:43,309 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:28:43,952 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/6005220063 HTTP/11" 404 None
+2025-02-20 13:28:49,517 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:28:50,374 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/520701393/pos/SUC003POS006/orders HTTP/11" 204 0
+2025-02-20 13:28:51,899 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 13:29:50,059 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 13:29:50,290 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 13:29:50,668 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 13:29:50,779 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 13:29:50,976 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:29:50,976 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 13:29:50,976 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 13:29:52,171 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:29:52,957 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-20 13:29:54,320 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:29:55,018 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 218
+2025-02-20 13:30:13,742 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 13:30:13,967 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 13:30:14,189 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 13:30:14,301 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 13:30:14,501 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:30:14,501 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 13:30:14,501 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 13:30:15,698 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:30:16,392 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-20 13:30:17,749 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:30:18,451 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 409 113
+2025-02-20 13:30:20,126 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 13:31:55,659 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 13:31:55,882 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 13:31:56,274 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 13:31:56,380 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 13:31:56,577 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:31:56,577 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 13:31:56,577 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 13:31:57,790 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:31:58,527 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-20 13:31:59,892 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:32:00,756 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 409 113
+2025-02-20 13:32:04,746 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 13:32:16,155 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 13:32:16,426 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 13:32:16,670 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 13:32:16,781 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 13:32:16,980 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:32:16,980 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 13:32:16,980 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 13:32:18,183 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:32:18,896 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-20 13:32:20,255 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:32:20,933 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 217
+2025-02-20 13:32:29,780 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:32:30,431 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/52600520055 HTTP/11" 404 None
+2025-02-20 13:33:04,166 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 13:33:21,384 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 13:33:21,611 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 13:33:21,996 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 13:33:22,103 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 13:33:22,297 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:33:22,298 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 13:33:22,298 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 13:33:23,497 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:33:24,227 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-20 13:33:25,590 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:33:26,265 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 218
+2025-02-20 13:33:32,909 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:33:33,678 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/8528522852 HTTP/11" 404 None
+2025-02-20 13:34:16,029 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-02-20 13:35:11,333 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-02-20 13:35:11,559 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-02-20 13:35:11,900 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-02-20 13:35:12,008 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-02-20 13:35:12,208 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-20 13:35:12,208 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-20 13:35:12,208 - DEBUG - STREAM b'IDAT' 54 8192
+2025-02-20 13:35:13,399 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:35:14,136 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/11" 200 181
+2025-02-20 13:35:15,495 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:35:16,193 - DEBUG - https://api.mercadopago.com:443 "POST /point/integration-api/devices/PAX_A910__SMARTPOS1493043847/payment-intents HTTP/11" 201 217
+2025-02-20 13:35:22,253 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-02-20 13:35:22,908 - DEBUG - https://api.mercadopago.com:443 "GET /v1/payments/564513126456 HTTP/11" 404 None
+2025-02-20 13:35:42,810 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-03-29 10:41:07,591 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-03-29 10:41:07,654 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-03-29 10:41:07,878 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-03-29 10:41:07,912 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-03-29 10:41:08,178 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-29 10:41:08,179 - DEBUG - STREAM b'sRGB' 41 1
+2025-03-29 10:41:08,179 - DEBUG - STREAM b'IDAT' 54 8192
+2025-03-29 10:41:09,895 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-29 10:41:10,581 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/1662461858/pos/SUC001POS001/qrs HTTP/11" 400 102
+2025-03-29 10:41:10,584 - ERROR - Error: Respuesta de MP al Crear Pago: notification_url must be url
+2025-03-29 10:41:16,359 - ERROR - crear_orden: CrearOrdenPago.cierre_ERROR() missing 1 required positional argument: 'paso_M'
+2025-03-29 10:41:17,338 - ERROR - func_progreso: CrearOrdenPago.cierre_ERROR() missing 1 required positional argument: 'paso_M'
+2025-03-29 10:53:56,511 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-03-29 10:53:56,605 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-03-29 10:53:56,979 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-03-29 10:53:57,012 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-03-29 10:53:57,390 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-29 10:53:57,390 - DEBUG - STREAM b'sRGB' 41 1
+2025-03-29 10:53:57,390 - DEBUG - STREAM b'IDAT' 54 8192
+2025-03-29 10:53:59,133 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-29 10:53:59,802 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/1662461858/pos/SUC001POS001/qrs HTTP/11" 400 102
+2025-03-29 10:53:59,803 - ERROR - Error: Respuesta de MP al Crear Pago: notification_url must be url
+2025-03-29 10:54:02,063 - ERROR - crear_orden: CrearOrdenPago.cierre_ERROR() missing 1 required positional argument: 'paso_M'
+2025-03-29 10:54:02,835 - ERROR - func_progreso: CrearOrdenPago.cierre_ERROR() missing 1 required positional argument: 'paso_M'
+2025-03-29 10:54:18,503 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-03-29 10:54:18,571 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-03-29 10:54:18,797 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-03-29 10:54:18,830 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-03-29 10:54:18,968 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-29 10:54:18,969 - DEBUG - STREAM b'sRGB' 41 1
+2025-03-29 10:54:18,969 - DEBUG - STREAM b'IDAT' 54 8192
+2025-03-29 10:54:20,616 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-29 10:54:21,281 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/1662461858/pos/SUC001POS001/qrs HTTP/11" 400 102
+2025-03-29 10:54:21,282 - ERROR - Error: Respuesta de MP al Crear Pago: notification_url must be url
+2025-03-29 10:54:22,261 - ERROR - crear_orden: CrearOrdenPago.cierre_ERROR() missing 1 required positional argument: 'paso_M'
+2025-03-29 10:54:23,121 - ERROR - func_progreso: CrearOrdenPago.cierre_ERROR() missing 1 required positional argument: 'paso_M'
+2025-03-29 10:55:16,194 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-03-29 10:55:16,276 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-03-29 10:55:16,604 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-03-29 10:55:16,645 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-03-29 10:55:16,788 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-29 10:55:16,789 - DEBUG - STREAM b'sRGB' 41 1
+2025-03-29 10:55:16,789 - DEBUG - STREAM b'IDAT' 54 8192
+2025-03-29 10:55:18,453 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-29 10:55:19,121 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/1662461858/pos/SUC001POS001/qrs HTTP/11" 400 102
+2025-03-29 10:55:19,122 - ERROR - Error: Respuesta de MP al Crear Pago: notification_url must be url
+2025-03-29 10:55:19,904 - ERROR - crear_orden: CrearOrdenPago.cierre_ERROR() missing 1 required positional argument: 'paso_M'
+2025-03-29 10:55:20,360 - ERROR - func_progreso: CrearOrdenPago.cierre_ERROR() missing 1 required positional argument: 'paso_M'
+2025-03-29 10:56:03,863 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-03-29 10:56:03,947 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-03-29 10:56:04,172 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-03-29 10:56:04,212 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-03-29 10:56:04,355 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-29 10:56:04,355 - DEBUG - STREAM b'sRGB' 41 1
+2025-03-29 10:56:04,355 - DEBUG - STREAM b'IDAT' 54 8192
+2025-03-29 10:56:06,005 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-29 10:56:06,679 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/1662461858/pos/SUC001POS001/qrs HTTP/11" 400 102
+2025-03-29 10:56:06,680 - ERROR - Error: Respuesta de MP al Crear Pago: notification_url must be url
+2025-03-29 10:56:08,563 - ERROR - crear_orden: CrearOrdenPago.cierre_ERROR() missing 1 required positional argument: 'paso_M'
+2025-03-29 10:56:09,137 - ERROR - func_progreso: CrearOrdenPago.cierre_ERROR() missing 1 required positional argument: 'paso_M'
+2025-03-29 10:56:26,024 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-03-29 10:56:26,102 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-03-29 10:56:26,506 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-03-29 10:56:26,545 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-03-29 10:56:26,688 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-29 10:56:26,688 - DEBUG - STREAM b'sRGB' 41 1
+2025-03-29 10:56:26,688 - DEBUG - STREAM b'IDAT' 54 8192
+2025-03-29 10:56:28,324 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-29 10:56:28,994 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/1662461858/pos/SUC001POS001/qrs HTTP/11" 400 102
+2025-03-29 10:56:28,996 - ERROR - Error: Respuesta de MP al Crear Pago: notification_url must be url
+2025-03-29 10:56:40,584 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-03-29 10:56:40,652 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-03-29 10:56:40,900 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-03-29 10:56:40,930 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-03-29 10:56:41,065 - DEBUG - STREAM b'IHDR' 16 13
+2025-03-29 10:56:41,065 - DEBUG - STREAM b'sRGB' 41 1
+2025-03-29 10:56:41,065 - DEBUG - STREAM b'IDAT' 54 8192
+2025-03-29 10:56:42,690 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-03-29 10:56:43,346 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/1662461858/pos/SUC001POS001/qrs HTTP/11" 400 102
+2025-03-29 10:56:43,347 - ERROR - Error: Respuesta de MP al Crear Pago: notification_url must be url

@@ -1,0 +1,6 @@
+2025-06-03 12:02:26,281 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-06-03 12:02:26,516 - DEBUG - Starting new HTTPS connection (1): apparent-charmed-amoeba.ngrok-free.app:443
+2025-06-03 12:02:26,770 - DEBUG - https://apparent-charmed-amoeba.ngrok-free.app:443 "GET / HTTP/11" 400 None
+2025-06-03 12:02:26,771 - ERROR - No nos pudimos conectar al servidor API local
+2025-06-03 12:02:27,990 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+

@@ -1,3 +1,8 @@
+import os
+import sys
+import platform
+import subprocess
+import time
 import tkinter as tk
 import ttkbootstrap as ttk
 import Func.window_position
@@ -12,6 +17,7 @@ from tkinter import messagebox
 from assets.image_pathV2 import *
 from PIL import Image, ImageTk
 from Func.log_errorsV2 import log_error
+from GUI.MessageBox import CustomMessageBox
 from Clover.GUI.gui_main import GUI_MAIN
 
 
@@ -43,17 +49,20 @@ class GUIMAIN:
             #self.datos_caja[2] = posNAME
             #self.datos_caja[3] = external_id_pos
             #self.datos_caja[4] = IPN_url
+            log_error("Se inició la ventana principal de creación de orden.", "GUIMAIN.__init__")
         except Exception as e:
             log_error(f"Error al obtener datos para la orden: {e}", function_name='__init__')
             messagebox.showerror("Error", "No se pudo obtener los datos necesarios para la orden.")
+        print(self.datos_para_orden[6] == 2)
         if self.datos_para_orden[6] == 2:
             threading.Thread(target=GUI_MAIN).start()
-            print("Modulo CLOVER")
+            print("Modulo de CLOVER")
         else:
             self.ventana_creacion_caja = ttk.Window(themename="lumen", iconphoto=LOGO_MP())
             self.ventana_creacion_caja.title(f"Creación de OrdenV2, V.{version}")
             self.ventana_creacion_caja.resizable(False, False)
             #self.ventana_creacion_caja.iconbitmap(Icono_MercadoPago_Blue())
+            
             
             self.frame_left = tk.Frame(
                 self.ventana_creacion_caja, 
@@ -89,7 +98,7 @@ class GUIMAIN:
             Func.window_position.center_window(self.ventana_creacion_caja, 400, 550)
             self.ventana_creacion_caja.protocol("WM_DELETE_WINDOW", self.mostrar_error)
             self.ventana_creacion_caja.mainloop()
-            
+        
     def mostrar_error(self):
         # Mostrar un mensaje de error
         messagebox.showerror("Error", "No se puede cerrar la ventana porque una orden está en proceso.")
@@ -107,6 +116,7 @@ class GUIMAIN:
             # Crear y empacar el Label con la imagen
             self.logo_mp_img_label = ttk.Label(self.frame_conjunto, image=self.logo_mp_img_tk)
             self.logo_mp_img_label.pack()
+            log_error("Logo de MercadoPago cargado correctamente", "logo_mp")
 
         except Exception as e:
             log_error(str(e), "logo_mp")
@@ -156,9 +166,9 @@ class GUIMAIN:
                 "func_ventana_buscar_pago_manual": self.def_ventana_buscar_pago_manual,
                 "cerrar_ventana_buscar_pago_manual": self.cerrar_ventana_buscar_pago_manual
                 },
-            "cerrar_ventana": self.after_cerrar_ventana
+            "cerrar_ventana": self.after_cerrar_ventana,
+            "cerrar_con_taskill": self.cerrado_inmediato_taskkill
         }
-        
         
         
         if self.datos_para_orden[1] == 1:
@@ -168,6 +178,7 @@ class GUIMAIN:
                     "nro_factura": self.datos_para_orden[0], 
                     "sucNAME": self.datos_caja[1], 
                     "monto_pagar": float(self.datos_para_orden[2].quantize(Decimal('1.00'))),
+                    "response": self.datos_para_orden[4],
                     "url_API": self.conexionDBAServer.specify_search_condicion("SPDIR", "ID", "GRID", "url_api_AWS", False),
                     'NomCaja': self.datos_para_orden[8],
                     'NumCajero': self.datos_para_orden[9],
@@ -179,12 +190,14 @@ class GUIMAIN:
                     "nro_factura": self.datos_para_orden[0], 
                     "sucNAME": self.datos_caja[1], 
                     "monto_pagar": float(self.datos_para_orden[2].quantize(Decimal('1.00'))),
+                    "response": self.datos_para_orden[4],
                     "url_API": self.conexionDBAServer.specify_search_condicion("SPDIR", "ID", "GRID", "url_api_NGROK", False),
                     'NomCaja': self.datos_para_orden[8],
                     'NumCajero': self.datos_para_orden[9],
                     'NombreCajero': self.datos_para_orden[10]
                 }
             if self.datos_para_orden[6] == 0:
+                log_error("Se detectó tipo de orden: Estándar", "func_barra_progreso")
                 threading.Thread(target=CrearOrdenPago, args=(self.frame_progress_bar, self.DIC_WIDGET, DICT_DATOS_ORDEN, DICT_CONEXION)).start()
             else:
                 try:
@@ -192,6 +205,7 @@ class GUIMAIN:
                         self.my_buttonDLT.pack_forget()
                         self.my_label_aviso_cancelar_point.pack(pady=10)
                         self.my_label_aviso_cancelar_point.pack_propagate(False)
+                        log_error("Se seleccionó la opción de envío a POINT.", "func_barra_progreso")
                         threading.Thread(target=CrearOrdenPagoPOINT, args=(self.frame_progress_bar, self.DIC_WIDGET, DICT_DATOS_ORDEN, DICT_CONEXION)).start()
                     else:
                         messagebox.showerror("Error", "Este facturador no esta habilitado para realizar envios a un POINT")
@@ -230,6 +244,7 @@ class GUIMAIN:
                     "nro_factura": self.datos_para_orden[0], 
                     "sucNAME": self.datos_caja[1], 
                     "monto_pagar": float(self.datos_para_orden[2].quantize(Decimal('1.00'))),
+                    "response": self.datos_para_orden[4],
                     "url_API": self.conexionDBAServer.specify_search_condicion("SPDIR", "ID", "GRID", "url_api_AWS", False),
                     'NomCaja': self.datos_para_orden[8],
                     'NumCajero': self.datos_para_orden[9],
@@ -241,11 +256,14 @@ class GUIMAIN:
                     "nro_factura": self.datos_para_orden[0], 
                     "sucNAME": self.datos_caja[1], 
                     "monto_pagar": float(self.datos_para_orden[2].quantize(Decimal('1.00'))),
+                    "response": self.datos_para_orden[4],
                     "url_API": self.conexionDBAServer.specify_search_condicion("SPDIR", "ID", "GRID", "url_api_NGROK", False),
                     'NomCaja': self.datos_para_orden[8],
                     'NumCajero': self.datos_para_orden[9],
                     'NombreCajero': self.datos_para_orden[10]
                 }
+                
+            log_error("Se detectó tipo de orden: Reembolso", "func_barra_progreso")
             threading.Thread(target=CrearOrdenReembolso, args=(self.frame_progress_bar, self.DIC_WIDGET, DICT_DATOS_ORDEN, DICT_CONEXION)).start()
         elif self.datos_para_orden[1] == 9:
             if self.conexionDBAServer.specify_search_condicion("SPDIR", "ID", "GRID", "MP_NUEVA_VERSION", False).lower() == "true":
@@ -254,6 +272,7 @@ class GUIMAIN:
                     "nro_factura": self.datos_para_orden[0], 
                     "sucNAME": self.datos_caja[1], 
                     "monto_pagar": float(self.datos_para_orden[2].quantize(Decimal('1.00'))),
+                    "response": self.datos_para_orden[4],
                     "url_API": self.conexionDBAServer.specify_search_condicion("SPDIR", "ID", "GRID", "url_api_AWS", False),
                     'NomCaja': self.datos_para_orden[8],
                     'NumCajero': self.datos_para_orden[9],
@@ -265,12 +284,13 @@ class GUIMAIN:
                     "nro_factura": self.datos_para_orden[0], 
                     "sucNAME": self.datos_caja[1], 
                     "monto_pagar": float(self.datos_para_orden[2].quantize(Decimal('1.00'))),
+                    "response": self.datos_para_orden[4],
                     "url_API": self.conexionDBAServer.specify_search_condicion("SPDIR", "ID", "GRID", "url_api_NGROK", False),
                     'NomCaja': self.datos_para_orden[8],
                     'NumCajero': self.datos_para_orden[9],
                     'NombreCajero': self.datos_para_orden[10]
                 }
-                
+                log_error("Se detectó tipo de orden: Buscar Pago Manual", "func_barra_progreso")
                 threading.Thread(target=BuscarOrdenPago, args=(self.frame_progress_bar, self.DIC_WIDGET, DICT_DATOS_ORDEN, DICT_CONEXION)).start()
             
             
@@ -337,7 +357,7 @@ class GUIMAIN:
             self.DIC_WIDGET["def_ventana_buscar_pago_manual"]["button_info_buscar_pago"] = self.button_info_buscar_pago
 
             Func.window_position.center_window(self.ventana_buscar_pago_manual, 400, 225)
-
+            log_error("Se creó correctamente la ventana de búsqueda manual.", "def_ventana_buscar_pago_manual")
         except Exception as e:
             log_error(str(e), "fun_ventana_buscar_pago_manual")
             messagebox.showerror("Error", "Ha ocurrido un error en la ventana de búsqueda de pago manual.")
@@ -361,3 +381,39 @@ class GUIMAIN:
     def cerrar_ventana(self):
         self.ventana_creacion_caja.quit()
         self.ventana_creacion_caja.destroy()
+        
+    def cerrado_inmediato_taskkill(self, nro_factura=None):
+        try:
+            if nro_factura is not None:
+                datos_error = {
+                    'status': 0,
+                    'response': 102,
+                    'description': "Cierre forzado detectado"
+                }
+                self.conexionDBA.actualizar_datos_condicion(
+                    "MPQRCODE_CONEXIONPROGRAMAS",
+                    datos_error,
+                    "nro_factura",
+                    f"'{nro_factura}'"
+                )
+
+            log_error(f"Cierre inmediato solicitado por el usuario - Factura: {nro_factura}", "cerrado_inmediato_taskkill")
+            print("Cierre inmediato solicitado")
+
+            CustomMessageBox(
+                self.ventana_creacion_caja,
+                "Error",
+                "El proceso se ha finalizado inesperadamente.\nPor favor, intente realizar el cierre de venta nuevamente.",
+                "error"
+            )
+
+            if platform.system() == "Windows":
+                pid = os.getpid()
+                if pid:
+                    subprocess.call(["taskkill", "/F", "/PID", str(pid)])
+            else:
+                os._exit(1)
+
+        except Exception as e:
+            log_error(str(e), "cerrado_inmediato_taskkill")
+

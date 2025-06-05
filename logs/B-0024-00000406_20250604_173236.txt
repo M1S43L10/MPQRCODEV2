@@ -1,0 +1,41 @@
+[2025-06-04 17:32:36] [INFO] Iniciando proceso VENTA
+[2025-06-04 17:32:36] [INFO] Buscando datos del Local...
+[2025-06-04 17:32:37] [DEBUG] ----- [REQUEST] -----
+[2025-06-04 17:32:37] [DEBUG] URL: https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1
+[2025-06-04 17:32:37] [DEBUG] Headers: {'X-POS-ID': 'Op_1111', 'Content-Type': 'application/json', 'Authorization': 'Bearer 8e4254f0-03d6-d1c8-9529-4be39effeec1'}
+[2025-06-04 17:32:37] [DEBUG] Payload: None
+[2025-06-04 17:32:37] [DEBUG] [RESPONSE JSON]: {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1', 'id': 'TGMXC47JK4HC1', 'name': 'Inforhard Servicios CLOVER', 'owner': {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/employees/6R9FPGN093262', 'id': '6R9FPGN093262', 'orders': {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/employees/6R9FPGN093262/orders'}}, 'address': {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/address'}, 'merchantPlan': {'id': '75B8KFZ5B5K8W'}, 'createdTime': 1742216238000, 'gateway': {}, 'tenders': {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/tenders'}, 'shifts': {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/shifts'}, 'orders': {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/orders'}, 'payments': {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/payments'}, 'taxRates': {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/tax_rates'}, 'printers': {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/printers'}, 'modifierGroups': {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/modifier_groups'}, 'orderTypes': {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/order_types'}, 'reseller': {'id': 'SZGGG5RXYTAWE'}, 'opening_hours': {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/opening_hours'}}
+[2025-06-04 17:32:37] [DEBUG] ----------------------
+[2025-06-04 17:32:37] [INFO] Consultando URL directa: https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/address
+[2025-06-04 17:32:37] [DEBUG] ----- [REQUEST] -----
+[2025-06-04 17:32:37] [DEBUG] URL: https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/address
+[2025-06-04 17:32:37] [DEBUG] Headers: {'X-POS-ID': 'Op_1111', 'Content-Type': 'application/json', 'Authorization': 'Bearer 8e4254f0-03d6-d1c8-9529-4be39effeec1'}
+[2025-06-04 17:32:37] [DEBUG] Payload: None
+[2025-06-04 17:32:37] [DEBUG] [RESPONSE JSON]: {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/address', 'address1': 'Santa Fe 197', 'city': 'Resistencia', 'country': 'AR', 'state': 'Chaco', 'zip': '3500'}
+[2025-06-04 17:32:37] [DEBUG] ----------------------
+[2025-06-04 17:32:37] [INFO] Buscando dispositivo...
+[2025-06-04 17:32:38] [DEBUG] ----- [REQUEST] -----
+[2025-06-04 17:32:38] [DEBUG] URL: https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/devices/
+[2025-06-04 17:32:38] [DEBUG] Headers: {'X-POS-ID': 'Op_1111', 'Content-Type': 'application/json', 'Authorization': 'Bearer 8e4254f0-03d6-d1c8-9529-4be39effeec1'}
+[2025-06-04 17:32:38] [DEBUG] Payload: None
+[2025-06-04 17:32:38] [DEBUG] [RESPONSE JSON]: {'elements': [{'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/devices/ffec774e-d9fa-4d20-b713-c568fe97c701', 'id': 'ffec774e-d9fa-4d20-b713-c568fe97c701', 'model': 'unknown_Android SDK built for x86', 'merchant': {'id': 'TGMXC47JK4HC1'}, 'serial': 'EMULATOR35X2X10X0', 'secureId': '1dbbd2a2c40e8a7', 'buildType': 'USERDEBUG', 'deviceTypeName': 'OTHER'}, {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/devices/e4eebdad-047f-7b52-9c52-75382cf589ed', 'id': 'e4eebdad-047f-7b52-9c52-75382cf589ed', 'name': 'Op_1111', 'model': 'Clover_C406', 'merchant': {'id': 'TGMXC47JK4HC1'}, 'orderPrefix': '1', 'terminalPrefix': 1, 'serial': 'C046LT44741323', 'secureId': '97c6a3fb6d95a9fd', 'buildType': 'USER', 'deviceTypeName': 'FIGTREE', 'productName': 'Flex 4', 'pinDisabled': False, 'offlinePayments': False, 'offlinePaymentsAll': False}, {'href': 'https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/devices/0b680a9d-57ef-45ba-8b92-c320887ddef6', 'id': '0b680a9d-57ef-45ba-8b92-c320887ddef6', 'name': 'REST API Test Device', 'model': 'Google_Android SDK built for x86', 'merchant': {'id': 'TGMXC47JK4HC1'}, 'orderPrefix': '0', 'terminalPrefix': 0, 'serial': '17fbb3ca30960cec', 'secureId': '17fbb3ca30960cec', 'buildType': 'USERDEBUG', 'deviceTypeName': 'OTHER', 'pinDisabled': False, 'offlinePayments': False, 'offlinePaymentsAll': False}], 'href': 'http://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1/devices'}
+[2025-06-04 17:32:38] [DEBUG] ----------------------
+[2025-06-04 17:32:41] [INFO] Creando pago...
+[2025-06-04 17:32:41] [DEBUG] Payload: {'amount': 985325, 'final': True, 'externalPaymentId': 'B-0024-00000406'}
+[2025-06-04 17:32:43] [WARNING] ❌ Fallo intento 1 al hacer request: 400 Client Error: Bad Request for url: https://sandbox.dev.clover.com/connect/v1/payments
+[2025-06-04 17:32:45] [WARNING] ❌ Fallo intento 2 al hacer request: 400 Client Error: Bad Request for url: https://sandbox.dev.clover.com/connect/v1/payments
+[2025-06-04 17:32:48] [WARNING] ❌ Fallo intento 3 al hacer request: 400 Client Error: Bad Request for url: https://sandbox.dev.clover.com/connect/v1/payments
+[2025-06-04 17:32:48] [DEBUG] ----- [REQUEST] -----
+[2025-06-04 17:32:48] [DEBUG] URL: https://sandbox.dev.clover.com/connect/v1/payments
+[2025-06-04 17:32:48] [DEBUG] Headers: {'X-POS-ID': 'Op_1111', 'Content-Type': 'application/json', 'Authorization': 'Bearer 8e4254f0-03d6-d1c8-9529-4be39effeec1', 'X-Clover-Device-Id': 'C046LT44741323', 'Idempotency-Key': 'b607c094-fc2f-483d-8be5-8209423f5b15'}
+[2025-06-04 17:32:48] [DEBUG] Payload: {'amount': 985325, 'final': True, 'externalPaymentId': 'B-0024-00000406'}
+[2025-06-04 17:32:48] [DEBUG] [RESPONSE JSON]: {'code': 'invalid_request', 'message': 'El externalPaymentId de B-0024-00000406 provisto ya se procesó y no se puede reenviar.', 'requestId': '33b95532-261738', 'requestType': 'PAY', 'type': 'invalid_request_error'}
+[2025-06-04 17:32:48] [DEBUG] ----------------------
+[2025-06-04 17:32:48] [ERROR] Error en create_payment: 400 Client Error: Bad Request for url: https://sandbox.dev.clover.com/connect/v1/payments
+[2025-06-04 17:32:50] [INFO] Enviando pantalla de bienvenida...
+[2025-06-04 17:32:51] [DEBUG] ----- [REQUEST] -----
+[2025-06-04 17:32:51] [DEBUG] URL: https://sandbox.dev.clover.com/connect/v1/device/welcome
+[2025-06-04 17:32:51] [DEBUG] Headers: {'X-POS-ID': 'Op_1111', 'Content-Type': 'application/json', 'Authorization': 'Bearer 8e4254f0-03d6-d1c8-9529-4be39effeec1', 'X-Clover-Device-Id': 'C046LT44741323', 'Idempotency-Key': 'b607c094-fc2f-483d-8be5-8209423f5b15'}
+[2025-06-04 17:32:51] [DEBUG] Payload: None
+[2025-06-04 17:32:51] [DEBUG] [RESPONSE JSON]: {}
+[2025-06-04 17:32:51] [DEBUG] ----------------------

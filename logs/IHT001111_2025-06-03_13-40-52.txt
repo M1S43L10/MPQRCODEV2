@@ -1,0 +1,21 @@
+2025-06-03 13:40:53,205 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-06-03 13:40:53,266 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-06-03 13:40:53,611 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-06-03 13:40:53,638 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-06-03 13:40:53,655 - ERROR - GUIMAIN.__init__: Se inició la ventana principal de creación de orden.
+2025-06-03 13:40:53,830 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-03 13:40:53,830 - DEBUG - STREAM b'sRGB' 41 1
+2025-06-03 13:40:53,830 - DEBUG - STREAM b'IDAT' 54 8192
+2025-06-03 13:40:53,869 - ERROR - logo_mp: Logo de MercadoPago cargado correctamente
+2025-06-03 13:40:53,932 - ERROR - func_barra_progreso: Se detectó tipo de orden: Estándar
+2025-06-03 13:40:55,483 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-06-03 13:40:56,724 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/1662461858/pos/SUC001POS001/qrs HTTP/11" 200 219
+2025-06-03 13:40:56,725 - ERROR - crear_orden: Orden enviada exitosamente en el intento #1
+2025-06-03 13:40:57,539 - ERROR - func_orden_creada: QR mostrado correctamente al usuario.
+2025-06-03 13:40:58,063 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-03 13:40:58,063 - DEBUG - STREAM b'IDAT' 41 6826
+2025-06-03 13:40:58,839 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-06-03 13:40:59,671 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/1662461858/pos/SUC001POS001/orders HTTP/11" 204 0
+2025-06-03 13:41:01,863 - ERROR - aviso_cancelar_orden: Usuario solicitó cancelar la orden manualmente.
+2025-06-03 13:41:01,911 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+

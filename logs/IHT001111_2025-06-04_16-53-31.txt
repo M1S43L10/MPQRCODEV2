@@ -1,0 +1,8 @@
+2025-06-04 16:53:31,373 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-06-04 16:53:31,453 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-06-04 16:53:31,833 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-06-04 16:53:31,858 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-06-04 16:53:31,874 - ERROR - GUIMAIN.__init__: Se inició la ventana principal de creación de orden.
+2025-06-04 16:53:31,875 - ERROR - Error en llamar_crear_orden: GUI_MAIN.__init__() missing 1 required positional argument: 'version'
+2025-06-04 16:53:31,875 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+

@@ -1,0 +1,17 @@
+2025-06-04 15:08:29,130 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-06-04 15:08:29,210 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-06-04 15:08:29,565 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-06-04 15:08:29,604 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-06-04 15:08:29,624 - ERROR - GUIMAIN.__init__: Se inició la ventana principal de creación de orden.
+2025-06-04 15:08:29,625 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-06-04 15:08:29,821 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-04 15:08:29,821 - DEBUG - STREAM b'pHYs' 41 9
+2025-06-04 15:08:29,821 - DEBUG - STREAM b'iTXt' 62 1217
+2025-06-04 15:08:29,821 - DEBUG - STREAM b'IDAT' 1291 38988
+2025-06-04 15:08:29,849 - DEBUG - Starting new HTTPS connection (1): api.la.clover.com:443
+2025-06-04 15:08:30,106 - DEBUG - https://api.la.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1 HTTP/11" 401 30
+2025-06-04 15:08:31,109 - DEBUG - Starting new HTTPS connection (1): api.la.clover.com:443
+2025-06-04 15:08:31,339 - DEBUG - https://api.la.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1 HTTP/11" 401 30
+2025-06-04 15:08:32,341 - DEBUG - Starting new HTTPS connection (1): api.la.clover.com:443
+2025-06-04 15:08:32,550 - DEBUG - https://api.la.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1 HTTP/11" 401 30

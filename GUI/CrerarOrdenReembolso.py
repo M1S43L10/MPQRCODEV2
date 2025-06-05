@@ -200,6 +200,7 @@ class CrearOrdenReembolso(BarraProgreso):
             
     def iniciar_reembolso(self):
         try:
+            log_error(f"Iniciando reembolso para ID {self.id_factura}", "iniciar_reembolso")
             self.DICT_PROGRESO["text_label_aviso"] = f"Iniciando Reembolso de Op > {self.id_factura}"
             self.DICT_PROGRESO["carga"] = 55
             self.DICT_PROGRESO["command"] = None
@@ -257,11 +258,13 @@ class CrearOrdenReembolso(BarraProgreso):
                 self.DICT_PROGRESO["carga"] = 85
                 self.DICT_PROGRESO["command"] = self.actaulizar_nuevos_datos
                 self.progreso(**self.DICT_PROGRESO)
+                log_error("Reembolso exitoso, actualizando datos...", "mandar_orden_reembolso")
             else:
                 CustomMessageBox(self.DICT_WIDGETS["root"], "Error Repuesta MP", self.detalle_respuesta_mp,"error")
                 #messagebox.showerror("Error Repuesta MP", self.detalle_respuesta_mp)
                 self.NRO_ERROR = 3
                 self.cierre_ERROR()
+                log_error(f"Fallo el reembolso: {self.detalle_respuesta_mp}", "mandar_orden_reembolso")
         except Exception as e:
             log_error(e, "mandar_orden_reembolso")
             
@@ -271,24 +274,46 @@ class CrearOrdenReembolso(BarraProgreso):
             self.DICT_PROGRESO["carga"] = 75
             self.DICT_PROGRESO["command"] = None
             self.progreso(**self.DICT_PROGRESO)
-            if self.SELECCION_TIPO_BUSQUEDA:
-                respuesta = self.DICT_CONEXION["conexionAPI"].crear_orden_reembolso(self.id_factura, self.DICT_DATOS_ORDEN["monto_pagar"])
-            else:
-                print("MPPOINT")
-                respuesta = self.DICT_CONEXION["conexionAPIPOINT"].crear_orden_reembolso(self.id_factura, self.DICT_DATOS_ORDEN["monto_pagar"])
-            
-            if not 'message' in respuesta.json():
-                self.respuesta_mp = respuesta.json()
-            else:
-                self.detalle_respuesta_mp = respuesta.json()["message"]
-                self.respuesta_mp = False
+            reintentos = 3
+            intento = 0
+            respuesta = None
+
+            while intento < reintentos:
+                try:
+                    if self.SELECCION_TIPO_BUSQUEDA:
+                        respuesta = self.DICT_CONEXION["conexionAPI"].crear_orden_reembolso(
+                            self.id_factura,
+                            self.DICT_DATOS_ORDEN["monto_pagar"]
+                        )
+                    else:
+                        respuesta = self.DICT_CONEXION["conexionAPIPOINT"].crear_orden_reembolso(
+                            self.id_factura,
+                            self.DICT_DATOS_ORDEN["monto_pagar"]
+                        )
+
+                    if not 'message' in respuesta.json():
+                        log_error(f"Reembolso creado correctamente en el intento #{intento + 1}", "conexion_con_mp_reembolso")
+                        self.respuesta_mp = respuesta.json()
+                        break
+                    else:
+                        self.detalle_respuesta_mp = respuesta.json()["message"]
+                        log_error(f"Intento #{intento + 1} fallido: {self.detalle_respuesta_mp}", "conexion_con_mp_reembolso")
+                        self.respuesta_mp = False
+                        intento += 1
+                        time.sleep(1.5)
+
+                except Exception as e:
+                    log_error(f"Excepción en intento #{intento + 1}: {str(e)}", "conexion_con_mp_reembolso")
+                    self.respuesta_mp = False
+                    intento += 1
+                    time.sleep(1.5)
         except Exception as e:
             log_error(e, "conexion_con_mp_reembolso")
             
             
     def actaulizar_nuevos_datos(self):
         try:
-            self.DICT_CONEXION["conexionAPI"].obtenerPago_manual(self.DICT_DATOS_ORDEN["nro_factura"], self.DICT_DATOS_ORDEN["external_id_pos"], self.DICT_CONEXION["conexionAPI"].obtenerPAGO(self.id_factura))
+            self.DICT_CONEXION["conexionAPI"].obtenerPago_manual(self.DICT_DATOS_ORDEN["external_id_pos"], self.DICT_CONEXION["conexionAPI"].obtenerPAGO(self.id_factura))
         
             self.DICT_PROGRESO["text_label_aviso"] = f"Datos actualizados"
             self.DICT_PROGRESO["carga"] = 99
@@ -311,12 +336,14 @@ class CrearOrdenReembolso(BarraProgreso):
             self.DICT_WIDGETS["my_label_aviso"].config(text="Reembolso logrado") 
             if self.SELECCION_TIPO_BUSQUEDA:
                 self.DICT_CONEXION["conexionDBAServer"].actualizar_datos_condicion("MPQRCODE_OBTENERPAGOServer", self.datos_obtener_pago, "external_reference", f"'{self.DICT_DATOS_ORDEN["nro_factura"]}'")
+                self.DICT_CONEXION["conexionDBA"].actualizar_datos_condicion("MPQRCODE_OBTENERPAGO", self.datos_obtener_pago, "external_reference", f"'{self.DICT_DATOS_ORDEN["nro_factura"]}'")
                 #messagebox.showinfo("Reembolso logrado", f"Reembolso logrado a:\nNro Factura: {self.DICT_DATOS_ORDEN["nro_factura"]}\nNro Operación: {self.DICT_CONEXION["conexionDBAServer"].specify_search_condicion("MPQRCODE_OBTENERPAGOServer", "id", "external_reference", f"{self.DICT_DATOS_ORDEN["nro_factura"]}", False)}\nMonto devuelto: {float(self.DICT_CONEXION["conexionDBAServer"].specify_search_condicion("MPQRCODE_OBTENERPAGOServer", "transaction_details_total_paid_amount", "external_reference", f"{self.DICT_DATOS_ORDEN["nro_factura"]}", False))}")
             else:
                 #messagebox.showinfo("Reembolso logrado", f"Reembolso logrado a:\nNro Factura: {self.DICT_DATOS_ORDEN["nro_factura"]}\nNro Operación: {self.datos_pago["id"]}\nMonto devuelto: {float(self.datos_pago["transaction_amount_refunded"])}")
                 self.DICT_CONEXION["conexionDBA"].actualizar_datos_condicion("MPQRCODE_OBTENERPAGOPOINT", self.datos_obtener_pago, "external_reference", f"'{self.DICT_DATOS_ORDEN["nro_factura"]}'")
                 self.DICT_CONEXION["conexionDBAServer"].actualizar_datos_condicion("MPQRCODE_OBTENERPAGOPOINTServer", self.datos_obtener_pago, "external_reference", f"'{self.DICT_DATOS_ORDEN["nro_factura"]}'")
             self.DICT_CONEXION["conexionDBA"].actualizar_datos_condicion("MPQRCODE_CONEXIONPROGRAMAS", datos, "nro_factura", f"'{self.DICT_DATOS_ORDEN["nro_factura"]}'")
+            log_error("Reembolso finalizado y datos actualizados correctamente.", "finalizar_pago")
             self.DICT_WIDGETS["cerrar_ventana"]()
         except Exception as e:
             print(e)
@@ -402,3 +429,6 @@ class CrearOrdenReembolso(BarraProgreso):
         except Exception as e:
             log_error(str(e), "on_a_and_6")
             messagebox.showerror("Error", "Ha ocurrido un error al detectar las teclas 'a' y '6'.")
+            
+    def llamado_taskkill(self):
+        self.DICT_WIDGETS["cerrar_con_taskill"](self.DICT_DATOS_ORDEN['nro_factura'])

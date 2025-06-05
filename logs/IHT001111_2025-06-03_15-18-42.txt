@@ -1,0 +1,41 @@
+2025-06-03 15:18:42,637 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-06-03 15:18:42,708 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-06-03 15:18:43,031 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-06-03 15:18:43,064 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-06-03 15:18:43,080 - ERROR - GUIMAIN.__init__: Se inició la ventana principal de creación de orden.
+2025-06-03 15:18:43,081 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-06-03 15:18:43,280 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-03 15:18:43,281 - DEBUG - STREAM b'pHYs' 41 9
+2025-06-03 15:18:43,281 - DEBUG - STREAM b'iTXt' 62 1217
+2025-06-03 15:18:43,281 - DEBUG - STREAM b'IDAT' 1291 38988
+2025-06-03 15:18:43,306 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
+2025-06-03 15:18:44,057 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1 HTTP/11" 200 None
+2025-06-03 15:18:44,064 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
+2025-06-03 15:18:44,813 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/address HTTP/11" 200 None
+2025-06-03 15:18:44,821 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
+2025-06-03 15:18:45,564 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/devices/ HTTP/11" 200 None
+2025-06-03 15:18:48,578 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
+2025-06-03 15:18:56,787 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/payments HTTP/11" 200 None
+2025-06-03 15:18:56,859 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
+2025-06-03 15:18:57,577 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1/payments/RC72K9JYJFQZR?expand=cardTransaction HTTP/11" 200 None
+2025-06-03 15:18:57,585 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
+2025-06-03 15:18:59,499 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/printers HTTP/11" 200 None
+2025-06-03 15:18:59,520 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-03 15:18:59,520 - DEBUG - STREAM b'IDAT' 41 3176
+2025-06-03 15:18:59,546 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-03 15:18:59,546 - DEBUG - STREAM b'IDAT' 41 31340
+2025-06-03 15:18:59,554 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
+2025-06-03 15:19:01,598 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/print/image HTTP/11" 200 None
+2025-06-03 15:19:01,611 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
+2025-06-03 15:19:06,644 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/receipt-options HTTP/11" 200 None
+2025-06-03 15:19:06,652 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
+2025-06-03 15:19:08,492 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/printers HTTP/11" 200 None
+2025-06-03 15:19:08,504 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-03 15:19:08,504 - DEBUG - STREAM b'IDAT' 41 3176
+2025-06-03 15:19:08,526 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-03 15:19:08,526 - DEBUG - STREAM b'IDAT' 41 30848
+2025-06-03 15:19:08,534 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
+2025-06-03 15:19:10,650 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/print/image HTTP/11" 200 None
+2025-06-03 15:19:10,684 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
+2025-06-03 15:19:12,488 - DEBUG - https://sandbox.dev.clover.com:443 "POST /connect/v1/device/welcome HTTP/11" 200 None

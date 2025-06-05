@@ -1,0 +1,13 @@
+2025-06-03 13:58:01,190 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-06-03 13:58:01,251 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-06-03 13:58:01,598 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-06-03 13:58:01,628 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-06-03 13:58:01,646 - ERROR - GUIMAIN.__init__: Se inició la ventana principal de creación de orden.
+2025-06-03 13:58:01,646 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-06-03 13:58:01,844 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-03 13:58:01,844 - DEBUG - STREAM b'pHYs' 41 9
+2025-06-03 13:58:01,844 - DEBUG - STREAM b'iTXt' 62 1217
+2025-06-03 13:58:01,844 - DEBUG - STREAM b'IDAT' 1291 38988
+2025-06-03 13:58:01,871 - DEBUG - Starting new HTTPS connection (1): sandbox.dev.clover.com:443
+2025-06-03 13:58:02,636 - DEBUG - https://sandbox.dev.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1 HTTP/11" 200 None

@@ -1,0 +1,18 @@
+[2025-06-04 15:26:17] [INFO] Iniciando proceso ANULACIÓN
+[2025-06-04 15:26:17] [INFO] Buscando datos del Local...
+[2025-06-04 15:26:17] [WARNING] ❌ Fallo intento 1 al hacer request: 401 Client Error: Unauthorized for url: https://api.la.clover.com/v3/merchants/TGMXC47JK4HC1
+[2025-06-04 15:26:18] [WARNING] ❌ Fallo intento 2 al hacer request: 401 Client Error: Unauthorized for url: https://api.la.clover.com/v3/merchants/TGMXC47JK4HC1
+[2025-06-04 15:26:20] [WARNING] ❌ Fallo intento 3 al hacer request: 401 Client Error: Unauthorized for url: https://api.la.clover.com/v3/merchants/TGMXC47JK4HC1
+[2025-06-04 15:26:20] [DEBUG] ----- [REQUEST] -----
+[2025-06-04 15:26:20] [DEBUG] URL: https://api.la.clover.com/v3/merchants/TGMXC47JK4HC1
+[2025-06-04 15:26:20] [DEBUG] Headers: {'X-POS-ID': 'Op_1111', 'Content-Type': 'application/json', 'Authorization': 'Bearer 8e4254f0-03d6-d1c8-9529-4be39effeec1'}
+[2025-06-04 15:26:20] [DEBUG] Payload: None
+[2025-06-04 15:26:20] [DEBUG] [RESPONSE JSON]: {'message': '401 Unauthorized'}
+[2025-06-04 15:26:20] [DEBUG] ----------------------
+[2025-06-04 15:26:20] [DEBUG] ----- [REQUEST] -----
+[2025-06-04 15:26:20] [DEBUG] URL: https://api.la.clover.com/v3/merchants/TGMXC47JK4HC1
+[2025-06-04 15:26:20] [DEBUG] Headers: {'X-POS-ID': 'Op_1111', 'Content-Type': 'application/json', 'Authorization': 'Bearer 8e4254f0-03d6-d1c8-9529-4be39effeec1'}
+[2025-06-04 15:26:20] [DEBUG] Payload: None
+[2025-06-04 15:26:20] [ERROR] [ERROR]: 401 Client Error: Unauthorized for url: https://api.la.clover.com/v3/merchants/TGMXC47JK4HC1
+[2025-06-04 15:26:20] [DEBUG] ----------------------
+[2025-06-04 15:26:20] [ERROR] Error en get_local_name: 401 Client Error: Unauthorized for url: https://api.la.clover.com/v3/merchants/TGMXC47JK4HC1

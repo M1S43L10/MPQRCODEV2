@@ -1,0 +1,6 @@
+2025-06-03 12:03:33,952 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-06-03 12:03:34,015 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-06-03 12:03:34,168 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 404 None
+2025-06-03 12:03:34,169 - ERROR - No nos pudimos conectar al servidor API local
+2025-06-03 12:03:36,534 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+

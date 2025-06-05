@@ -1,0 +1,23 @@
+2025-06-05 16:39:18,258 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-06-05 16:39:18,342 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-06-05 16:39:18,679 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-06-05 16:39:18,715 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-06-05 16:39:18,735 - ERROR - GUIMAIN.__init__: Se inició la ventana principal de creación de orden.
+2025-06-05 16:39:18,922 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-05 16:39:18,922 - DEBUG - STREAM b'sRGB' 41 1
+2025-06-05 16:39:18,922 - DEBUG - STREAM b'IDAT' 54 8192
+2025-06-05 16:39:18,963 - ERROR - logo_mp: Logo de MercadoPago cargado correctamente
+2025-06-05 16:39:19,013 - ERROR - func_barra_progreso: Se detectó tipo de orden: Reembolso
+2025-06-05 16:39:21,469 - ERROR - iniciar_reembolso: Iniciando reembolso para ID 113546518359
+2025-06-05 16:39:23,023 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-06-05 16:39:23,836 - DEBUG - https://api.mercadopago.com:443 "POST /v1/payments/113546518359/refunds HTTP/11" 400 None
+2025-06-05 16:39:23,836 - ERROR - conexion_con_mp_reembolso: Intento #1 fallido: The action requested is not valid for the current payment state
+2025-06-05 16:39:25,338 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-06-05 16:39:26,171 - DEBUG - https://api.mercadopago.com:443 "POST /v1/payments/113546518359/refunds HTTP/11" 400 None
+2025-06-05 16:39:26,172 - ERROR - conexion_con_mp_reembolso: Intento #2 fallido: The action requested is not valid for the current payment state
+2025-06-05 16:39:27,673 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-06-05 16:39:28,696 - DEBUG - https://api.mercadopago.com:443 "POST /v1/payments/113546518359/refunds HTTP/11" 400 None
+2025-06-05 16:39:28,697 - ERROR - conexion_con_mp_reembolso: Intento #3 fallido: The action requested is not valid for the current payment state
+2025-06-05 16:39:34,795 - ERROR - mandar_orden_reembolso: Fallo el reembolso: The action requested is not valid for the current payment state
+2025-06-05 16:39:34,841 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+

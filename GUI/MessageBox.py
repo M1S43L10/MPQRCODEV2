@@ -3,20 +3,28 @@ import ttkbootstrap as ttk
 import winsound
 import threading
 import time
+from Func.tecladohasar import TecladoHasar
 
 class CustomMessageBox:
-    def __init__(self, parent, title="Mensaje", message="Texto del mensaje", msg_type="info",
-                 width=700, height=400, font_size=24):
+    def __init__(self, parent=None, title="Mensaje", message="Texto del mensaje", msg_type="info",
+                 width=700, height=400, font_size=24, teclado_hasar=None):
         """Crea una MessageBox personalizada con ttkbootstrap y Toplevel."""
+
         self.running = True
         self.result = None
 
-        self.window = tk.Toplevel(parent)
+        if parent is None:
+            self.parent = tk.Tk()
+            self.parent.withdraw()
+            self.window = tk.Toplevel(self.parent)
+        else:
+            self.parent = parent
+            self.window = tk.Toplevel(parent)
+
         self.window.title(title)
         self.window.protocol("WM_DELETE_WINDOW", lambda: None)
-        self.window.transient(parent)
+        self.window.transient(self.parent)
         self.window.grab_set()
-
         # Contenedor principal
         container = ttk.Frame(self.window, padding=20)
         container.pack(fill="both", expand=True)
@@ -34,6 +42,8 @@ class CustomMessageBox:
         # Mensaje dinámico con ajuste de línea (wraplength)
         self.message_label = ttk.Label(content_frame, text=message, font=("Arial", font_size), wraplength=width - 50)
         self.message_label.pack(pady=5, padx=20, fill="both", expand=True)
+        
+        self.teclado = TecladoHasar()
 
         # Botones
         self.create_buttons(content_frame, msg_type, font_size)
@@ -52,7 +62,10 @@ class CustomMessageBox:
         threading.Thread(target=self.play_alert_sound, args=(msg_type,), daemon=True).start()
 
         # Esperar acción del usuario
+        threading.Thread(target=self.teclado.asignar_funcion, args=("4a", self.close)).start()
         self.wait_for_user_action()
+        #
+        
 
     def play_alert_sound(self, msg_type):
         """Reproduce un sonido de alerta sin bloquear la interfaz"""
@@ -72,12 +85,14 @@ class CustomMessageBox:
         button_style.configure("Custom.TButton", font=("Arial", font_size))
 
         if msg_type in ["info", "warning", "error"]:
-            ttk.Button(frame, text="OK", command=self.close, style="Custom.TButton", bootstyle="success").pack()
+            buton = ttk.Button(frame, text="OK", command=self.close, style="Custom.TButton", bootstyle="success")
+            buton.pack()
         elif msg_type == "yesno":
             ttk.Button(frame, text="Sí", command=lambda: self.set_result(True), style="Custom.TButton",
                        bootstyle="primary").pack(side="left", padx=10)
             ttk.Button(frame, text="No", command=lambda: self.set_result(False), style="Custom.TButton",
                        bootstyle="danger").pack(side="left", padx=10)
+            
 
     def set_result(self, value):
         """Guarda el resultado y cierra la ventana"""

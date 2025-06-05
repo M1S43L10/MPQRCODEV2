@@ -1,0 +1,9 @@
+2025-06-04 17:06:33,583 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-06-04 17:06:33,645 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-06-04 17:06:34,024 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/1.1" 200 None
+2025-06-04 17:06:34,056 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-06-04 17:06:34,073 - ERROR - GUIMAIN.__init__: Se inició la ventana principal de creación de orden.
+2025-06-04 17:06:34,217 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-04 17:06:34,218 - DEBUG - STREAM b'sRGB' 41 1
+2025-06-04 17:06:34,218 - DEBUG - STREAM b'IDAT' 54 8192
+2025-06-04 17:06:34,251 - ERROR - logo_mp: Logo de MercadoPago cargado correctamente

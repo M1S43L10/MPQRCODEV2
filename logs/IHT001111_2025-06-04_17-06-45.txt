@@ -1,0 +1,14 @@
+2025-06-04 17:06:45,410 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-06-04 17:06:45,473 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-06-04 17:06:45,710 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/1.1" 200 None
+2025-06-04 17:06:45,739 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-06-04 17:06:45,754 - ERROR - GUIMAIN.__init__: Se inició la ventana principal de creación de orden.
+2025-06-04 17:06:45,898 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-04 17:06:45,898 - DEBUG - STREAM b'sRGB' 41 1
+2025-06-04 17:06:45,898 - DEBUG - STREAM b'IDAT' 54 8192
+2025-06-04 17:06:45,928 - ERROR - logo_mp: Logo de MercadoPago cargado correctamente
+2025-06-04 17:06:45,991 - ERROR - func_barra_progreso: Se seleccionó la opción de envío a POINT.
+2025-06-04 17:06:47,037 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-06-04 17:06:47,675 - DEBUG - https://api.mercadopago.com:443 "GET /point/integration-api/devices?&limit=50 HTTP/1.1" 401 105
+2025-06-04 17:06:50,758 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+

@@ -1,0 +1,23 @@
+2025-06-04 15:51:42,670 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-06-04 15:51:42,760 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-06-04 15:51:43,106 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/11" 200 None
+2025-06-04 15:51:43,148 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-06-04 15:51:43,172 - ERROR - GUIMAIN.__init__: Se inició la ventana principal de creación de orden.
+2025-06-04 15:51:43,173 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+
+2025-06-04 15:51:43,402 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-04 15:51:43,402 - DEBUG - STREAM b'pHYs' 41 9
+2025-06-04 15:51:43,402 - DEBUG - STREAM b'iTXt' 62 1217
+2025-06-04 15:51:43,402 - DEBUG - STREAM b'IDAT' 1291 38988
+2025-06-04 15:51:43,430 - DEBUG - Starting new HTTPS connection (1): api.la.clover.com:443
+2025-06-04 15:51:43,710 - DEBUG - https://api.la.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1 HTTP/11" 401 30
+2025-06-04 15:51:44,713 - DEBUG - Starting new HTTPS connection (1): api.la.clover.com:443
+2025-06-04 15:51:44,942 - DEBUG - https://api.la.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1 HTTP/11" 401 30
+2025-06-04 15:51:45,945 - DEBUG - Starting new HTTPS connection (1): api.la.clover.com:443
+2025-06-04 15:51:46,186 - DEBUG - https://api.la.clover.com:443 "GET /v3/merchants/TGMXC47JK4HC1 HTTP/11" 401 30
+2025-06-04 15:51:47,335 - DEBUG - Starting new HTTPS connection (1): api.la.clover.com:443
+2025-06-04 15:51:47,581 - DEBUG - https://api.la.clover.com:443 "POST /connect/v1/device/welcome HTTP/11" 401 107
+2025-06-04 15:51:48,583 - DEBUG - Starting new HTTPS connection (1): api.la.clover.com:443
+2025-06-04 15:51:48,802 - DEBUG - https://api.la.clover.com:443 "POST /connect/v1/device/welcome HTTP/11" 401 107
+2025-06-04 15:51:49,805 - DEBUG - Starting new HTTPS connection (1): api.la.clover.com:443
+2025-06-04 15:51:50,040 - DEBUG - https://api.la.clover.com:443 "POST /connect/v1/device/welcome HTTP/11" 401 107

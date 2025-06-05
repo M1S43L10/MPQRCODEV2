@@ -344,104 +344,107 @@ class Conexion_APP():
     def obtenerPAGO(self, id_pago):
         return self.conexionAPI.obtener_pago(id_pago)
                 
-    def obtenerPago_manual(self, external_reference, external_idPOS, respuesta):
-        
-        
-        if respuesta.status_code > 300 and respuesta.status_code < 500:
-            return f"Error {respuesta.status_code, respuesta.json["message"]}"
-        else:
-            pass
-
+    def obtenerPago_manual(self, external_idPOS, respuesta):
         try:
-            # Verifica si la respuesta es un objeto JSON válido
-            json_response = respuesta.json()
-            print(json_response)
-        except ValueError as e:
-            print(f"Error al parsear la respuesta JSON: {str(e)}")
-            return  f"Error al parsear la respuesta JSON: {str(e)}"
-
         
-        datos = {
-            'external_reference': external_reference,
-            'external_idPOS': external_idPOS,
-            "collector_id": json_response["collector_id"],
-            "coupon_amount": json_response["coupon_amount"],
-            "currency_id": json_response["currency_id"],
-            "date_approved": json_response["date_approved"],
-            "date_created": json_response["date_created"],
-            "date_last_updated": json_response["date_last_updated"],
-            "date_of_expiration": json_response["date_of_expiration"],
-            "deduction_schema": json_response["deduction_schema"],
-            "description": json_response["description"],
-            "id": json_response["id"],
-            "installments": json_response["installments"],
-            "integrator_id": json_response["integrator_id"],
-            "issuer_id": json_response["issuer_id"],
-            "live_mode": json_response["live_mode"],
-            "marketplace_owner": json_response["marketplace_owner"],
-            "merchant_account_id": json_response["merchant_account_id"],
-            "merchant_number": json_response["merchant_number"],
-            "order_id": json_response["order"]["id"],
-            "order_type": json_response["order"]["type"],
-            "payer_id": json_response["payer"]["id"],
-            "payment_metodo_id": json_response["payment_method"]["id"],
-            "payment_metodo_issuer_id": json_response["payment_method"]["issuer_id"],
-            "payment_metodo_type": json_response["payment_method"]["type"],
-            "pos_id": json_response["pos_id"],
-            "processing_mode": json_response["processing_mode"],
-            "shipping_amount": json_response["shipping_amount"],
-            "sponsor_id": json_response["sponsor_id"],
-            "status": json_response["status"],
-            "status_detail": json_response["status_detail"],
-            "store_id": json_response["store_id"],
-            "taxes_amount": json_response["taxes_amount"],
-            "transaction_amount": json_response["transaction_amount"],
-            "transaction_amount_refunded": json_response["transaction_amount_refunded"],
-            "net_received_amount": json_response["transaction_details"]["net_received_amount"],
-            "transaction_details_total_paid_amount": json_response["transaction_details"]["total_paid_amount"],
-        }
-        datos_server = {
-            'external_reference': external_reference,
-            'data': json_response["id"],
-            "collector_id": json_response["collector_id"],
-            "coupon_amount": json_response["coupon_amount"],
-            "currency_id": json_response["currency_id"],
-            "date_approved": json_response["date_approved"],
-            "date_created": json_response["date_created"],
-            "date_last_updated": json_response["date_last_updated"],
-            "date_of_expiration": json_response["date_of_expiration"],
-            "deduction_schema": json_response["deduction_schema"],
-            "description": json_response["description"],
-            "id": json_response["id"],
-            "installments": json_response["installments"],
-            "integrator_id": json_response["integrator_id"],
-            "issuer_id": json_response["issuer_id"],
-            "live_mode": json_response["live_mode"],
-            "marketplace_owner": json_response["marketplace_owner"],
-            "merchant_account_id": json_response["merchant_account_id"],
-            "merchant_number": json_response["merchant_number"],
-            "order_id": json_response["order"]["id"],
-            "order_type": json_response["order"]["type"],
-            "payer_id": json_response["payer"]["id"],
-            "payment_metodo_id": json_response["payment_method"]["id"],
-            "payment_metodo_issuer_id": json_response["payment_method"]["issuer_id"],
-            "payment_metodo_type": json_response["payment_method"]["type"],
-            "pos_id": json_response["pos_id"],
-            "processing_mode": json_response["processing_mode"],
-            "shipping_amount": json_response["shipping_amount"],
-            "sponsor_id": json_response["sponsor_id"],
-            "status": json_response["status"],
-            "status_detail": json_response["status_detail"],
-            "store_id": json_response["store_id"],
-            "taxes_amount": json_response["taxes_amount"],
-            "transaction_amount": json_response["transaction_amount"],
-            "transaction_amount_refunded": json_response["transaction_amount_refunded"],
-            "net_received_amount": json_response["transaction_details"]["net_received_amount"],
-            "transaction_details_total_paid_amount": json_response["transaction_details"]["total_paid_amount"],
-        }
-        self.conexionDBA.insertar_datos_o_actualizar("MPQRCODE_OBTENERPAGO", datos)
-        self.conexionDBAServer.insertar_datos_o_actualizar("MPQRCODE_OBTENERPAGOServer", datos_server)
-        return respuesta
+        
+            if respuesta.status_code > 300 and respuesta.status_code < 500:
+                return f"Error {respuesta.status_code, respuesta.json["message"]}"
+            else:
+                pass
+
+            try:
+                # Verifica si la respuesta es un objeto JSON válido
+                json_response = respuesta.json()
+                print(json_response)
+            except ValueError as e:
+                print(f"Error al parsear la respuesta JSON: {str(e)}")
+                return  f"Error al parsear la respuesta JSON: {str(e)}"
+
+            
+            datos = {
+                'external_reference': json_response["external_reference"],
+                'external_idPOS': external_idPOS,
+                "collector_id": json_response["collector_id"],
+                "coupon_amount": json_response["coupon_amount"],
+                "currency_id": json_response["currency_id"],
+                "date_approved": json_response["date_approved"],
+                "date_created": json_response["date_created"],
+                "date_last_updated": json_response["date_last_updated"],
+                "date_of_expiration": json_response["date_of_expiration"],
+                "deduction_schema": json_response["deduction_schema"],
+                "description": json_response["description"],
+                "id": json_response["id"],
+                "installments": json_response["installments"],
+                "integrator_id": json_response["integrator_id"],
+                "issuer_id": json_response["issuer_id"],
+                "live_mode": json_response["live_mode"],
+                "marketplace_owner": json_response["marketplace_owner"],
+                "merchant_account_id": json_response["merchant_account_id"],
+                "merchant_number": json_response["merchant_number"],
+                "order_id": json_response["order"]["id"],
+                "order_type": json_response["order"]["type"],
+                "payer_id": json_response["payer"]["id"],
+                "payment_metodo_id": json_response["payment_method"]["id"],
+                "payment_metodo_issuer_id": json_response["payment_method"]["issuer_id"],
+                "payment_metodo_type": json_response["payment_method"]["type"],
+                "pos_id": json_response["pos_id"],
+                "processing_mode": json_response["processing_mode"],
+                "shipping_amount": json_response["shipping_amount"],
+                "sponsor_id": json_response["sponsor_id"],
+                "status": json_response["status"],
+                "status_detail": json_response["status_detail"],
+                "store_id": json_response["store_id"],
+                "taxes_amount": json_response["taxes_amount"],
+                "transaction_amount": json_response["transaction_amount"],
+                "transaction_amount_refunded": json_response["transaction_amount_refunded"],
+                "net_received_amount": json_response["transaction_details"]["net_received_amount"],
+                "transaction_details_total_paid_amount": json_response["transaction_details"]["total_paid_amount"],
+            }
+            datos_server = {
+                'external_reference': json_response["external_reference"],
+                'data': json_response["id"],
+                "collector_id": json_response["collector_id"],
+                "coupon_amount": json_response["coupon_amount"],
+                "currency_id": json_response["currency_id"],
+                "date_approved": json_response["date_approved"],
+                "date_created": json_response["date_created"],
+                "date_last_updated": json_response["date_last_updated"],
+                "date_of_expiration": json_response["date_of_expiration"],
+                "deduction_schema": json_response["deduction_schema"],
+                "description": json_response["description"],
+                "id": json_response["id"],
+                "installments": json_response["installments"],
+                "integrator_id": json_response["integrator_id"],
+                "issuer_id": json_response["issuer_id"],
+                "live_mode": json_response["live_mode"],
+                "marketplace_owner": json_response["marketplace_owner"],
+                "merchant_account_id": json_response["merchant_account_id"],
+                "merchant_number": json_response["merchant_number"],
+                "order_id": json_response["order"]["id"],
+                "order_type": json_response["order"]["type"],
+                "payer_id": json_response["payer"]["id"],
+                "payment_metodo_id": json_response["payment_method"]["id"],
+                "payment_metodo_issuer_id": json_response["payment_method"]["issuer_id"],
+                "payment_metodo_type": json_response["payment_method"]["type"],
+                "pos_id": json_response["pos_id"],
+                "processing_mode": json_response["processing_mode"],
+                "shipping_amount": json_response["shipping_amount"],
+                "sponsor_id": json_response["sponsor_id"],
+                "status": json_response["status"],
+                "status_detail": json_response["status_detail"],
+                "store_id": json_response["store_id"],
+                "taxes_amount": json_response["taxes_amount"],
+                "transaction_amount": json_response["transaction_amount"],
+                "transaction_amount_refunded": json_response["transaction_amount_refunded"],
+                "net_received_amount": json_response["transaction_details"]["net_received_amount"],
+                "transaction_details_total_paid_amount": json_response["transaction_details"]["total_paid_amount"],
+            }
+            self.conexionDBA.insertar_datos_o_actualizar("MPQRCODE_OBTENERPAGO", datos)
+            self.conexionDBAServer.insertar_datos_o_actualizar("MPQRCODE_OBTENERPAGOServer", datos_server)
+            return respuesta
+        except Exception as e:
+            print(e)
     
     def obtenerPagoV2_POINT(self, idpago):
         return self.conexionAPI.obtener_pago(idpago)
@@ -465,6 +468,9 @@ class Conexion_APP():
             return "No se ha encontrado el número de operación"
         else:
             return f"Error {respuesta.status_code, respuesta.json()}"
+        
+    def actualizarPago(self, id_pago, dict_datos_actualizar):
+        return self.conexionAPI.actualizar_pago(id_pago, dict_datos_actualizar)
             
             
             

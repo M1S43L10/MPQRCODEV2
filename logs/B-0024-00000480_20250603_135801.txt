@@ -1,0 +1,12 @@
+[2025-06-03 13:58:01] [INFO] Iniciando proceso VENTA
+[2025-06-03 13:58:01] [INFO] Buscando datos del Local...
+[2025-06-03 13:58:02] [WARNING] ❌ Fallo intento 1 al hacer request: 'Response' object is not callable
+[2025-06-03 13:58:03] [WARNING] ❌ Fallo intento 2 al hacer request: 'Response' object is not callable
+[2025-06-03 13:58:04] [WARNING] ❌ Fallo intento 3 al hacer request: 'Response' object is not callable
+[2025-06-03 13:58:04] [DEBUG] ----- [REQUEST] -----
+[2025-06-03 13:58:04] [DEBUG] URL: https://sandbox.dev.clover.com/v3/merchants/TGMXC47JK4HC1
+[2025-06-03 13:58:04] [DEBUG] Headers: {'X-POS-ID': 'Op_1111', 'Content-Type': 'application/json', 'Authorization': 'Bearer 8e4254f0-03d6-d1c8-9529-4be39effeec1'}
+[2025-06-03 13:58:04] [DEBUG] Payload: None
+[2025-06-03 13:58:04] [ERROR] [ERROR]: 'Response' object has no attribute '__name__'
+[2025-06-03 13:58:04] [DEBUG] ----------------------
+[2025-06-03 13:58:04] [ERROR] Error en get_local_name: 'Response' object has no attribute '__name__'

@@ -1520,6 +1520,7 @@ class ConexionSybase:
             with self.conexion.cursor() as cursor:
                 # Consulta para obtener el valor de la columna 'id' por 'condicion'
                 query = f"SELECT {nombre_columna} FROM {nombre_tabla} WHERE {condicion} = '{valor_condicion}'"
+                print(query)
                 cursor.execute(query)
                 if valor_unico:
                     resultado = cursor.fetchall()

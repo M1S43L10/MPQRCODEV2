@@ -1,17 +1,20 @@
-from GUI.BarraProgreso import BarraProgreso
-from GUI.BuscarOrdenPago import Ventana_BuscarPagoManual
-from Func.guardar_json import guardar_json_respuesta
-from Func.log_errorsV2 import log_error
 import keyboard
-from pprint import pprint
-from tkinter import messagebox
 import tkinter as tk
 import json
 import threading
 import time
 import traceback
-
+import pytz
+from datetime import datetime, timedelta
+from pprint import pprint
+from tkinter import messagebox
+from GUI.BarraProgreso import BarraProgreso
+from GUI.BuscarOrdenPago import Ventana_BuscarPagoManual
 from GUI.MessageBox import CustomMessageBox
+#from Func.guardar_json import guardar_json_respuesta
+from Func.tecladohasar import TecladoHasar
+from Func.log_errorsV2 import log_error
+
 
 
 class CrearOrdenPagoPOINT(BarraProgreso):
@@ -45,7 +48,12 @@ class CrearOrdenPagoPOINT(BarraProgreso):
             self.DICT_CONEXION = DICT_CONEXION
             self.DICT_DATOS_ORDEN = DICT_DATOS_ORDEN
             self.condicion_teclado =  self.DICT_CONEXION["conexionDBA"].specify_search_condicion("SPDIR", "ID", "GRID", "teclado_km84", False)
+            if self.condicion_teclado:
+                self.teclado_hasar = TecladoHasar()
+                self.teclado_hasar.asignar_funcion("98", self.llamado_taskkill)
             pprint(self.DICT_DATOS_ORDEN)
+            
+            self.obtener_diccionario_pbs() #AGREGADO 23/04/2025
             
             self.datos_obtener_pago = {
                 'NOMCAJA': self.DICT_DATOS_ORDEN["NomCaja"],
@@ -119,10 +127,32 @@ class CrearOrdenPagoPOINT(BarraProgreso):
         try:
             IMPRIME_TICKET = self.pregunta_imprime()
             print(IMPRIME_TICKET)
-            self.respuesta_orden = self.DICT_CONEXION["conexionAPIPOINT"].crearIntencionPAGOPoint(self.datos_dispositivo["id"], self.DICT_DATOS_ORDEN["nro_factura"], self.eliminar_decimal(self.DICT_DATOS_ORDEN["monto_pagar"]), IMPRIME_TICKET)
-            print(self.respuesta_orden.json())
+            reintentos = 3
+            intento = 0
+            self.respuesta_orden = None
+
+            while intento < reintentos:
+                try:
+                    self.respuesta_orden = self.DICT_CONEXION["conexionAPIPOINT"].crearIntencionPAGOPoint(
+                        self.datos_dispositivo["id"],
+                        self.DICT_DATOS_ORDEN["nro_factura"],
+                        self.eliminar_decimal(self.DICT_DATOS_ORDEN["monto_pagar"]),
+                        IMPRIME_TICKET
+                    )
+                    if 200 <= self.respuesta_orden.status_code < 300:
+                        log_error(f"Orden POINT creada correctamente en el intento #{intento + 1}", "generar_orden_POINT")
+                        break
+                    else:
+                        log_error(f"Error en intento #{intento + 1}: {self.respuesta_orden.status_code} - {self.respuesta_orden.text}", "generar_orden_POINT")
+                        intento += 1
+                        time.sleep(1.5)
+                    print(self.respuesta_orden.status_code)
+                except Exception as e:
+                    log_error(f"Excepción en intento #{intento + 1}: {str(e)}", "generar_orden_POINT")
+                    intento += 1
+                    time.sleep(1.5)
             
-            if self.respuesta_orden.status_code >= 200 and self.respuesta_orden.status_code < 300:
+            if self.respuesta_orden and 200 <= self.respuesta_orden.status_code < 300:
                 self.DICT_PROGRESO["text_label_aviso"] = f"Enviando Orden al POINT {self.datos_dispositivo["id"]}"
                 self.DICT_PROGRESO["carga"] = 48
                 self.DICT_PROGRESO["command"] = None
@@ -133,22 +163,31 @@ class CrearOrdenPagoPOINT(BarraProgreso):
                 self.progreso(**self.DICT_PROGRESO)
             else:
                 self.NRO_ERROR = 26
-                self.cierre_ERROR(True)
+                self.cierre_ERROR(False)
             
         except Exception as e:
-            print(e)
+            log_error(str(e), "generar_orden_POINT")
+            self.NRO_ERROR = 26
+            self.cierre_ERROR(False)
+            self.DICT_WIDGETS["cerrar_con_taskill"]()
+            
+            
+    def llamado_taskkill(self):
+        self.DICT_WIDGETS["cerrar_con_taskill"](self.DICT_DATOS_ORDEN['nro_factura'])
+
             
     def orden_enviada(self):
         try:
             time.sleep(2)
+            log_error("Orden enviada, esperando pago...", "orden_enviada")
             self.DICT_PROGRESO["text_label_aviso"] = "Esperando Pago."
             self.DICT_PROGRESO["carga"] = 50
             self.DICT_PROGRESO["command"] = None
             self.progreso(**self.DICT_PROGRESO)
             self.nro_punto = 2
             if self.condicion_teclado == "true":
-                keyboard.hook(self.on_a_and_6)
-                keyboard.hook(self.on_a_and_b)
+                self.teclado_hasar.asignar_funcion("a6", self.buscar_pago_manual)
+                self.teclado_hasar.asignar_funcion("ab", self.DICT_WIDGETS["def_ventana_buscar_pago_manual"]["cerrar_ventana_buscar_pago_manual"])
             else:
                 # Asociar la combinación de teclas con la función cancelar_orden
                 keyboard.add_hotkey('ctrl+alt+s', self.buscar_pago_manual)
@@ -244,6 +283,7 @@ class CrearOrdenPagoPOINT(BarraProgreso):
             
             
     def buscar_pago_manual(self):
+        log_error("Ventana de búsqueda de pago manual abierta por el usuario.", "buscar_pago_manual")
         if self.ventana_buscarpagomanual_abierta  == False:
             self.ventana_buscarpagomanual_abierta  = True
             ventana_buscarpagomanual = Ventana_BuscarPagoManual(self.DICT_WIDGETS, self.DICT_DATOS_ORDEN, self.DICT_CONEXION)
@@ -325,11 +365,51 @@ class CrearOrdenPagoPOINT(BarraProgreso):
         
     def resultado_estado_pago(self):
         if self.datos_pagos["external_reference"] != self.DICT_DATOS_ORDEN["nro_factura"]:
-            self.NRO_ERROR = 13
+            if self.es_fecha_aprovado(self.datos_pagos['date_approved']) <= 300:
+                datos_actulizar = {
+                    "external_reference": self.DICT_DATOS_ORDEN["nro_factura"],
+                }
+                respuesta = self.DICT_CONEXION["conexionAPI"].actualizarPago(self.datos_pagos["id"], datos_actulizar)
+                if respuesta.status_code == 200:
+                    self.DICT_CONEXION["conexionDBAServer"].insertar_datos_o_actualizar("MPQRCODE_OBTENERPAGOServer", datos_actulizar)
+                else:
+                    print(respuesta.json())
+                    CustomMessageBox(self.DICT_WIDGETS["root"], f"Error API", respuesta.json(), "error")
+                    self.NRO_ERROR = 13
+            else:
+                self.NRO_ERROR = 13
         elif self.datos_pagos["transaction_amount"] != self.DICT_DATOS_ORDEN["monto_pagar"]:
             self.NRO_ERROR = 10
         elif self.datos_pagos["status"] == "refunded":
             self.NRO_ERROR = 12
+        elif int(self.DICT_DATOS_ORDEN["response"]) == 98: #AGREGADO 23/04/2025
+            print("INICIO COMPROBANDO PBD")
+            if not self.comprobación_PBS():
+                if not self.NRO_ERROR == 1001:
+                    self.NRO_ERROR = 15
+                    CustomMessageBox(
+                        self.DICT_WIDGETS["root"],
+                        f"Error {self.NRO_ERROR}",
+                        self.LISTADO_ERRORES(),
+                        "error"
+                    )
+                    self.DICT_PROGRESO["text_label_aviso"] = "Realizando reembolso"
+                    self.progreso(**self.DICT_PROGRESO)
+                    respuesta_reembolso = self.DICT_CONEXION['conexionAPI'].crear_orden_reembolso(self.id_pago, self.datos_pagos["transaction_amount"]).status_code == 200
+                    if respuesta_reembolso:
+                        self.DICT_PROGRESO["text_label_aviso"] = "Reembolso realizado"
+                        self.progreso(**self.DICT_PROGRESO)
+                    else:
+                        self.NRO_ERROR = 16
+                        CustomMessageBox(
+                            self.DICT_WIDGETS["root"],
+                            f"Error {self.NRO_ERROR}",
+                            self.LISTADO_ERRORES(),
+                            "error"
+                        )
+                        log_error(respuesta_reembolso.json(), "realizar_comparacion_comprobación_PBS")
+            print("FIN COMPROBANDO PBD")
+        
         if self.NRO_ERROR == None:
             if self.datos_pagos["status"] == "approved":
                 if self.datos_pagos["status_detail"] == "accredited":
@@ -436,14 +516,18 @@ class CrearOrdenPagoPOINT(BarraProgreso):
         
     def pregunta_imprime(self):
         try: 
-            print_TICKET = self.DICT_CONEXION["conexionDBA"].specify_search_condicion("SPDIR", "ID", "GRID", "MP_POINT_PRINT", False).lower()
-            if print_TICKET == "auto":
-                return messagebox.askyesno("Imprime ticket", "¿Desea imprimir comprobante de pago?")
+            print_TICKET = self.DICT_CONEXION["conexionDBA"].specify_search_condicion("SPDIR", "ID", "GRID", "MP_POINT_PRINT", False)
+            if not print_TICKET == None:
+                print_TICKET.lower()
+                if print_TICKET == "auto":
+                    return messagebox.askyesno("Imprime ticket", "¿Desea imprimir comprobante de pago?")
+                else:
+                    if print_TICKET == "false":
+                        return False
+                    elif print_TICKET == "true":
+                        return True
             else:
-                if print_TICKET == "false":
-                    return False
-                elif print_TICKET == "true":
-                    return True
+                return messagebox.askyesno("Imprime ticket", "¿Desea imprimir comprobante de pago?")
         except Exception as e:
             print(e)
             return messagebox.askyesno("Imprime ticket", "¿Desea imprimir comprobante de pago?")
@@ -535,9 +619,11 @@ class CrearOrdenPagoPOINT(BarraProgreso):
             #messagebox.showinfo("Pago recibido", f"Pago recibido\nNro Factura: {self.DICT_DATOS_ORDEN["nro_factura"]}\nNro Operación: {self.datos_pagos["id"]}\nMonto recibido: {float(self.datos_pagos["transaction_amount"])}")
             self.DICT_WIDGETS["my_label_aviso"].config(text="Pago recibido") 
             self.DICT_CONEXION["conexionDBA"].actualizar_datos_condicion("MPQRCODE_OBTENERPAGOPOINT", self.datos_obtener_pago, "external_reference", f"'{self.DICT_DATOS_ORDEN["nro_factura"]}'")
-            self.DICT_CONEXION["conexionDBAServer"].actualizar_datos_condicion("MPQRCODE_OBTENERPAGOPOINTServer", self.datos_obtener_pago, "external_reference", f"'{self.DICT_DATOS_ORDEN["nro_factura"]}'")
+            self.DICT_CONEXION["conexionDBAServer"].actualizar_datos_condicion("MPQRCODE_OBTENERPAGOServer", self.datos_obtener_pago, "external_reference", f"'{self.DICT_DATOS_ORDEN["nro_factura"]}'")
+            self.DICT_CONEXION["conexionDBA"].actualizar_datos_condicion("MPQRCODE_OBTENERPAGO", self.datos_obtener_pago, "external_reference", f"'{self.DICT_DATOS_ORDEN["nro_factura"]}'")
             self.DICT_CONEXION["conexionDBA"].actualizar_datos_condicion("MPQRCODE_CONEXIONPROGRAMAS", datos, "nro_factura", f"'{self.DICT_DATOS_ORDEN["nro_factura"]}'")
             #guardar_json_respuesta(self.datos_pagos)
+            log_error("Pago recibido correctamente, cerrando ventana.", "finalizar_pago")
             self.cerrar_ventana()
                 
         except Exception as e:
@@ -594,6 +680,11 @@ class CrearOrdenPagoPOINT(BarraProgreso):
                     11: f"El ID {self.id_pago} no coincide",
                     12: f"El ID {self.id_pago} ya tiene una devolución hecha",
                     13: "El Número de factura no coincide con el ID Obtenido",
+                    15: (
+                        "Este medio de pago no está disponible para realizar el descuento del PBS.\n"
+                        f"Medios Disponibles: {list(self.dict_pbs_disponibles.keys())}"
+                    ), #AGREGADO 23/04/2025
+                    16: f"No se pudo realizar el reembolso del ID {self.id_pago}\n Por favor, verificar con el supervisor si se necesita más información sobre el reembolso.",  #AGREGADO 23/04/2025
                     21: "El pago no está aprobado",
                     23: "No hemos recibido respuesta de MercadoPago",
                     24: f"No hay dispositivos vinculados con la caja {nom_caja}.",
@@ -601,7 +692,7 @@ class CrearOrdenPagoPOINT(BarraProgreso):
                     26: f"El dispositivo {dispositivo_id} ya se encuentra con una orden. Cancelar y volver a enviar orden.",
                     100: "Error a la hora de buscar pago manual",
                     101: "Error en la búsqueda en MercadoPago",
-                    1001: "Error no registrado"
+                    1001: "Error no registrado",
                 }
 
                 self.datos_error = {
@@ -651,6 +742,71 @@ class CrearOrdenPagoPOINT(BarraProgreso):
             else:
                 print("58")
                 self.aviso_intencion_no_cerrada()  # Mostrar aviso y NO cerrar"""
+                
+                
+    def es_fecha_aprovado(self, date_string):
+        try:
+            # Parsear la fecha que viene con zona horaria -04:00
+            fecha_remota = datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%S.000-04:00")
+
+            # La fecha en la zona -04:00 (ya está en ese huso, sin necesidad de conversión)
+            tz_remota = pytz.timezone("Etc/GMT+4")  # GMT+4 es UTC-04:00
+            fecha_remota = tz_remota.localize(fecha_remota)
+
+            # Hora actual en Argentina (UTC-03:00)
+            tz_arg = pytz.timezone("America/Argentina/Buenos_Aires")
+            ahora_arg = datetime.now(tz_arg)
+
+            # Convertimos ambas fechas a UTC para comparar correctamente
+            diferencia = abs((ahora_arg.astimezone(pytz.utc) - fecha_remota.astimezone(pytz.utc)).total_seconds())
+
+            return diferencia
+        except Exception as e:
+            print(f"Error al verificar la fecha: {e}")
+            return False
+        
+    def obtener_diccionario_pbs(self): #AGREGADO 23/04/2025
+        sentencia_traer_PBS_disponibles = """
+            SELECT CDESPAGO, cMetodo_id, cMetodo_name, ctype_id
+            FROM FPAGO
+            WHERE NAPL1 = '2'
+        """
+        self.pbs_disponibles = self.DICT_CONEXION["conexionDBA"].ejecutar_consulta(sentencia_traer_PBS_disponibles)
+
+        self.dict_pbs_disponibles = {}
+        for item in self.pbs_disponibles:
+            cdenspago, metodo_id, metodo_name, tipo_id = item
+            self.dict_pbs_disponibles[cdenspago] = {
+                "payment_method_id": metodo_id,
+                "payment_metho_name": metodo_name,
+                "payment_type_id": tipo_id
+            }
+        pprint(self.dict_pbs_disponibles)
+        
+    def comprobación_PBS(self): #AGREGADO 23/04/2025
+        try:
+            # Verifica si el método y tipo de pago están en alguno de los valores del diccionario
+            encontrados = any(
+                self.datos_pagos["payment_method_id"] == datos["payment_method_id"] and
+                self.datos_pagos["payment_type_id"] == datos["payment_type_id"]
+                for datos in self.dict_pbs_disponibles.values()
+            )
+            print(f"encontrados: {encontrados}")
+
+            if not encontrados:
+                return False
+            return True
+
+        except Exception as e:
+            self.NRO_ERROR = 1001
+            CustomMessageBox(
+                self.DICT_WIDGETS["root"],
+                f"Error inesperado",
+                f"Ocurrió un error inesperado: {e}",
+                "error"
+            )
+            return False
+
 
 
 #------------------------------------ Teclado Hasar ------------------------------------
@@ -716,6 +872,7 @@ class CrearOrdenPagoPOINT(BarraProgreso):
             else:
                 # Mostrar el mensaje de error
                 messagebox.showerror("Error", "Solo puedes ingresar valores numéricos.")
+                self.ventana_buscarpagomanual_abierta = False
                 return False
         except Exception as e:
             log_error(str(e), "validate_number")
@@ -877,3 +1034,4 @@ class CrearOrdenPagoPOINT(BarraProgreso):
         except Exception as e:
             log_error(str(e), "on_4_and_a")
             messagebox.showerror("Error", "Ha ocurrido un error al detectar las teclas '4' y 'a'.")
+            

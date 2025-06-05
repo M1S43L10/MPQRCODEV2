@@ -1,0 +1,21 @@
+2025-06-04 17:06:58,933 - ERROR - __init__: INICIO ENLACE: ----------------------------------------------------------------------------------------
+2025-06-04 17:06:58,992 - DEBUG - Starting new HTTPS connection (1): stable-heartily-squirrel.ngrok-free.app:443
+2025-06-04 17:06:59,224 - DEBUG - https://stable-heartily-squirrel.ngrok-free.app:443 "GET / HTTP/1.1" 200 None
+2025-06-04 17:06:59,254 - ERROR - __init__: PASE A SISTEMA: ----------------------------------------------------------------------------------------
+2025-06-04 17:06:59,271 - ERROR - GUIMAIN.__init__: Se inició la ventana principal de creación de orden.
+2025-06-04 17:06:59,417 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-04 17:06:59,417 - DEBUG - STREAM b'sRGB' 41 1
+2025-06-04 17:06:59,417 - DEBUG - STREAM b'IDAT' 54 8192
+2025-06-04 17:06:59,448 - ERROR - logo_mp: Logo de MercadoPago cargado correctamente
+2025-06-04 17:06:59,506 - ERROR - func_barra_progreso: Se detectó tipo de orden: Estándar
+2025-06-04 17:07:01,043 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-06-04 17:07:02,170 - DEBUG - https://api.mercadopago.com:443 "PUT /instore/orders/qr/seller/collectors/1662461858/pos/SUC001POS001/qrs HTTP/1.1" 200 219
+2025-06-04 17:07:02,172 - ERROR - crear_orden: Orden enviada exitosamente en el intento #1
+2025-06-04 17:07:02,980 - ERROR - func_orden_creada: QR mostrado correctamente al usuario.
+2025-06-04 17:07:03,502 - DEBUG - STREAM b'IHDR' 16 13
+2025-06-04 17:07:03,502 - DEBUG - STREAM b'IDAT' 41 6803
+2025-06-04 17:07:04,703 - DEBUG - Starting new HTTPS connection (1): api.mercadopago.com:443
+2025-06-04 17:07:05,599 - DEBUG - https://api.mercadopago.com:443 "DELETE /instore/qr/seller/collectors/1662461858/pos/SUC001POS001/orders HTTP/1.1" 204 0
+2025-06-04 17:07:07,685 - ERROR - aviso_cancelar_orden: Usuario solicitó cancelar la orden manualmente.
+2025-06-04 17:07:07,737 - ERROR - __init__: FIN ENLACE: ----------------------------------------------------------------------------------------
+

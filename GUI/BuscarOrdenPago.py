@@ -1,15 +1,15 @@
-from GUI.BarraProgreso import BarraProgreso
-from Func.log_errorsV2 import log_error
-import keyboard
 from pprint import pprint
 from tkinter import messagebox
+from GUI.BarraProgreso import BarraProgreso
+from GUI.MessageBox import CustomMessageBox
+from Func.log_errorsV2 import log_error
+from Func.tecladohasar import TecladoHasar
+import keyboard
 import ttkbootstrap as ttk
 import json
 import threading
 import time
 import traceback
-
-from GUI.MessageBox import CustomMessageBox
 
 
 class BuscarOrdenPago(BarraProgreso):
@@ -42,6 +42,7 @@ class BuscarOrdenPago(BarraProgreso):
             self.DICT_DATOS_ORDEN = DICT_DATOS_ORDEN
             self.condicion_teclado =  self.DICT_CONEXION["conexionDBA"].specify_search_condicion("SPDIR", "ID", "GRID", "teclado_km84", False)
             
+            self.obtener_diccionario_pbs() #AGREGADO 23/04/2025
             
             self.datos_obtener_pago = {
                 'NomCaja': self.DICT_DATOS_ORDEN["NomCaja"],
@@ -212,6 +213,35 @@ class BuscarOrdenPago(BarraProgreso):
             self.NRO_ERROR = 10
         elif self.datos_pagos["status"] == "refunded":
             self.NRO_ERROR = 12
+        elif int(self.DICT_DATOS_ORDEN["response"]) == 98: #AGREGADO 23/04/2025
+            print("INICIO COMPROBANDO PBD")
+            if not self.comprobación_PBS():
+                if not self.NRO_ERROR == 1001:
+                    self.NRO_ERROR = 15
+                    CustomMessageBox(
+                        self.DICT_WIDGETS["root"],
+                        f"Error {self.NRO_ERROR}",
+                        self.LISTADO_ERRORES(),
+                        "error"
+                    )
+                    self.DICT_PROGRESO["text_label_aviso"] = "Realizando reembolso"
+                    self.progreso(**self.DICT_PROGRESO)
+                    respuesta_reembolso = self.DICT_CONEXION['conexionAPI'].crear_orden_reembolso(self.id_pago, self.datos_pagos["transaction_amount"]).status_code == 200
+                    if respuesta_reembolso:
+                        self.DICT_PROGRESO["text_label_aviso"] = "Reembolso realizado"
+                        self.progreso(**self.DICT_PROGRESO)
+                    else:
+                        self.NRO_ERROR = 16
+                        CustomMessageBox(
+                            self.DICT_WIDGETS["root"],
+                            f"Error {self.NRO_ERROR}",
+                            self.LISTADO_ERRORES(),
+                            "error"
+                        )
+                        log_error(respuesta_reembolso.json(), "realizar_comparacion_comprobación_PBS")
+            print("FIN COMPROBANDO PBD")
+            
+            
         if self.NRO_ERROR == None:
             if self.datos_pagos["status"] == "approved":
                 if self.datos_pagos["status_detail"] == "accredited":
@@ -256,7 +286,8 @@ class BuscarOrdenPago(BarraProgreso):
             
     def mostrar_error(self):
         try:
-            Messagebox.show_error(self.LISTADO_ERRORES(), f"Error {self.NRO_ERROR}", parent=self.DICT_WIDGETS["root"])
+            CustomMessageBox(self.DICT_WIDGETS["root"], self.LISTADO_ERRORES(), f"Error {self.NRO_ERROR}", "error")
+            #Messagebox.show_error(self.LISTADO_ERRORES(), f"Error {self.NRO_ERROR}", parent=self.DICT_WIDGETS["root"])
             self.DICT_CONEXION["conexionDBA"].actualizar_datos_condicion(
                 "MPQRCODE_CONEXIONPROGRAMAS",
                 self.datos_error,
@@ -344,6 +375,48 @@ class BuscarOrdenPago(BarraProgreso):
             error_detallado = traceback.format_exc()
             print(label_error, error_detallado)
             log_error(error_detallado, "ERROR_API")  # Registro del error completo
+            
+    def obtener_diccionario_pbs(self): #AGREGADO 23/04/2025
+        sentencia_traer_PBS_disponibles = """
+            SELECT CDESPAGO, cMetodo_id, cMetodo_name, ctype_id
+            FROM FPAGO
+            WHERE NAPL1 = '2'
+        """
+        self.pbs_disponibles = self.DICT_CONEXION["conexionDBA"].ejecutar_consulta(sentencia_traer_PBS_disponibles)
+
+        self.dict_pbs_disponibles = {}
+        for item in self.pbs_disponibles:
+            cdenspago, metodo_id, metodo_name, tipo_id = item
+            self.dict_pbs_disponibles[cdenspago] = {
+                "payment_method_id": metodo_id,
+                "payment_metho_name": metodo_name,
+                "payment_type_id": tipo_id
+            }
+        pprint(self.dict_pbs_disponibles)
+        
+    def comprobación_PBS(self): #AGREGADO 23/04/2025
+        try:
+            # Verifica si el método y tipo de pago están en alguno de los valores del diccionario
+            encontrados = any(
+                self.datos_pagos["payment_method_id"] == datos["payment_method_id"] and
+                self.datos_pagos["payment_type_id"] == datos["payment_type_id"]
+                for datos in self.dict_pbs_disponibles.values()
+            )
+            print(f"encontrados: {encontrados}")
+
+            if not encontrados:
+                return False
+            return True
+
+        except Exception as e:
+            self.NRO_ERROR = 1001
+            CustomMessageBox(
+                self.DICT_WIDGETS["root"],
+                f"Error inesperado",
+                f"Ocurrió un error inesperado: {e}",
+                "error"
+            )
+            return False
         
     def LISTADO_ERRORES(self):
         try: #SE SACO LOS PUNTO 25, 26 XQ ESTA CLASE NO NESECEITA EL DATOS_DISPOSITIVOS
@@ -361,6 +434,11 @@ class BuscarOrdenPago(BarraProgreso):
                     11: f"El ID {self.id_pago} no coincide",
                     12:  f"El ID {self.id_pago} ya tiene una devolución hecha",
                     13: "El Número de factura no coincide con el ID Obtenido",
+                    15: (
+                        "Este medio de pago no está disponible para realizar el descuento del PBS.\n"
+                        f"Medios Disponibles: {list(self.dict_pbs_disponibles.keys())}"
+                    ), #AGREGADO 23/04/2025
+                    16: f"No se pudo realizar el reembolso del ID {self.id_pago}\n Por favor, verificar con el supervisor si se necesita más información sobre el reembolso.",  #AGREGADO 23/04/2025
                     21: "El pago no está aprobado",
                     23: "No hemos recibido respuesta de MercadoPago",
                     24: f"No hay dispositivos vinculados con la caja {self.datos_obtener_pago["NomCaja"]}.",
@@ -453,6 +531,9 @@ class Ventana_BuscarPagoManual:
         self.DICT_CONEXION = DICT_CONEXION
         self.tipo_busqueda = tipo_busqueda
         self.condicion_teclado =  self.DICT_CONEXION["conexionDBA"].specify_search_condicion("SPDIR", "ID", "GRID", "teclado_km84", False)
+        if self.condicion_teclado:
+            self.teclado_hasar = TecladoHasar()
+
         self.respuesta_mp = None
         self.press_enter_id_pago_manual = False
         
@@ -488,12 +569,22 @@ class Ventana_BuscarPagoManual:
             keyboard.add_hotkey('enter', self.press_enter_buscar_id_manual)
         else:
             # Asocia el evento de presionar tecla
+            self.teclado_hasar.asignar_funcion("6a", self.press_enter_buscar_id_manual)
+            self.teclado_hasar.asignar_funcion("ab", self.on_closing)
+            self.teclado_hasar.asignar_funcion("86", self.teclado_hasar.borrar_ultimo_caracter)  # Si "67" es la combinación para borrar
+
+            self.teclado_hasar.set_entry(self.DICT_WIDGETS["def_ventana_buscar_pago_manual"]["entry_info_buscar_pago"])
             self.DICT_WIDGETS["def_ventana_buscar_pago_manual"]["entry_info_buscar_pago"].bind("<KeyPress>", self.detectar_secuencia)
+            pass
             
     def press_enter_buscar_id_manual(self):
-        if self.press_enter_id_pago_manual == False:
-            self.press_enter_id_pago_manual = True
-            self.buscar_id_pago_manual()
+        try:
+            if self.press_enter_id_pago_manual == False:
+                self.press_enter_id_pago_manual = True
+                self.buscar_id_pago_manual()
+        except:
+            self.on_closing()
+
 
     
     def buscar_id_pago_manual(self):
@@ -507,10 +598,8 @@ class Ventana_BuscarPagoManual:
                     self.SELECCION_TIPO_BUSQUEDA = True
                 if self.SELECCION_TIPO_BUSQUEDA:
                     print("QR")
-                    respuesta = self.DICT_CONEXION["conexionAPI"].obtenerPago_manual(
-                    self.DICT_DATOS_ORDEN["nro_factura"], self.DICT_DATOS_ORDEN["external_id_pos"], datos_pagos
-                    )
-
+                    respuesta = self.DICT_CONEXION["conexionAPI"].obtenerPago_manual(self.DICT_DATOS_ORDEN["external_id_pos"], datos_pagos)
+                    print("PAGO ENCONTRADO")
                 elif self.SELECCION_TIPO_BUSQUEDA == False:
                     print("POINT")
                     respuesta = self.DICT_CONEXION["conexionAPIPOINT"].obtenerPago_manualPOINT(datos_pagos)
@@ -608,6 +697,7 @@ class Ventana_BuscarPagoManual:
             else:
                 # Mostrar el mensaje de error
                 CustomMessageBox(self.DICT_WIDGETS["root"], "Error", "Solo puedes ingresar valores numéricos." "error")
+                self.respuesta_mp = "CERRANDO"
                 #messagebox.showerror("Error", "Solo puedes ingresar valores numéricos.")
                 return False
         except Exception as e:
@@ -617,7 +707,8 @@ class Ventana_BuscarPagoManual:
 
     def detectar_secuencia(self, event):
         try:
-            # Agregar la tecla presionada a la secuencia solo si es relevante
+            return "break"
+            """ # Agregar la tecla presionada a la secuencia solo si es relevante
             if event.keysym.isdigit() or event.keysym == "Return" or event.keysym == "a":
                 self.tecla_secuencia.append(event.keysym)
 
@@ -659,10 +750,10 @@ class Ventana_BuscarPagoManual:
                 secuencia_tupla = tuple(self.tecla_secuencia[-3:])
 
                 # Acción específica para '6', '4'
-                """if secuencia_tupla[:2] == ('6', '4'):  # Verificar solo las dos primeras teclas
+                if secuencia_tupla[:2] == ('6', '4'):  # Verificar solo las dos primeras teclas
                     print("Acción específica para 6 + 4")
                     self.tecla_secuencia = []  # Limpiar la secuencia
-                    return  # Salir de la función"""
+                    return  # Salir de la función
                 
                 if secuencia_tupla[:2] == ('a', 'b'):
                     # Obtener el Entry y eliminar los últimos dos caracteres
@@ -748,7 +839,7 @@ class Ventana_BuscarPagoManual:
 
             else:
                 # Si la secuencia tiene menos de 3 teclas, no hacer nada
-                pass
+                pass"""
 
         except Exception as e:
             log_error(str(e), "detectar_secuencia")
