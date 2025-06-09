@@ -3,5 +3,12 @@ AWS/
 output/
 tickets/
 logs/
-configuracion.json/
-errores.txt/
+__init__.py
+configuracion.json
+errores.txt
+MPQRCODEV2_PYINSTALLER_DEBUG.json
+MPQRCODEV2_PYINSTALLER_DEBUGVENVjson.json
+MPQRCODEV2_PYINSTALLER_NODEBUG.json
+MPQRCODEV2_PYINSTALLER.json
+ticket_fiserv-cliente.png
+ticket_fiserv-comercio.png
